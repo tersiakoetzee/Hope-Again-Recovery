@@ -7,10 +7,10 @@ const MenuBar = () => {
     return (
         <Navbar bg="light" expand="lg">
         <Container>
-            <Navbar.Brand href="#home">H-A-R</Navbar.Brand>
+            <Navbar.Brand href="#home">H-A-R-H</Navbar.Brand>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
-            <Nav className="me-auto">
+            <Nav className="me-auto justify-content-end flex-grow-1">
                 <Nav.Link href="#home">Home</Nav.Link>
                 <Nav.Link href="#link">About</Nav.Link>
                 {/* Program dropdown */}
@@ -37,7 +37,7 @@ const MenuBar = () => {
                     <NavDropdown.Item href="#action/3.3">Become a Funder</NavDropdown.Item>
                 </NavDropdown>
 
-                <Nav.Link href="#link">Donate Now</Nav.Link>
+                <Nav.Link className="btn btn-success text-light" href="#link">Donate Now</Nav.Link>
             </Nav>
             </Navbar.Collapse>
         </Container>
