@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import MenuBar from "../components/MenuBar";
+import { MenuBar } from "../components/MenuBar";
 
 import "./Home.css";
 import logo from "./logo.svg";
