@@ -4,9 +4,9 @@ jobs:
   lint:
     runs-on: ubuntu-latest
     steps:
-    - name: checkout repository 
-      uses: actions/checkout@v2
-    - name: install dependencies
-      run: npm install
-    - name: Run ESLint
-      run: npm run lint
+      - name: checkout repository
+        uses: actions/checkout@v2
+      - name: install dependencies
+        run: npm install
+      - name: Run ESLint
+        run: npm run lint

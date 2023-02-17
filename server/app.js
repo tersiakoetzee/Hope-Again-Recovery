@@ -3,7 +3,11 @@ import express from "express";
 import apiRouter from "./api";
 import config from "./utils/config";
 import {
-	clientRouter, configuredHelmet, configuredMorgan, httpsOnly, logErrors,
+	clientRouter,
+	configuredHelmet,
+	configuredMorgan,
+	httpsOnly,
+	logErrors,
 } from "./utils/middleware";
 
 const apiRoot = "/api";
