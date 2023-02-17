@@ -29,12 +29,12 @@ export function Home() {
 			</header>
 			<main role="main">
 				<div>
-          <h1 className="message" data-qa="message">
-            {message}
-          </h1>
-          <PicCarousel />
-          <Link to="/about/this/site">About</Link>
-			</div>
+					<h1 className="message" data-qa="message">
+						{message}
+					</h1>
+					<PicCarousel />
+					<Link to="/about/this/site">About</Link>
+				</div>
 			</main>
 		</div>
 	);
