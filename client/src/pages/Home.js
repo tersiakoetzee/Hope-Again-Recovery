@@ -4,7 +4,6 @@ import "./Home.css";
 import { PicCarousel } from "../components/PicCarousel";
 
 export function Home() {
-
 	return (
 		<div>
 			<header>
