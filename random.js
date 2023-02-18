@@ -1,4 +1,4 @@
-var a = '1';
-var b = '2';
+let a = "1";
+let b = "2";
 
-var c = Number(a) + Number(b)
+export const c = Number(a) + Number(b);
