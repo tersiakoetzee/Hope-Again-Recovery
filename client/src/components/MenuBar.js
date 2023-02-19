@@ -60,5 +60,3 @@ export const MenuBar = () => {
 		</Navbar>
 	);
 };
-
-// export default MenuBar;
