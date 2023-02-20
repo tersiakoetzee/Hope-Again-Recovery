@@ -13,7 +13,7 @@ export function Home() {
 			<main role="main">
 				<div>
 					<PicCarousel />
-					{/* <Link to="/about/this/site">About</Link> */}
+					<Link to="/about/this/site">About</Link>
 					<Footer />
 				</div>
 			</main>
