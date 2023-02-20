@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { MenuBar } from "../components/MenuBar";
 import "./Home.css";
 import { PicCarousel } from "../components/PicCarousel";
+import { TestimonialWidget } from "../components/TestimonialWidget";
 
 export function Home() {
 	return (
@@ -12,7 +13,10 @@ export function Home() {
 			<main role="main">
 				<div>
 					<PicCarousel />
-					<Link to="/about/this/site">About</Link>
+					<section className="video-testimonial">
+						<Link to="/about/this/site">About</Link>
+						<TestimonialWidget />
+					</section>
 				</div>
 			</main>
 		</div>

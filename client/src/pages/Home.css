@@ -9,3 +9,7 @@
 .message:hover {
 	background-color: yellow;
 }
+
+.video-testimonial {
+	display: flex;
+}
