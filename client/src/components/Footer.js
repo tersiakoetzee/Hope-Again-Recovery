@@ -33,12 +33,14 @@ export const Footer = () => {
 						</p>
 					</Col>
 				</Row>
+				<Row>
+					<Col className="footer-bottom">
+						<p className="text-center">
+							Copyright &copy;{new Date().getFullYear()} HARH
+						</p>
+					</Col>
+				</Row>
 			</Container>
-			<div className="footer-bottom">
-				<p className="text-center">
-					Copyright &copy;{new Date().getFullYear()} HARH
-				</p>
-			</div>
 		</div>
 	);
 };
