@@ -1,6 +1,7 @@
 import { Router } from "express";
-import logger from "./utils/logger";
 import { google } from "googleapis";
+
+import logger from "./utils/logger";
 import dayjs from "dayjs";
 
 const router = Router();
@@ -21,9 +22,14 @@ router.get("/", async (req, res) => {
     logger.debug("Book a screening");
 
     // Required
-    const { name, surname, dateTime } = req.body;
+    const { name, surname, phoneNumber, addressLine1, addressLine2, city, country, dateTime } = req.body;
+    const required = { name, surname, phoneNumber, addressLine1, addressLine2, city, country, dateTime };
     // Optional
-    const { phoneNumber, email, addressLine1, addressLine2, city, country, postCode } = req.body;
+    const { email, postCode } = req.body;
+
+    if (!Object.values(required).every((v) => v)) {
+        return res.json({ msg: "Could not make a booking, fill all required fields" });
+    }
 
     // Set credentials
     oauth2Client.setCredentials({ refresh_token: process.env.REFRESH_TOKEN });
@@ -40,7 +46,7 @@ router.get("/", async (req, res) => {
                 timeZone: "Africa/Johannesburg",
             },
             end: {
-                dateTime: dayjs(new Date()).add(1, "day").add(1, "hour").toISOString(),
+                dateTime: dayjs(new Date(dateTime)).add(1, "hour").toISOString(),
                 timeZone: "Africa/Johannesburg",
             },
             location: `${addressLine1}\n${addressLine2}\n${city}\n${country}\n${postCode}\n`,
@@ -53,5 +59,3 @@ router.get("/", async (req, res) => {
 });
 
 export default router;
-
-
