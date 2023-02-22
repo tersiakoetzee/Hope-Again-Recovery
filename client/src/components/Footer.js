@@ -3,7 +3,6 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import "./Footer.css";
 
-
 export const Footer = () => {
 	return (
 		<div className="main-footer">

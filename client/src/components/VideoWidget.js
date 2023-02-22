@@ -10,7 +10,7 @@ export const VideoWidget = () => {
 			<Row>
 				<Col className="col-md-6 col-sm-6">
 					<Card>
-						<Card.Body >
+						<Card.Body>
 							<Card.Title> </Card.Title>
 							<div className="ratio ratio-16x9">
 								<iframe

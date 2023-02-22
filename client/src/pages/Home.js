@@ -5,7 +5,6 @@ import { PicCarousel } from "../components/PicCarousel";
 import { VideoWidget } from "../components/VideoWidget";
 import { Footer } from "../components/Footer";
 
-
 export function Home() {
 	return (
 		<div>
