@@ -3,6 +3,7 @@ import { MenuBar } from "../components/MenuBar";
 import "./Home.css";
 import { PicCarousel } from "../components/PicCarousel";
 import { Footer } from "../components/Footer";
+import "./Footer.css";
 
 export function Home() {
 	return (
