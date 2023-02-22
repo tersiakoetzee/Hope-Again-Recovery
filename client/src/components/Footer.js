@@ -37,7 +37,7 @@ export const Footer = () => {
 				<Row>
 					<Col className="footer-bottom">
 						<p className="text-center">
-							Copyright &copy;{new Date().getFullYear()} HARH
+							Copyright &copy;{new Date().getFullYear()} H-A-R-H
 						</p>
 					</Col>
 				</Row>
