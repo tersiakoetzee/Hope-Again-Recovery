@@ -2,6 +2,7 @@ import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Card from "react-bootstrap/Card";
+import "./VideoWidget.css";
 
 export const VideoWidget = () => {
 	return (
@@ -9,7 +10,7 @@ export const VideoWidget = () => {
 			<Row>
 				<Col className="col-md-6 col-sm-6">
 					<Card>
-						<Card.Body>
+						<Card.Body >
 							<Card.Title> </Card.Title>
 							<div className="ratio ratio-16x9">
 								<iframe
