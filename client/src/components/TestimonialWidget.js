@@ -8,7 +8,7 @@ export const TestimonialWidget = () => {
 			id="testimonial-widget"
 		>
 			<Card.Img
-				src="https://images.unsplash.com/photo-1505761671935-60b3a7427bad?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80"
+				src="/testimonial-widget/testimonial-widget.jpg"
 				alt="Card image"
 			/>
 			<Card.ImgOverlay>
