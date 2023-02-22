@@ -14,8 +14,10 @@ export function Home() {
 				<div>
 					<PicCarousel />
 					<section className="video-testimonial">
-						<Link to="/about/this/site">About</Link>
-						<TestimonialWidget />
+						<Link to="/about/this/site" className="vid-test-component">
+							About
+						</Link>
+						<TestimonialWidget className="vid-test-component testimonial-widget" />
 					</section>
 				</div>
 			</main>

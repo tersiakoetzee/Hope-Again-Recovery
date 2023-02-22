@@ -12,4 +12,25 @@
 
 .video-testimonial {
 	display: flex;
+	height: 300px;
 }
+
+.vid-test-component {
+	width: 50%;
+	height: 818px;
+}
+
+#testimonial-widget {
+	padding: 0px;
+	background-color: rgb(159, 221, 14);
+	border-radius: 0;
+	border: none;
+}
+#testimonial-widget img{
+	padding: 0px;
+	background-color: rgb(159, 221, 14);
+	border-radius: 0;
+	border: none;
+}
+
+
