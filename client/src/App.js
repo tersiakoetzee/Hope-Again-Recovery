@@ -1,7 +1,6 @@
 import { Route, Routes } from "react-router-dom";
-import About from "./pages/About";
+import { About } from "./pages/About";
 import Home from "./pages/Home";
-
 import "bootstrap/dist/css/bootstrap.min.css";
 
 const App = () => (

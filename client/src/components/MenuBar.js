@@ -7,12 +7,12 @@ export const MenuBar = () => {
 	return (
 		<Navbar bg="light" expand="lg">
 			<Container>
-				<Navbar.Brand href="#home">H-A-R-H</Navbar.Brand>
+				<Navbar.Brand href="/">H-A-R-H</Navbar.Brand>
 				<Navbar.Toggle aria-controls="basic-navbar-nav" />
 				<Navbar.Collapse id="basic-navbar-nav">
 					<Nav className="me-auto justify-content-end flex-grow-1">
-						<Nav.Link href="#home">Home</Nav.Link>
-						<Nav.Link href="#link">About</Nav.Link>
+						<Nav.Link href="/">Home</Nav.Link>
+						<Nav.Link href="/about/this/site">About</Nav.Link>
 						{/* Program dropdown */}
 						<NavDropdown title="Program" id="basic-nav-dropdown">
 							<NavDropdown.Item href="#action/3.1">

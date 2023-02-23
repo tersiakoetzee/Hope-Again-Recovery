@@ -1,4 +1,4 @@
-const About = () => (
+export const About = () => (
 	<main role="main">
 		<div>
 			<h1>About</h1>
@@ -10,5 +10,3 @@ const About = () => (
 		</div>
 	</main>
 );
-
-export default About;
