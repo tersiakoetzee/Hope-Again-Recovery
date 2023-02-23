@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import { MenuBar } from "../components/MenuBar";
 import "./Home.css";
 import { PicCarousel } from "../components/PicCarousel";
