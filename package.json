@@ -1,5 +1,5 @@
 {
-	"name": "starter-kit",
+	"name": "hope again recovery",
 	"version": "0.0.1",
 	"description": "Starter kit for full-stack JavaScript projects",
 	"private": true,
@@ -72,11 +72,21 @@
 	},
 	"dependencies": {
 		"@babel/runtime": "^7.20.7",
+		"@fortawesome/fontawesome-svg-core": "^6.3.0",
+		"@fortawesome/free-regular-svg-icons": "^6.3.0",
+		"@fortawesome/free-solid-svg-icons": "^6.3.0",
+		"@fortawesome/react-fontawesome": "^0.2.0",
+		"@popperjs/core": "^2.11.6",
+		"bootstrap": "^5.2.3",
 		"dotenv": "^16.0.3",
 		"express": "^4.18.2",
 		"helmet": "^6.0.1",
+		"mdb-react-ui-kit": "^5.1.0",
 		"morgan": "^1.10.0",
 		"pg": "^8.8.0",
+		"popper.js": "^1.16.1",
+		"react-bootstrap": "^2.7.2",
+		"react-icons": "^4.7.1",
 		"winston": "^3.8.2"
 	},
 	"engines": {
