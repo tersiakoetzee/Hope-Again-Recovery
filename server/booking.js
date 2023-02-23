@@ -46,7 +46,7 @@ router.get("/", async (req, res) => {
 	const { email, postCode } = req.body;
 
 	if (!Object.values(required).every((v) => v)) {
-		return res.json({
+		return res.status(500).json({
 			msg: "Could not make a booking, fill all required fields",
 		});
 	}
@@ -74,7 +74,7 @@ router.get("/", async (req, res) => {
 		},
 	});
 
-	res.json({ msg: "Booking successful" });
+	res.status(200).json({ msg: "Booking successful" });
 });
 
 export default router;
