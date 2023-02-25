@@ -8,7 +8,7 @@ export const Footer = () => {
 		<div className="main-footer">
 			<Container ClassName="text-center py-1">
 				<Row>
-					<Col className="icon">
+					<Col className="icon ">
 						<img
 							className="text-center py-3"
 							src="https://scontent-cpt1-1.xx.fbcdn.net/v/t39.30808-6/328578860_1623777118136682_3792465063130725698_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=ro__ikRWxD0AX-5VndF&_nc_ht=scontent-cpt1-1.xx&oh=00_AfBcPuLjgtSb8d782M4zN3x_M-ksTlfZf0ZiCe_aW1JTHg&oe=63F858B2"
