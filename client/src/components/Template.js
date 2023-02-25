@@ -1,5 +1,5 @@
-import { MenuBar } from "../components/MenuBar";
-import { Footer } from "../components/Footer";
+import { MenuBar } from "./MenuBar";
+import { Footer } from "./Footer";
 export const Template = (props) => (
 	<main role="main">
 		<div>
