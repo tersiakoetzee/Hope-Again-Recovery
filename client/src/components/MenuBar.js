@@ -5,12 +5,11 @@ import NavDropdown from "react-bootstrap/NavDropdown";
 
 export const MenuBar = () => {
 	return (
-		<Navbar bg="light" expand="lg">
+		<Navbar bg="dark" variant="dark" expand="lg">
 			<Container>
-				<Navbar.Brand href="/">H-A-R-H</Navbar.Brand>
 				<Navbar.Toggle aria-controls="basic-navbar-nav" />
 				<Navbar.Collapse id="basic-navbar-nav">
-					<Nav className="me-auto justify-content-end flex-grow-1">
+					<Nav className="me-auto justify-content-center flex-grow-1">
 						<Nav.Link href="/">Home</Nav.Link>
 						<Nav.Link href="/about">About</Nav.Link>
 						{/* Program dropdown */}
@@ -51,9 +50,7 @@ export const MenuBar = () => {
 							</NavDropdown.Item>
 						</NavDropdown>
 
-						<Nav.Link className="btn btn-success text-light" href="#link">
-							Donate Now
-						</Nav.Link>
+						<Nav.Link href="#link">Donate Now</Nav.Link>
 					</Nav>
 				</Navbar.Collapse>
 			</Container>
