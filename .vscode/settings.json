@@ -4,5 +4,9 @@
 		"source.fixAll.eslint": true
 	},
 	"files.eol": "\n",
-	"cSpell.words": ["inhouse", "Mitchells"]
+	"cSpell.words": [
+		"inhouse",
+		"Mitchells",
+		"timeously"
+	]
 }
