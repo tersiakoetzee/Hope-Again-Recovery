@@ -15,10 +15,10 @@ export const MenuBar = () => {
 						<Nav.Link href="/about">About</Nav.Link>
 						{/* Program dropdown */}
 						<NavDropdown title="Program" id="basic-nav-dropdown">
-							<NavDropdown.Item href="#action/3.1">
+							<NavDropdown.Item href="/program">
 								Program Outlay
 							</NavDropdown.Item>
-							<NavDropdown.Item href="#action/3.3">
+							<NavDropdown.Item href="/familydays">
 								Family Days
 							</NavDropdown.Item>
 						</NavDropdown>
