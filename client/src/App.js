@@ -1,6 +1,8 @@
 import { Route, Routes } from "react-router-dom";
 import { About } from "./pages/About";
 import Home from "./pages/Home";
+import { Program } from "./pages/Program";
+import { FamilyDays } from "./pages/FamilyDays";
 import { Projects } from "./pages/Projects";
 import { FundingPartners } from "./pages/FundingPartners";
 import { BecomeAFunder } from "./pages/BecomeAFunder";
@@ -18,6 +20,8 @@ const App = () => (
 			<Route path="/projects" element={<Projects />} />
 			<Route path="/fundingpartners" element={<FundingPartners />} />
 			<Route path="/becomeafunder" element={<BecomeAFunder />} />
+			<Route path="/program" element={<Program />} />
+			<Route path="/familydays" element={<FamilyDays />} />
 		</Routes>
 	</ThemeProvider>
 );
