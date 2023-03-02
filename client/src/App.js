@@ -8,7 +8,6 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import ThemeProvider from "react-bootstrap/ThemeProvider";
 
 const App = () => (
-
 	<ThemeProvider
 		breakpoints={["xxxl", "xxl", "xl", "lg", "md", "sm", "xs", "xxs"]}
 		minBreakpoint="xxs"
@@ -17,8 +16,8 @@ const App = () => (
 			<Route path="/" element={<Home />} />
 			<Route path="/about" element={<About />} />
 			<Route path="/projects" element={<Projects />} />
-      	<Route path="/program" element={<Program />} />
-		<Route path="/familydays" element={<FamilyDays />} />
+			<Route path="/program" element={<Program />} />
+			<Route path="/familydays" element={<FamilyDays />} />
 		</Routes>
 	</ThemeProvider>
 );
