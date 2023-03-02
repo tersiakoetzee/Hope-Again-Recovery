@@ -25,25 +25,45 @@ router.get("/", async (req, res) => {
 	const {
 		name,
 		surname,
+		age,
 		phoneNumber,
 		addressLine1,
 		addressLine2,
 		city,
 		country,
 		dateTime,
+		answer1,
+		answer2,
 	} = req.body;
 	const required = {
 		name,
 		surname,
+		age,
 		phoneNumber,
 		addressLine1,
 		addressLine2,
 		city,
 		country,
 		dateTime,
+		answer1,
+		answer2,
 	};
 	// Optional
-	const { email, postCode } = req.body;
+	const { email, postCode, whichOne } = req.body;
+
+	// Screening questions
+	let question1 = `Have you previously been to a treatment centre?[${answer1}]`;
+	const question2 = `Do you acknowledge that Hope Again Recovery Home requires that you have an assigned care-giver on your recovery journey?[${answer2}]`;
+
+	if (whichOne && answer1.toLowerCase() == "yes") {
+		question1 += ` If so, which one?[${whichOne}]`;
+	}
+
+	if (![3, 4].includes(new Date(dateTime).getDay())) {
+		return res.status(500).json({
+			msg: "You can only make a booking for Wednesday or Thursday",
+		});
+	}
 
 	if (!Object.values(required).every((v) => v)) {
 		return res.status(500).json({
@@ -59,8 +79,8 @@ router.get("/", async (req, res) => {
 		calendarId: "primary",
 		auth: oauth2Client,
 		requestBody: {
-			summary: `${name} ${surname}`,
-			description: `${phoneNumber}\n${email}`,
+			summary: `${name} ${surname}\n${age}`,
+			description: `${phoneNumber}\n${email}\n${question1}\n${question2}`,
 			start: {
 				dateTime: new Date(dateTime),
 				timeZone: "Africa/Johannesburg",

@@ -4,3 +4,5 @@ node_modules/
 .DS_Store
 .env
 .vscode
+REFRESH_TOKEN=1//03oRKJIq2jn1MCgYIARAAGAMSNwF-L9Ir6PhdnVQsN5s4KfsEm865uGYaUt2anVI9NbHDpFZyJAuintgx_0eaoQFi8_WRGoDCt1Q
+AUTH_KEY=AIzaSyBmzL4ov1CMQ_j07Y-WIUdd9kUxRIQUqTk
