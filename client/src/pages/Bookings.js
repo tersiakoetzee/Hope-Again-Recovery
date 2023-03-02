@@ -23,44 +23,17 @@ export const Bookings = () => {
 	const [email, setEmail] = useState("");
 	const [postCode, setPostCode] = useState("");
 	const [whichOne, setWhichOne] = useState("");
-
+	const [dateTime, setDateTime] = useState(null);
 	const [validated, setValidated] = useState(false);
 
-	const handleSubmit = (e) => {
-		const form = e.currentTarget;
+	const handleSubmit = (event) => {
+		const form = event.currentTarget;
 		if (form.checkValidity() === false) {
-			e.stopPropagation();
-		} else {
-			setValidated(true);
-			//axios.post("http://localhost:3100/api/booking", {
-			// 		name,
-			// 		surname,
-			// 		age,
-			// 		phoneNumber,
-			// 		addressLine1,
-			// 		addressLine2,
-			// 		city,
-			// 		country,
-			// 		dateTime,
-			// 		answer1,
-			// 		answer2,
-			// 		email,
-			// 		postCode,
-			// 		whichOne,
-			// 	})
-		}
-	};
-	const [dateTime, setDateTime] = useState(null);
-	const isWeekday = (date) => {
-		const day = date.getDay();
-		return day !== 0 && day !== 6 && day !== 1 && day !== 2 && day !== 5;
-	};
-
-	const addBooking = async (e) => {
-		e.preventDefault();
-
-		try {
-			axios.post("http://localhost:3100/api/booking", {
+			event.preventDefault();
+            event.stopPropagation();
+ }
+            setValidated(true);
+			axios.post("/api/booking", {
 				name,
 				surname,
 				age,
@@ -76,10 +49,13 @@ export const Bookings = () => {
 				postCode,
 				whichOne,
 			});
-		} catch (e) {
-			console.log(e.response.data);
-		}
 	};
+
+	const isWeekday = (date) => {
+		const day = date.getDay();
+		return day !== 0 && day !== 1 && day !== 2 && day !== 5 && day !== 6;
+	};
+
 	return (
 		<Template>
 			<h1 style={{ textAlign: "center" }}> Book a Screening</h1>
@@ -97,11 +73,10 @@ export const Bookings = () => {
 			>
 				<Row className="mb-3">
 					<Form.Group
-						htmlFor="validationCustom01"
 						as={Col}
 						controlId="formGridName"
 					>
-						<Form.Label>Name</Form.Label>
+						<Form.Label >Name</Form.Label>
 						<Form.Control
 							type="name"
 							placeholder="Enter name"
@@ -209,7 +184,7 @@ export const Bookings = () => {
 					onChange={(e) => setAnswer1(e.target.value)}
 					required
 				>
-					<option>Open this select menu</option>
+					<option selected disabled>Open this select menu</option>
 					<option value="yes">Yes</option>
 					<option value="no">No</option>
 				</Form.Select>
@@ -222,14 +197,13 @@ export const Bookings = () => {
 					/>
 				</Form.Group>
 
-				<Form.Label htmlFor="validationCustom04">
+				<Form.Label>
 					{" "}
 					Do you acknowledge that Hope Again Recovery Home requires that you
 					have an assigned care-giver on your recovery journey?{" "}
 				</Form.Label>
 				<Form.Select
 					aria-label="Default select example"
-					id="validationCustom04"
 					onChange={(e) => setAnswer2(e.target.value)}
 					required
 				>
@@ -241,8 +215,6 @@ export const Bookings = () => {
 					variant="primary"
 					className="btn btn-success text-light"
 					type="submit"
-					//style={{ marginLeft: "43%", padding: "10px 40px" }}
-					onClick={addBooking}
 				>
 					Submit
 				</Button>
