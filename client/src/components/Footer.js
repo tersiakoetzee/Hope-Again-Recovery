@@ -18,7 +18,7 @@ export const Footer = () => {
 					</Col>
 					<Col className="col-md-3 col-sm-4">
 						<h4>More Projects</h4>
-						<a href="/building ">New Building</a>
+						<a href="/projects">New Building</a>
 					</Col>
 					<Col className="col-md-3 col-sm-6">
 						<h4>Socials</h4>
