@@ -23,6 +23,7 @@ export const Program = () => {
 							src="https://images.unsplash.com/photo-1490578474895-699cd4e2cf59?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OTJ8fGdyb3VwfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=600&q=60"
 							alt="First slide"
 							height="250"
+							width="100%"
 						></img>
 					</Col>
 				</Row>
@@ -42,6 +43,7 @@ export const Program = () => {
 							src="https://images.unsplash.com/photo-1516149893016-813d9a01d5d3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8eW91dGh8ZW58MHx8MHx8&auto=format&fit=crop&w=600&q=60"
 							alt="First slide"
 							height="250"
+							width="100%"
 						></img>
 					</Col>
 				</Row>

@@ -3,6 +3,5 @@
 	"editor.codeActionsOnSave": {
 		"source.fixAll.eslint": true
 	},
-	"files.eol": "\n",
-	"cSpell.words": ["inhouse", "Mitchells", "timeously"]
+	"files.eol": "\n"
 }
