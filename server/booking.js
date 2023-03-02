@@ -55,7 +55,7 @@ router.get("/", async (req, res) => {
 	let question1 = `Have you previously been to a treatment centre?[${answer1}]`;
 	const question2 = `Do you acknowledge that Hope Again Recovery Home requires that you have an assigned care-giver on your recovery journey?[${answer2}]`;
 
-	if(whichOne && answer1.toLowerCase() == "yes") {
+	if (whichOne && answer1.toLowerCase() == "yes") {
 		question1 += ` If so, which one?[${whichOne}]`;
 	}
 
