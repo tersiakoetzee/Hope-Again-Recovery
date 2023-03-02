@@ -30,25 +30,25 @@ export const Bookings = () => {
 		const form = event.currentTarget;
 		if (form.checkValidity() === false) {
 			event.preventDefault();
-            event.stopPropagation();
- }
-            setValidated(true);
-			axios.post("/api/booking", {
-				name,
-				surname,
-				age,
-				phoneNumber,
-				addressLine1,
-				addressLine2,
-				city,
-				country,
-				dateTime,
-				answer1,
-				answer2,
-				email,
-				postCode,
-				whichOne,
-			});
+			event.stopPropagation();
+		}
+		setValidated(true);
+		axios.post("/api/booking", {
+			name,
+			surname,
+			age,
+			phoneNumber,
+			addressLine1,
+			addressLine2,
+			city,
+			country,
+			dateTime,
+			answer1,
+			answer2,
+			email,
+			postCode,
+			whichOne,
+		});
 	};
 
 	const isWeekday = (date) => {
@@ -72,11 +72,8 @@ export const Bookings = () => {
 				}}
 			>
 				<Row className="mb-3">
-					<Form.Group
-						as={Col}
-						controlId="formGridName"
-					>
-						<Form.Label >Name</Form.Label>
+					<Form.Group as={Col} controlId="formGridName">
+						<Form.Label>Name</Form.Label>
 						<Form.Control
 							type="name"
 							placeholder="Enter name"
@@ -184,7 +181,9 @@ export const Bookings = () => {
 					onChange={(e) => setAnswer1(e.target.value)}
 					required
 				>
-					<option selected disabled>Open this select menu</option>
+					<option selected disabled>
+						Open this select menu
+					</option>
 					<option value="yes">Yes</option>
 					<option value="no">No</option>
 				</Form.Select>
