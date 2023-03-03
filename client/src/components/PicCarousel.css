@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,700&display=swap");
 
 h3 {
-    color: #209FDA;
+	color: #faea00;
 	text-align: center;
 	font-size: 48px;
 	text-shadow: -4px 2px 5px rgba(0, 0, 0, 0.62);
@@ -19,6 +19,7 @@ h3 {
 }
 
 .carousel-caption {
+	font-family: "Roboto Flex";
 	bottom: 150px;
 	padding-left: 100px;
 	padding-right: 100px;
@@ -26,17 +27,14 @@ h3 {
 
 .carousel-caption p {
 	font-size: 28px;
-	font-family: "Roboto Flex";
 	text-shadow: -5px 3px 6px rgba(0, 0, 0, 0.62);
 }
 
 .carousel-caption a {
-	background-color: #209fda;
+	background-color: #faea00;
 	color: black;
 	border-radius: 0;
 	padding: 10px 30px 10px 30px;
 	box-shadow: -2px 2px 4px rgba(0, 0, 0, 0.42);
-	text-shadow: -3px 3px 6px rgba(0, 0, 0, 0.52);
-	font-family: "Roboto Flex";
 	border: 0;
 }

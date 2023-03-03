@@ -1,7 +1,6 @@
 import Carousel from "react-bootstrap/Carousel";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./PicCarousel.css";
-import { Heading1 } from "./Heading1";
 export const PicCarousel = () => {
 	return (
 		<Carousel>
@@ -13,15 +12,14 @@ export const PicCarousel = () => {
 					height="550"
 				/>
 				<Carousel.Caption>
-					<Heading1>
-						<h3>Celebrate Sobriety</h3>
-					</Heading1>
+					<h3>Celebrate Sobriety</h3>
+
 					<p>
 						Our last fundraiser to raise awareness on substance use, and
 						fundraiser for land.
 					</p>
-					<a href="/" className="btn btn-lg btn-dark">
-						Become a Funder
+					<a href="/projects" className="btn btn-lg btn-dark">
+						View more here
 					</a>
 				</Carousel.Caption>
 			</Carousel.Item>
@@ -34,13 +32,12 @@ export const PicCarousel = () => {
 				/>
 
 				<Carousel.Caption>
-					<Heading1>
-						<h3>Book A Screening</h3>
-					</Heading1>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+					<h3>Book A Screening</h3>
+
+					<p>Find out how admission works and book a screening.</p>
 					<a href="/booking" className="btn btn-lg btn-dark">
 						{" "}
-						Book here
+						View more here
 					</a>
 				</Carousel.Caption>
 			</Carousel.Item>
@@ -53,14 +50,14 @@ export const PicCarousel = () => {
 				/>
 
 				<Carousel.Caption>
-					<Heading1>
-						<h3>Land Project</h3>
-					</Heading1>
+					<h3>Land Project</h3>
+
 					<p>
-						Praesent commodo cursus magna, vel scelerisque nisl consectetur.
+						Mount Hope plans to erect a Leadership Centre for Skills Development
+						and Recovery for Men and Women.
 					</p>
 					<a href="/" className="btn btn-lg btn-dark">
-						Our Land Project
+						View more here
 					</a>
 				</Carousel.Caption>
 			</Carousel.Item>
