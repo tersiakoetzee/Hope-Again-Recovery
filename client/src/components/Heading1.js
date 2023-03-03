@@ -4,6 +4,7 @@ export const Heading1 = (props) => (
 		<div
 			style={{
 				fontFamily: "Roboto Flex",
+				// fontSize: "48px",
 			}}
 		>
 			{props.children}
