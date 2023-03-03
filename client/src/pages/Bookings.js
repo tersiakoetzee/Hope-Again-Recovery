@@ -31,24 +31,25 @@ export const Bookings = () => {
 		if (form.checkValidity() === false) {
 			event.preventDefault();
 			event.stopPropagation();
+		} else {
+			setValidated(true);
+			axios.post("/api/booking", {
+				name,
+				surname,
+				age,
+				phoneNumber,
+				addressLine1,
+				addressLine2,
+				city,
+				country,
+				dateTime,
+				answer1,
+				answer2,
+				email,
+				postCode,
+				whichOne,
+			});
 		}
-		setValidated(true);
-		axios.post("/api/booking", {
-			name,
-			surname,
-			age,
-			phoneNumber,
-			addressLine1,
-			addressLine2,
-			city,
-			country,
-			dateTime,
-			answer1,
-			answer2,
-			email,
-			postCode,
-			whichOne,
-		});
 	};
 
 	const isWeekday = (date) => {

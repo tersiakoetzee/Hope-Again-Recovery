@@ -11,7 +11,7 @@ export const Footer = () => {
 					<Col className="icon ">
 						<img
 							className="text-center py-3"
-							src="google.com"
+							src="https://scontent-cpt1-1.xx.fbcdn.net/v/t39.30808-6/328616358_556590029746692_1897079217511533681_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=174925&_nc_ohc=W5TFkG91gMMAX-YUo9v&_nc_ht=scontent-cpt1-1.xx&oh=00_AfCk3QeJAeZ9IU3FnOXnJ8MehG4Aj10GL6qtJrATFF6ptQ&oe=640714B3"
 							alt="First slide"
 							height="150"
 						/>
