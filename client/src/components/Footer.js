@@ -8,25 +8,34 @@ export const Footer = () => {
 		<div className="main-footer">
 			<Container ClassName="text-center py-1">
 				<Row>
-					<Col className="icon ">
+					<Col className="icon " sm={12} md={3}>
 						<img
-							className="text-center py-3"
-							src="https://scontent-cpt1-1.xx.fbcdn.net/v/t39.30808-6/328578860_1623777118136682_3792465063130725698_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=ro__ikRWxD0AX-5VndF&_nc_ht=scontent-cpt1-1.xx&oh=00_AfBcPuLjgtSb8d782M4zN3x_M-ksTlfZf0ZiCe_aW1JTHg&oe=63F858B2"
+							className=" icon rounded-circle text-center py-2"
+							src="https://scontent-cpt1-1.xx.fbcdn.net/v/t39.30808-6/328616358_556590029746692_1897079217511533681_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=174925&_nc_ohc=W5TFkG91gMMAX-YUo9v&_nc_ht=scontent-cpt1-1.xx&oh=00_AfCk3QeJAeZ9IU3FnOXnJ8MehG4Aj10GL6qtJrATFF6ptQ&oe=640714B3"
 							alt="First slide"
-							height="150"
+							height="100"
 						/>
+						<p>
+							Hope Again <br></br>Recovery Home<br></br>
+							est. 2007
+						</p>
 					</Col>
-					<Col className="col-md-3 col-sm-4">
+					<Col sm={12} md={3}>
 						<h4>More Projects</h4>
-						<a href="/projects">New Building</a>
+						<a style={{ color: "white" }} href="/projects">
+							New Building
+						</a>
 					</Col>
-					<Col className="col-md-3 col-sm-6">
+					<Col sm={12} md={3}>
 						<h4>Socials</h4>
-						<a href="https://www.facebook.com/HOPEAGAINRECOVERYHOME/">
+						<a
+							style={{ color: "white" }}
+							href="https://www.facebook.com/HOPEAGAINRECOVERYHOME/"
+						>
 							Visit FaceBook
 						</a>
 					</Col>
-					<Col className="col-md-3 col-sm-6">
+					<Col sm={12} md={3}>
 						<h4>Contact Us</h4>
 						<p>
 							021 371 7323 57 Artemis Road, Woodlands, Mitchells Plain
@@ -34,11 +43,15 @@ export const Footer = () => {
 						</p>
 					</Col>
 				</Row>
-				<Row>
-					<Col className="footer-bottom">
-						<p className="text-center">
-							Copyright &copy;{new Date().getFullYear()} H-A-R-H
-						</p>
+				<Row className="footer-bottom">
+					<Col>
+						<p>Copyright &copy; {new Date().getFullYear()} H-A-R-H</p>
+					</Col>
+					<Col>
+						<p className=" text-center">Privacy Policy</p>
+					</Col>
+					<Col>
+						<p className=" text-center">Terms & Conditions</p>
 					</Col>
 				</Row>
 			</Container>
