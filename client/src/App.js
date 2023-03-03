@@ -7,7 +7,6 @@ import { Projects } from "./pages/Projects";
 import "bootstrap/dist/css/bootstrap.min.css";
 import ThemeProvider from "react-bootstrap/ThemeProvider";
 
-import { Bookings } from "./pages/Bookings";
 const App = () => (
 	<ThemeProvider
 		breakpoints={["xxxl", "xxl", "xl", "lg", "md", "sm", "xs", "xxs"]}
