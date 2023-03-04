@@ -28,11 +28,11 @@ export const Bookings = () => {
 
 	const handleSubmit = (event) => {
 		const form = event.currentTarget;
+		setValidated(true);
 		if (form.checkValidity() === false) {
 			event.preventDefault();
 			event.stopPropagation();
 		} else {
-			setValidated(true);
 			axios.post("/api/booking", {
 				name,
 				surname,
@@ -59,21 +59,20 @@ export const Bookings = () => {
 
 	return (
 		<Template>
-			<h1 style={{ textAlign: "center" }}> Book a Screening</h1>
+			<h1 style={{ textAlign: "center" }}>Book a Screening</h1>
 			<Form
-				className="row g-3 needs-validation"
+				className="row g-3 needs-validation mx-5 my-5"
 				noValidate
 				validated={validated}
 				onSubmit={handleSubmit}
 				style={{
-					margin: "100px",
 					border: " 1px solid",
 					padding: "20px",
 					borderRadius: "25px",
 				}}
 			>
 				<Row className="mb-3">
-					<Form.Group as={Col} controlId="formGridName">
+					<Form.Group as={Col} sm={12} md={6} controlId="formGridName">
 						<Form.Label>Name</Form.Label>
 						<Form.Control
 							type="name"
@@ -82,7 +81,7 @@ export const Bookings = () => {
 							required
 						/>
 					</Form.Group>
-					<Form.Group as={Col} controlId="formGridSurname">
+					<Form.Group as={Col} sm={12} md={6} controlId="formGridSurname">
 						<Form.Label>Surname</Form.Label>
 						<Form.Control
 							type="surname"
@@ -93,7 +92,7 @@ export const Bookings = () => {
 					</Form.Group>
 				</Row>
 				<Row className="mb-3">
-					<Form.Group as={Col} controlId="formGridAge">
+					<Form.Group sm={12} as={Col} controlId="formGridAge">
 						<Form.Label>Age</Form.Label>
 						<Form.Control
 							type="number"
@@ -102,7 +101,7 @@ export const Bookings = () => {
 							required
 						/>
 					</Form.Group>
-					<Form.Group as={Col} controlId="formGridEmail">
+					<Form.Group as={Col} sm={12} md={6} controlId="formGridEmail">
 						<Form.Label>Email</Form.Label>
 						<Form.Control
 							type="email"
@@ -110,7 +109,7 @@ export const Bookings = () => {
 							onChange={(e) => setEmail(e.target.value)}
 						/>
 					</Form.Group>
-					<Form.Group as={Col} controlId="formGridPhoneNumber">
+					<Form.Group as={Col} sm={12} md={6} controlId="formGridPhoneNumber">
 						<Form.Label>Phone Number</Form.Label>
 						<Form.Control
 							type="number"
@@ -122,7 +121,7 @@ export const Bookings = () => {
 				</Row>
 
 				<Row className="mb-3">
-					<Form.Group as={Col} controlId="formGridAddress1">
+					<Form.Group as={Col} sm={12} md={6} controlId="formGridAddress1">
 						<Form.Label>Street Address</Form.Label>
 						<Form.Control
 							placeholder="123 Main Street"
@@ -130,7 +129,7 @@ export const Bookings = () => {
 							required
 						/>
 					</Form.Group>
-					<Form.Group as={Col} controlId="formGridAddress2">
+					<Form.Group as={Col} sm={12} md={6} controlId="formGridAddress2">
 						<Form.Label>Suburb</Form.Label>
 						<Form.Control
 							placeholder="Moghul Park"
@@ -141,12 +140,12 @@ export const Bookings = () => {
 				</Row>
 
 				<Row className="mb-3">
-					<Form.Group as={Col} controlId="formGridCity">
+					<Form.Group as={Col} sm={12} md={4} controlId="formGridCity">
 						<Form.Label>City</Form.Label>
 						<Form.Control onChange={(e) => setCity(e.target.value)} required />
 					</Form.Group>
 
-					<Form.Group as={Col} controlId="formGridCountry">
+					<Form.Group as={Col} sm={12} md={4} controlId="formGridCountry">
 						<Form.Label>Country</Form.Label>
 						<Form.Control
 							onChange={(e) => setCountry(e.target.value)}
@@ -154,7 +153,7 @@ export const Bookings = () => {
 						/>
 					</Form.Group>
 
-					<Form.Group as={Col} controlId="formGridPostalCode">
+					<Form.Group as={Col} sm={12} md={4} controlId="formGridPostalCode">
 						<Form.Label>Postal Code</Form.Label>
 						<Form.Control onChange={(e) => setPostCode(e.target.value)} />
 					</Form.Group>
