@@ -1,13 +1,16 @@
 import Carousel from "react-bootstrap/Carousel";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./PicCarousel.css";
+import Image1 from "../assets/img1.jpeg";
+import Image2 from "../assets/img2.jpeg";
+import Image3 from "../assets/img3.jpeg";
 export const PicCarousel = () => {
 	return (
 		<Carousel>
 			<Carousel.Item>
 				<img
 					className="d-block w-100"
-					src="https://user-images.githubusercontent.com/125136484/222224717-4856a8d7-eb25-462f-892e-c18ed3b68188.JPG"
+					src={Image1}
 					alt="First slide"
 					height="550"
 				/>
@@ -26,7 +29,7 @@ export const PicCarousel = () => {
 			<Carousel.Item>
 				<img
 					className="d-block w-100"
-					src="https://user-images.githubusercontent.com/125136484/222224718-c24bfea5-d7ae-46ed-a397-d6aa134f513a.JPG"
+					src={Image2}
 					alt="Second slide"
 					height="550"
 				/>
@@ -44,7 +47,7 @@ export const PicCarousel = () => {
 			<Carousel.Item>
 				<img
 					className="d-block w-100"
-					src="https://user-images.githubusercontent.com/125136484/222224716-9740ed88-accf-4066-8283-b2066d8eb8a5.JPG"
+					src={Image3}
 					alt="Third slide"
 					height="550"
 				/>
