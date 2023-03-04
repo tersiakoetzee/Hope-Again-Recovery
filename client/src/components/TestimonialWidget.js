@@ -18,10 +18,7 @@ export const TestimonialWidget = () => {
 				<Card.Title className="card-title" id="testimonial-title">
 					Testimonials
 				</Card.Title>
-				<Card.Text
-					className="card-para"
-					id="testimonial-para"
-				>
+				<Card.Text className="card-para" id="testimonial-para">
 					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
 					varius enim in eros elementum tristique. Duis cursus, mi quis viverra
 					ornare, eros dolor interdum nulla, ut .

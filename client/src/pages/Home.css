@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans&family=Poppins:wght@500;600;700;800;900&family=Roboto:wght@500;700&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans&family=Poppins:wght@500;600;700;800;900&family=Roboto:wght@500;700&display=swap");
 
 .logo {
 	width: 100px;
@@ -34,7 +33,7 @@ font-family: 'Roboto', sans-serif;
 	background-color: rgb(159, 221, 14);
 	border-radius: 0;
 	border: none;
-} */ 
+} */
 
 #testimonial-container {
 	color: red;
@@ -43,16 +42,14 @@ font-family: 'Roboto', sans-serif;
 	top: 130%;
 }
 
-
 #testimonial-title {
-	font-family: 'Roboto', sans-serif;
+	font-family: "Roboto", sans-serif;
 	font-size: 80px;
 	font-weight: 700;
-
 }
 
 #testimonial-para {
-	font-family: 'Plus Jakarta Sans', sans-serif;
+	font-family: "Plus Jakarta Sans", sans-serif;
 	text-align: center;
 	left: 20px;
 }
