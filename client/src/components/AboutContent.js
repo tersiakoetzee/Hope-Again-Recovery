@@ -63,12 +63,7 @@ export const AboutContent = () => {
 				<Col lg={8}>
 					<h1 className="">Our Values |</h1>
 					<p>
-						For many years, Mount Hope Church hosted Recovery Circles and
-						support groups for men as a response to the ongoing drug misuse and
-						abuse plaguing Mitchell’s Plain and its surrounding communities.
-						They quickly realised that something more needed to be done, and
-						through a series of miraculous events Hope Again recovery Home was
-						established.
+						The programme’s ultimate goal is healing of the body, soul and spirit of the individual, as this is a prerequisite for a full, constructive life with the right tools to make healthy life choices.
 					</p>
 				</Col>
 			</Row>
