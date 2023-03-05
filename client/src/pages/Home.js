@@ -5,6 +5,9 @@ import { TestimonialWidget } from "../components/TestimonialWidget";
 import { VideoWidget } from "../components/VideoWidget";
 import { Footer } from "../components/Footer";
 import { Header } from "../components/Header";
+import Container from "react-bootstrap/Container";
+import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
 
 export function Home() {
 	return (
@@ -17,9 +20,18 @@ export function Home() {
 				<div>
 					<PicCarousel />
 					<section className="video-testimonial">
-						<TestimonialWidget className="vid-test-component testimonial-widget" />
+						<Container>
+							<Row>
+								<Col className=".me-1">
+									<VideoWidget />
+								</Col>
+								<Col className=".ms-1">
+									<TestimonialWidget />
+								</Col>
+							</Row>
+						</Container>
 					</section>
-					<VideoWidget />
+
 					<Footer />
 				</div>
 			</main>

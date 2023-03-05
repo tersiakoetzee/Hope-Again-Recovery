@@ -11,45 +11,10 @@
 }
 
 .video-testimonial {
-	display: flex;
-	height: 300px;
+	height: 500px;
+	margin: 50px auto;
 }
 
-.vid-test-component {
-	width: 50%;
-	height: 818px;
-}
-
-#testimonial-widget {
-	padding: 0px;
-	background-color: rgb(159, 221, 14);
-	border-radius: 0;
-	border: none;
-}
-/* #testimonial-widget img{
-	font-family: 'Poppins', sans-serif;
-font-family: 'Roboto', sans-serif;
-	padding: 0px;
-	background-color: rgb(159, 221, 14);
-	border-radius: 0;
-	border: none;
-} */
-
-#testimonial-container {
-	color: red;
-	width: 80%;
-	margin: 0 auto;
-	top: 130%;
-}
-
-#testimonial-title {
-	font-family: "Roboto", sans-serif;
-	font-size: 80px;
-	font-weight: 700;
-}
-
-#testimonial-para {
-	font-family: "Plus Jakarta Sans", sans-serif;
-	text-align: center;
-	left: 20px;
+#video-widget-card {
+	height: 466.688px;
 }

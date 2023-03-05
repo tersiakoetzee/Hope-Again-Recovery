@@ -1,27 +1,21 @@
 import Card from "react-bootstrap/Card";
-import "./../pages/Home.css";
+import "./TestimonialWidget.css";
 
 export const TestimonialWidget = () => {
 	return (
-		<Card
-			className="bg-dark text-white vid-test-component"
-			id="testimonial-widget"
-		>
+		<Card className="text-white" id="testimonial-widget">
 			<Card.Img
 				src="/testimonial-widget/testimonial-widget.jpg"
 				alt="Card image"
 			/>
-			<Card.ImgOverlay
-				id="testimonial-container"
-				className="d-flex flex-column align-items-end justify-content-center"
-			>
-				<Card.Title className="card-title" id="testimonial-title">
+			<Card.ImgOverlay className="d-flex flex-column align-items-end justify-content-end">
+				<Card.Title className="card-title mx-auto" id="testimonial-title">
 					Testimonials
 				</Card.Title>
 				<Card.Text className="card-para" id="testimonial-para">
 					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
 					varius enim in eros elementum tristique. Duis cursus, mi quis viverra
-					ornare, eros dolor interdum nulla, ut .
+					ornare, eros dolor interdum nulla, ut. Read more <a href="/about"> here.</a>
 				</Card.Text>
 			</Card.ImgOverlay>
 		</Card>
