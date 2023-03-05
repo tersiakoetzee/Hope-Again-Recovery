@@ -63,7 +63,9 @@ export const AboutContent = () => {
 				<Col lg={8}>
 					<h1 className="">Our Values |</h1>
 					<p>
-						The programme’s ultimate goal is healing of the body, soul and spirit of the individual, as this is a prerequisite for a full, constructive life with the right tools to make healthy life choices.
+						The programme’s ultimate goal is healing of the body, soul and
+						spirit of the individual, as this is a prerequisite for a full,
+						constructive life with the right tools to make healthy life choices.
 					</p>
 				</Col>
 			</Row>
