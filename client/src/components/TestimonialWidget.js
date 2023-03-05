@@ -15,7 +15,8 @@ export const TestimonialWidget = () => {
 				<Card.Text className="card-para" id="testimonial-para">
 					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
 					varius enim in eros elementum tristique. Duis cursus, mi quis viverra
-					ornare, eros dolor interdum nulla, ut. Read more <a href="/about"> here.</a>
+					ornare, eros dolor interdum nulla, ut. Read more{" "}
+					<a href="/about"> here.</a>
 				</Card.Text>
 			</Card.ImgOverlay>
 		</Card>
