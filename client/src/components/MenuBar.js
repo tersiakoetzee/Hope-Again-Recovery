@@ -31,7 +31,7 @@ export const MenuBar = () => {
 						</NavDropdown>
 						{/* Screening dropdown */}
 						<NavDropdown title="Screening" id="basic-nav-dropdown">
-							<NavDropdown.Item href="#action/3.1">
+							<NavDropdown.Item href="/admission">
 								How Admission Works
 							</NavDropdown.Item>
 							<NavDropdown.Item href="/booking">
