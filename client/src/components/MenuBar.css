@@ -1,0 +1,26 @@
+.dropdown-menu {
+	border-radius: 0 !important;
+}
+
+.dropdown-item {
+	text-align: center !important;
+}
+
+/* On larger screen */
+@media screen and (min-width: 992px) {
+	.b-start {
+		border-left: 3px solid #564e4e;
+	}
+
+	.b-left {
+		border-left: 1px solid #564e4e;
+	}
+
+	.b-right {
+		border-right: 1px solid #564e4e;
+	}
+
+	.b-end {
+		border-right: 3px solid #564e4e;
+	}
+}
