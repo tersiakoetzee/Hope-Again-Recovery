@@ -67,7 +67,6 @@ export const MenuBar = () => {
 							id="basic-nav-dropdown"
 						>
 							<NavDropdown.Item href="/fundingpartners">
-
 								Funding Partners
 							</NavDropdown.Item>
 							<NavDropdown.Item href="/becomeafunder">
