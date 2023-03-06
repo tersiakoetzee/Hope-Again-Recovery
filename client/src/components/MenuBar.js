@@ -51,7 +51,7 @@ export const MenuBar = () => {
 							<NavDropdown.Item href="#action/3.1">
 								How Admission Works
 							</NavDropdown.Item>
-							<NavDropdown.Item href="#action/3.3">
+							<NavDropdown.Item href="/booking">
 								Book a Screening
 							</NavDropdown.Item>
 						</NavDropdown>
