@@ -18,7 +18,7 @@ const calendar = google.calendar({
 	auth: process.env.AUTH_KEY,
 });
 
-router.get("/", async (req, res) => {
+router.post("/", async (req, res) => {
 	logger.debug("Book a screening");
 
 	// Required

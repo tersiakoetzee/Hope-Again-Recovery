@@ -1,4 +1,12 @@
 .main-footer {
-	background-color: dimgray;
+	background-color: #1d2130;
+	color: aliceblue;
+	padding: 20px;
+}
+.footer-bottom {
+	border-top: 1px solid aliceblue;
+	padding: 4px;
+}
+a:href {
 	color: aliceblue;
 }
