@@ -24,11 +24,11 @@ export const AdmissionInfo = () => {
 					<ListGroup.Item>
 						The screening must be attended along with an assigned
 						care-giver—this is the care-giver willing to take responsibility
-						along with the client, for their recovery journey
+						along with the client, for their recovery journey.
 					</ListGroup.Item>
 					<ListGroup.Item>
 						During a screening, the program will be explained and an acceptance
-						agreement is shared both verbally and on paper
+						agreement is shared both verbally and on paper.
 					</ListGroup.Item>
 					<ListGroup.Item>
 						Once there is a mutual acceptance of the T’s & C’s of the program,
