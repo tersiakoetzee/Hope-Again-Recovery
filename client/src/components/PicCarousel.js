@@ -1,49 +1,67 @@
 import Carousel from "react-bootstrap/Carousel";
 import "bootstrap/dist/css/bootstrap.min.css";
+import "./PicCarousel.css";
+import Image1 from "../assets/img1.jpeg";
+import Image2 from "../assets/img2.jpeg";
+import Image3 from "../assets/img3.jpeg";
 export const PicCarousel = () => {
 	return (
 		<Carousel>
 			<Carousel.Item>
 				<img
 					className="d-block w-100"
-					src="https://wallpaperaccess.com/full/2560738.jpg"
+					src={Image1}
 					alt="First slide"
 					height="550"
-				/>
+				/>{" "}
 				<Carousel.Caption>
 					<h3>Celebrate Sobriety</h3>
+
 					<p>
 						Our last fundraiser to raise awareness on substance use, and
 						fundraiser for land.
 					</p>
+					<a href="/projects" className="btn btn-lg btn-dark">
+						View more here
+					</a>
 				</Carousel.Caption>
 			</Carousel.Item>
 			<Carousel.Item>
 				<img
 					className="d-block w-100"
-					src="https://img.wallpapersafari.com/desktop/1280/1024/94/65/m9lET8.jpg"
+					src={Image2}
 					alt="Second slide"
 					height="550"
 				/>
 
 				<Carousel.Caption>
 					<h3>Book A Screening</h3>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+
+					<p>Find out how admission works and book a screening.</p>
+					<a href="/booking" className="btn btn-lg btn-dark">
+						{" "}
+						View more here
+					</a>
 				</Carousel.Caption>
 			</Carousel.Item>
 			<Carousel.Item>
 				<img
 					className="d-block w-100"
-					src="https://images.unsplash.com/photo-1505761671935-60b3a7427bad?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80"
+					src={Image3}
 					alt="Third slide"
 					height="550"
 				/>
 
 				<Carousel.Caption>
 					<h3>Land Project</h3>
+
 					<p>
-						Praesent commodo cursus magna, vel scelerisque nisl consectetur.
+						Mount Hope plans to erect a Leadership Centre for Skills Development
+						and Recovery for Men and Women.
 					</p>
+					<a href="/" className="btn btn-lg btn-dark">
+						View more here
+					</a>
 				</Carousel.Caption>
 			</Carousel.Item>
 		</Carousel>
