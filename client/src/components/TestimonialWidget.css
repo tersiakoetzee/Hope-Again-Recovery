@@ -1,0 +1,17 @@
+#testimonial-widget {
+	padding: 0px;
+	border-radius: 0;
+	border: none;
+}
+
+#testimonial-title {
+	font-family: "Roboto", sans-serif;
+	font-size: 80px;
+	font-weight: 700;
+}
+
+#testimonial-para {
+	font-family: "Plus Jakarta Sans", sans-serif;
+	text-align: center;
+	left: 20px;
+}
