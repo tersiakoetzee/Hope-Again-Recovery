@@ -43,12 +43,13 @@ export const MenuBar = () => {
 							</NavDropdown.Item>
 						</NavDropdown>
 						{/* Screening dropdown */}
+
 						<NavDropdown
 							className="b-right b-left px-4"
 							title="Screening"
 							id="basic-nav-dropdown"
 						>
-							<NavDropdown.Item href="#action/3.1">
+							<NavDropdown.Item href="/admission">
 								How Admission Works
 							</NavDropdown.Item>
 							<NavDropdown.Item href="/booking">

@@ -6,6 +6,7 @@ import { FamilyDays } from "./pages/FamilyDays";
 import { Projects } from "./pages/Projects";
 import "bootstrap/dist/css/bootstrap.min.css";
 import ThemeProvider from "react-bootstrap/ThemeProvider";
+import { AdmissionInfo } from "./components/AdmissionInfo";
 
 import { Bookings } from "./pages/Bookings";
 const App = () => (
@@ -20,6 +21,7 @@ const App = () => (
 			<Route path="/booking" element={<Bookings />} />
 			<Route path="/program" element={<Program />} />
 			<Route path="/familydays" element={<FamilyDays />} />
+			<Route path="/admission" element={<AdmissionInfo />} />
 		</Routes>
 	</ThemeProvider>
 );
