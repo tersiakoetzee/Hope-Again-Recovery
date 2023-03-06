@@ -13,7 +13,7 @@ export const PicCarousel = () => {
 					src={Image1}
 					alt="First slide"
 					height="550"
-				/>
+				/>{" "}
 				<Carousel.Caption>
 					<h3>Celebrate Sobriety</h3>
 
