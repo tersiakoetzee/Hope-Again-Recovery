@@ -4,6 +4,8 @@ import Home from "./pages/Home";
 import { Program } from "./pages/Program";
 import { FamilyDays } from "./pages/FamilyDays";
 import { Projects } from "./pages/Projects";
+import { FundingPartners } from "./pages/FundingPartners";
+import { BecomeAFunder } from "./pages/BecomeAFunder";
 import "bootstrap/dist/css/bootstrap.min.css";
 import ThemeProvider from "react-bootstrap/ThemeProvider";
 import { AdmissionInfo } from "./components/AdmissionInfo";
@@ -18,6 +20,8 @@ const App = () => (
 			<Route path="/" element={<Home />} />
 			<Route path="/about" element={<About />} />
 			<Route path="/projects" element={<Projects />} />
+			<Route path="/fundingpartners" element={<FundingPartners />} />
+			<Route path="/becomeafunder" element={<BecomeAFunder />} />
 			<Route path="/booking" element={<Bookings />} />
 			<Route path="/program" element={<Program />} />
 			<Route path="/familydays" element={<FamilyDays />} />

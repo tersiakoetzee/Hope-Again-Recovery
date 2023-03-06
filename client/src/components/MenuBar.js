@@ -67,10 +67,10 @@ export const MenuBar = () => {
 							title="Funding"
 							id="basic-nav-dropdown"
 						>
-							<NavDropdown.Item href="#action/3.1">
+							<NavDropdown.Item href="/fundingpartners">
 								Funding Partners
 							</NavDropdown.Item>
-							<NavDropdown.Item href="#action/3.3">
+							<NavDropdown.Item href="/becomeafunder">
 								Become a Funder
 							</NavDropdown.Item>
 						</NavDropdown>
