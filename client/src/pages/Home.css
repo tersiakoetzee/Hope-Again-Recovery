@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans&family=Poppins:wght@500;600;700;800;900&family=Roboto:wght@500;700&display=swap");
+
 .logo {
 	width: 100px;
 }
@@ -6,4 +8,13 @@
 }
 .message:hover {
 	background-color: yellow;
+}
+
+.video-testimonial {
+	height: 500px;
+	margin: 50px auto;
+}
+
+#video-widget-card {
+	height: 466.688px;
 }
