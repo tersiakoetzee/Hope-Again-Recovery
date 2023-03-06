@@ -6,7 +6,7 @@ import "./Footer.css";
 export const Footer = () => {
 	return (
 		<div className="main-footer">
-			<Container ClassName="text-center py-1">
+			<Container className="text-center py-1">
 				<Row>
 					<Col className="icon " sm={12} md={3}>
 						<img

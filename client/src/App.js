@@ -7,6 +7,7 @@ import { Projects } from "./pages/Projects";
 import "bootstrap/dist/css/bootstrap.min.css";
 import ThemeProvider from "react-bootstrap/ThemeProvider";
 
+import { Bookings } from "./pages/Bookings";
 const App = () => (
 	<ThemeProvider
 		breakpoints={["xxxl", "xxl", "xl", "lg", "md", "sm", "xs", "xxs"]}
@@ -16,6 +17,7 @@ const App = () => (
 			<Route path="/" element={<Home />} />
 			<Route path="/about" element={<About />} />
 			<Route path="/projects" element={<Projects />} />
+			<Route path="/booking" element={<Bookings />} />
 			<Route path="/program" element={<Program />} />
 			<Route path="/familydays" element={<FamilyDays />} />
 		</Routes>
