@@ -1,6 +1,10 @@
 import Card from "react-bootstrap/Card";
 import ListGroup from "react-bootstrap/ListGroup";
 export const AdmissionInfo = () => {
+	const scroll = "book";
+	const handleClick = () => {
+		document.getElementById(scroll).scrollIntoView({ behaviour: "smooth" });
+	};
 	return (
 		<Card className="bg-light card border-light mt-5 mx-5 px-5 py-5">
 			<Card.Title className="text-center">How Admission Works</Card.Title>
@@ -13,7 +17,7 @@ export const AdmissionInfo = () => {
 				<ListGroup variant="flush">
 					<ListGroup.Item className="text-center">
 						Contact us to book your screening (See{" "}
-						<Card.Link class="link-dark" href="/booking">
+						<Card.Link class="link-dark" onClick={handleClick}>
 							Book a Screening
 						</Card.Link>
 						)

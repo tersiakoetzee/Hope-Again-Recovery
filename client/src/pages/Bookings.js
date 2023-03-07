@@ -8,6 +8,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import axios from "axios";
 import React, { useState } from "react";
 import { Template } from "../components/Template";
+import { AdmissionInfo } from "../components/AdmissionInfo";
 
 export const Bookings = () => {
 	const [name, setName] = useState("");
@@ -20,10 +21,17 @@ export const Bookings = () => {
 	const [country, setCountry] = useState("");
 	const [answer1, setAnswer1] = useState("");
 	const [answer2, setAnswer2] = useState("");
+	const [careGiverName, setCareGiverName] = useState("");
+	const [careGiverNumber, setCareGiverNumber] = useState("");
 	const [email, setEmail] = useState("");
 	const [postCode, setPostCode] = useState("");
 	const [whichOne, setWhichOne] = useState("");
 	const [dateTime, setDateTime] = useState(null);
+	const [careGiverAddress1, setCareGiverAddress1] = useState("");
+	const [careGiverAddress2, setCareGiverAddress2] = useState("");
+	const [careGiverCity, setCareGiverCity] = useState("");
+	const [careGiverCountry, setCareGiverCountry] = useState("");
+	const [careGiverPostCode, setCareGiverPostCode] = useState("");
 	const [validated, setValidated] = useState(false);
 
 	const handleSubmit = (event) => {
@@ -45,9 +53,16 @@ export const Bookings = () => {
 				dateTime,
 				answer1,
 				answer2,
+				careGiverName,
+				careGiverNumber,
 				email,
 				postCode,
 				whichOne,
+				careGiverAddress1,
+				careGiverAddress2,
+				careGiverCity,
+				careGiverCountry,
+				careGiverPostCode,
 			});
 		}
 	};
@@ -59,9 +74,12 @@ export const Bookings = () => {
 
 	return (
 		<Template>
-			<h1 style={{ textAlign: "center" }}>Book a Screening</h1>
+			<AdmissionInfo />
+			<h1 id="book" className="text-center my-5">
+				Book a Screening
+			</h1>
 			<Form
-				className="row g-3 needs-validation mx-5 my-5"
+				className="row g-3 needs-validation col-md-8 offset-md-2 mb-5"
 				noValidate
 				validated={validated}
 				onSubmit={handleSubmit}
@@ -71,9 +89,11 @@ export const Bookings = () => {
 					borderRadius: "25px",
 				}}
 			>
+				<h2 className="text-center mt-3">Personal Information</h2>
+				<p style={{ color: "grey" }}>*Required fields</p>
 				<Row className="mb-3">
 					<Form.Group as={Col} sm={12} md={6} controlId="formGridName">
-						<Form.Label>Name</Form.Label>
+						<Form.Label>Name*</Form.Label>
 						<Form.Control
 							type="name"
 							placeholder="Enter name"
@@ -82,7 +102,7 @@ export const Bookings = () => {
 						/>
 					</Form.Group>
 					<Form.Group as={Col} sm={12} md={6} controlId="formGridSurname">
-						<Form.Label>Surname</Form.Label>
+						<Form.Label>Surname*</Form.Label>
 						<Form.Control
 							type="surname"
 							placeholder="Enter surname"
@@ -93,7 +113,7 @@ export const Bookings = () => {
 				</Row>
 				<Row className="mb-3">
 					<Form.Group sm={12} as={Col} controlId="formGridAge">
-						<Form.Label>Age</Form.Label>
+						<Form.Label>Age*</Form.Label>
 						<Form.Control
 							type="number"
 							placeholder="Enter age"
@@ -110,7 +130,7 @@ export const Bookings = () => {
 						/>
 					</Form.Group>
 					<Form.Group as={Col} sm={12} md={6} controlId="formGridPhoneNumber">
-						<Form.Label>Phone Number</Form.Label>
+						<Form.Label>Phone Number*</Form.Label>
 						<Form.Control
 							type="number"
 							placeholder="Enter phone number"
@@ -122,7 +142,7 @@ export const Bookings = () => {
 
 				<Row className="mb-3">
 					<Form.Group as={Col} sm={12} md={6} controlId="formGridAddress1">
-						<Form.Label>Street Address</Form.Label>
+						<Form.Label>Street Address*</Form.Label>
 						<Form.Control
 							placeholder="123 Main Street"
 							onChange={(e) => setAddressLine1(e.target.value)}
@@ -130,7 +150,7 @@ export const Bookings = () => {
 						/>
 					</Form.Group>
 					<Form.Group as={Col} sm={12} md={6} controlId="formGridAddress2">
-						<Form.Label>Suburb</Form.Label>
+						<Form.Label>Suburb*</Form.Label>
 						<Form.Control
 							placeholder="Moghul Park"
 							onChange={(e) => setAddressLine2(e.target.value)}
@@ -141,12 +161,12 @@ export const Bookings = () => {
 
 				<Row className="mb-3">
 					<Form.Group as={Col} sm={12} md={4} controlId="formGridCity">
-						<Form.Label>City</Form.Label>
+						<Form.Label>City*</Form.Label>
 						<Form.Control onChange={(e) => setCity(e.target.value)} required />
 					</Form.Group>
 
 					<Form.Group as={Col} sm={12} md={4} controlId="formGridCountry">
-						<Form.Label>Country</Form.Label>
+						<Form.Label>Country*</Form.Label>
 						<Form.Control
 							onChange={(e) => setCountry(e.target.value)}
 							required
@@ -159,7 +179,7 @@ export const Bookings = () => {
 					</Form.Group>
 				</Row>
 				<Form.Group controlId="dob">
-					<Form.Label>Select Date and Time for screening:</Form.Label>
+					<Form.Label>Select Date and Time for screening*</Form.Label>
 					<DatePicker
 						selected={dateTime}
 						onChange={(date) => setDateTime(date)}
@@ -174,7 +194,7 @@ export const Bookings = () => {
 
 				<Form.Label>
 					{" "}
-					Have you previously been to a treatment centre?
+					Have you previously been to a treatment centre?*
 				</Form.Label>
 				<Form.Select
 					aria-label="Default select example"
@@ -199,20 +219,80 @@ export const Bookings = () => {
 				<Form.Label>
 					{" "}
 					Do you acknowledge that Hope Again Recovery Home requires that you
-					have an assigned care-giver on your recovery journey?{" "}
+					have an assigned care-giver on your recovery journey?*{" "}
 				</Form.Label>
 				<Form.Select
 					aria-label="Default select example"
 					onChange={(e) => setAnswer2(e.target.value)}
 					required
 				>
-					<option>Open this select menu</option>
+					<option selected disabled>
+						Open this select menu
+					</option>
 					<option value="yes">Yes</option>
 					<option value="no">No</option>
 				</Form.Select>
+				<h2 className="text-center mt-5 mb-5">Care-Giver Information</h2>
+				<Row className="mb-3">
+					<Form.Group as={Col} sm={12} md={6} controlId="formGridCGName">
+						<Form.Label>Care-Giver Full Name:*</Form.Label>
+						<Form.Control
+							type="name"
+							placeholder="Enter Care-Giver full name"
+							onChange={(e) => setCareGiverName(e.target.value)}
+							required
+						/>
+					</Form.Group>
+					<Form.Group as={Col} sm={12} md={6} controlId="formGridCGNumber">
+						<Form.Label>Contact Number*</Form.Label>
+						<Form.Control
+							type="number"
+							placeholder="Enter Care-giver contact number"
+							onChange={(e) => setCareGiverNumber(e.target.value)}
+							required
+						/>
+					</Form.Group>
+				</Row>
+				<Row className="mb-3">
+					<Form.Group as={Col} sm={12} md={6} controlId="formGridCGAddress1">
+						<Form.Label>Street Address</Form.Label>
+						<Form.Control
+							placeholder="123 Main Street"
+							onChange={(e) => setCareGiverAddress1(e.target.value)}
+						/>
+					</Form.Group>
+					<Form.Group as={Col} sm={12} md={6} controlId="formGridCGAddress2">
+						<Form.Label>Suburb</Form.Label>
+						<Form.Control
+							placeholder="Moghul Park"
+							onChange={(e) => setCareGiverAddress2(e.target.value)}
+						/>
+					</Form.Group>
+				</Row>
+
+				<Row className="mb-3">
+					<Form.Group as={Col} sm={12} md={4} controlId="formGridCGCity">
+						<Form.Label>City</Form.Label>
+						<Form.Control onChange={(e) => setCareGiverCity(e.target.value)} />
+					</Form.Group>
+
+					<Form.Group as={Col} sm={12} md={4} controlId="formGridCGCountry">
+						<Form.Label>Country</Form.Label>
+						<Form.Control
+							onChange={(e) => setCareGiverCountry(e.target.value)}
+						/>
+					</Form.Group>
+
+					<Form.Group as={Col} sm={12} md={4} controlId="formGridCGPostalCode">
+						<Form.Label>Postal Code</Form.Label>
+						<Form.Control
+							onChange={(e) => setCareGiverPostCode(e.target.value)}
+						/>
+					</Form.Group>
+				</Row>
 				<Button
 					variant="primary"
-					className="btn btn-success text-light"
+					className="btn btn-success text-light mt-5 mb-3"
 					type="submit"
 				>
 					Submit
