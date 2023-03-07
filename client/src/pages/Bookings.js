@@ -226,7 +226,6 @@ export const Bookings = () => {
 					<option value="yes">Yes</option>
 					<option value="no">No</option>
 				</Form.Select>
-
 				<Button
 					variant="primary"
 					className="btn btn-success text-light"

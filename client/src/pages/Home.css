@@ -14,6 +14,15 @@
 	background-color: yellow;
 }
 
+.video-testimonial {
+	height: 500px;
+	margin: 50px auto;
+}
+
+#video-widget-card {
+	height: 466.688px;
+}
+
 /* Booking confirmation icons */
 .b-icon {
 	font-size: 80px;
