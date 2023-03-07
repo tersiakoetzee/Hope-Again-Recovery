@@ -1,3 +1,9 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap");
+
+* {
+	font-family: "Roboto", sans-serif !important;
+}
+
 .logo {
 	width: 100px;
 }
@@ -6,4 +12,9 @@
 }
 .message:hover {
 	background-color: yellow;
+}
+
+/* Booking confirmation icons */
+.b-icon {
+	font-size: 80px;
 }
