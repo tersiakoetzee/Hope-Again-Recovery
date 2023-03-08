@@ -1,11 +1,12 @@
 import Card from "react-bootstrap/Card";
 import "./TestimonialWidget.css";
+import Image1 from "../assets/testimonial-widget.jpg";
 
 export const TestimonialWidget = () => {
 	return (
 		<Card className="text-white" id="testimonial-widget">
 			<Card.Img
-				src="/testimonial-widget/testimonial-widget.jpg"
+				src={Image1}
 				alt="Card image"
 			/>
 			<Card.ImgOverlay className="d-flex flex-column align-items-end justify-content-end">
