@@ -23,8 +23,7 @@ const App = () => (
 			<Route path="/becomeafunder" element={<BecomeAFunder />} />
 			<Route path="/program" element={<Program />} />
 			<Route path="/familydays" element={<FamilyDays />} />
-			<Route path="/admission" element={<Bookings />} />
-			{/* <Route path="/booking" element={<Bookings />} /> */}
+			<Route path="/booking" element={<Bookings />} />
 		</Routes>
 	</ThemeProvider>
 );

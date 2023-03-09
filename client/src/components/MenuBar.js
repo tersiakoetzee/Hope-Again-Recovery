@@ -8,7 +8,6 @@ export const MenuBar = () => {
 	const handleClick = () => {
 		document.getElementById(scroll).scrollIntoView({ behaviour: "smooth" });
 	};
-
 	return (
 		<Navbar bg="dark" variant="dark" expand="lg">
 			<Container className="justify-content-center flex-grow-1">
@@ -53,7 +52,7 @@ export const MenuBar = () => {
 							title="Screening"
 							id="basic-nav-dropdown"
 						>
-							<NavDropdown.Item href="/admission">
+							<NavDropdown.Item href="/booking">
 								How Admission Works
 							</NavDropdown.Item>
 							<Nav.Link

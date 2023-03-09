@@ -95,31 +95,41 @@ export const Bookings = () => {
 					<Form.Group as={Col} sm={12} md={6} controlId="formGridName">
 						<Form.Label>Name*</Form.Label>
 						<Form.Control
-							type="name"
+							// type="name"
+							type="text"
+							pattern="[a-zA-Z]*"
 							placeholder="Enter name"
 							onChange={(e) => setName(e.target.value)}
 							required
 						/>
+						<div className="invalid-feedback">Please enter a valid name.</div>
 					</Form.Group>
 					<Form.Group as={Col} sm={12} md={6} controlId="formGridSurname">
 						<Form.Label>Surname*</Form.Label>
 						<Form.Control
-							type="surname"
+							type="text"
+							pattern="[a-zA-Z]*"
 							placeholder="Enter surname"
 							onChange={(e) => setSurname(e.target.value)}
 							required
 						/>
+						<div className="invalid-feedback">
+							Please enter a valid Surname.
+						</div>
 					</Form.Group>
 				</Row>
 				<Row className="mb-3">
 					<Form.Group sm={12} as={Col} controlId="formGridAge">
 						<Form.Label>Age*</Form.Label>
 						<Form.Control
-							type="number"
 							placeholder="Enter age"
+							type="text"
+							pattern="^[0-9]+$"
+							maxLength="2"
 							onChange={(e) => setAge(e.target.value)}
 							required
 						/>
+						<div className="invalid-feedback">Please enter a valid age.</div>
 					</Form.Group>
 					<Form.Group as={Col} sm={12} md={6} controlId="formGridEmail">
 						<Form.Label>Email</Form.Label>
@@ -128,15 +138,22 @@ export const Bookings = () => {
 							placeholder="Enter email"
 							onChange={(e) => setEmail(e.target.value)}
 						/>
+						<div className="invalid-feedback">Please enter a valid email.</div>
 					</Form.Group>
 					<Form.Group as={Col} sm={12} md={6} controlId="formGridPhoneNumber">
 						<Form.Label>Phone Number*</Form.Label>
 						<Form.Control
-							type="number"
 							placeholder="Enter phone number"
 							onChange={(e) => setPhoneNumber(e.target.value)}
+							minLength="10"
+							maxLength="10 "
+							type="text"
+							pattern="0[0-9]{9}"
 							required
 						/>
+						<div className="invalid-feedback">
+							Please enter a valid phone number.
+						</div>
 					</Form.Group>
 				</Row>
 
@@ -148,34 +165,58 @@ export const Bookings = () => {
 							onChange={(e) => setAddressLine1(e.target.value)}
 							required
 						/>
+						<div className="invalid-feedback">
+							Please enter a valid Address.
+						</div>
 					</Form.Group>
 					<Form.Group as={Col} sm={12} md={6} controlId="formGridAddress2">
 						<Form.Label>Suburb*</Form.Label>
 						<Form.Control
 							placeholder="Moghul Park"
+							type="text"
+							pattern="[a-zA-Z]*"
 							onChange={(e) => setAddressLine2(e.target.value)}
 							required
 						/>
+						<div className="invalid-feedback">Please enter a valid Suburb.</div>
 					</Form.Group>
 				</Row>
 
 				<Row className="mb-3">
 					<Form.Group as={Col} sm={12} md={4} controlId="formGridCity">
 						<Form.Label>City*</Form.Label>
-						<Form.Control onChange={(e) => setCity(e.target.value)} required />
+						<Form.Control
+							onChange={(e) => setCity(e.target.value)}
+							required
+							type="text"
+							pattern="[a-zA-Z]*"
+						/>
+						<div className="invalid-feedback">Please enter a valid city.</div>
 					</Form.Group>
 
 					<Form.Group as={Col} sm={12} md={4} controlId="formGridCountry">
 						<Form.Label>Country*</Form.Label>
 						<Form.Control
 							onChange={(e) => setCountry(e.target.value)}
+							type="text"
+							pattern="[a-zA-Z]*"
 							required
 						/>
+						<div className="invalid-feedback">
+							Please enter a valid Country.
+						</div>
 					</Form.Group>
 
 					<Form.Group as={Col} sm={12} md={4} controlId="formGridPostalCode">
 						<Form.Label>Postal Code</Form.Label>
-						<Form.Control onChange={(e) => setPostCode(e.target.value)} />
+						<Form.Control
+							onChange={(e) => setPostCode(e.target.value)}
+							type="text"
+							pattern="^[0-9]+$"
+						/>
+						<div className="invalid-feedback">
+							Please enter a valid Postal code.
+						</div>
 					</Form.Group>
 				</Row>
 				<Form.Group controlId="dob">
@@ -237,20 +278,26 @@ export const Bookings = () => {
 					<Form.Group as={Col} sm={12} md={6} controlId="formGridCGName">
 						<Form.Label>Care-Giver Full Name:*</Form.Label>
 						<Form.Control
-							type="name"
 							placeholder="Enter Care-Giver full name"
 							onChange={(e) => setCareGiverName(e.target.value)}
+							type="text"
+							pattern="[a-zA-Z]*"
 							required
 						/>
+						<div className="invalid-feedback">Please enter a valid name. </div>
 					</Form.Group>
 					<Form.Group as={Col} sm={12} md={6} controlId="formGridCGNumber">
 						<Form.Label>Contact Number*</Form.Label>
 						<Form.Control
-							type="number"
+							minLength="10"
+							maxLength="10 "
+							type="text"
+							pattern="0[0-9]{9}"
 							placeholder="Enter Care-giver contact number"
 							onChange={(e) => setCareGiverNumber(e.target.value)}
 							required
 						/>
+						<div className="invalid-feedback">Please enter a valid number.</div>
 					</Form.Group>
 				</Row>
 				<Row className="mb-3">
@@ -261,7 +308,14 @@ export const Bookings = () => {
 							onChange={(e) => setCareGiverAddress1(e.target.value)}
 						/>
 					</Form.Group>
-					<Form.Group as={Col} sm={12} md={6} controlId="formGridCGAddress2">
+					<Form.Group
+						as={Col}
+						sm={12}
+						md={6}
+						type="text"
+						pattern="[a-zA-Z]*"
+						controlId="formGridCGAddress2"
+					>
 						<Form.Label>Suburb</Form.Label>
 						<Form.Control
 							placeholder="Moghul Park"
@@ -271,19 +325,40 @@ export const Bookings = () => {
 				</Row>
 
 				<Row className="mb-3">
-					<Form.Group as={Col} sm={12} md={4} controlId="formGridCGCity">
+					<Form.Group
+						as={Col}
+						sm={12}
+						md={4}
+						type="text"
+						pattern="[a-zA-Z]*"
+						controlId="formGridCGCity"
+					>
 						<Form.Label>City</Form.Label>
 						<Form.Control onChange={(e) => setCareGiverCity(e.target.value)} />
 					</Form.Group>
 
-					<Form.Group as={Col} sm={12} md={4} controlId="formGridCGCountry">
+					<Form.Group
+						as={Col}
+						sm={12}
+						md={4}
+						type="text"
+						pattern="[a-zA-Z]*"
+						controlId="formGridCGCountry"
+					>
 						<Form.Label>Country</Form.Label>
 						<Form.Control
 							onChange={(e) => setCareGiverCountry(e.target.value)}
 						/>
 					</Form.Group>
 
-					<Form.Group as={Col} sm={12} md={4} controlId="formGridCGPostalCode">
+					<Form.Group
+						as={Col}
+						sm={12}
+						md={4}
+						type="text"
+						pattern="^[0-9]+$"
+						controlId="formGridCGPostalCode"
+					>
 						<Form.Label>Postal Code</Form.Label>
 						<Form.Control
 							onChange={(e) => setCareGiverPostCode(e.target.value)}
