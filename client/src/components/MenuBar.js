@@ -4,10 +4,6 @@ import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
 import "./MenuBar.css";
 export const MenuBar = () => {
-	const scroll = "book";
-	const handleClick = () => {
-		document.getElementById(scroll).scrollIntoView({ behaviour: "smooth" });
-	};
 	return (
 		<Navbar bg="dark" variant="dark" expand="lg">
 			<Container className="justify-content-center flex-grow-1">
@@ -58,7 +54,7 @@ export const MenuBar = () => {
 							<Nav.Link
 								className="b-right b-left px-4"
 								title="Screening"
-								onClick={handleClick}
+								href="#scrollspyHeading1"
 								style={{ color: "black" }}
 							>
 								Book a Screening{" "}

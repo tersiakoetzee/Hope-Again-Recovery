@@ -75,7 +75,7 @@ export const Bookings = () => {
 	return (
 		<Template>
 			<AdmissionInfo />
-			<h1 id="book" className="text-center my-5">
+			<h1 id="scrollspyHeading1" className="text-center my-5 ">
 				Book a Screening
 			</h1>
 			<Form
