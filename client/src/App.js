@@ -9,8 +9,8 @@ import { BecomeAFunder } from "./pages/BecomeAFunder";
 import "bootstrap/dist/css/bootstrap.min.css";
 import ThemeProvider from "react-bootstrap/ThemeProvider";
 import { AdmissionInfo } from "./components/AdmissionInfo";
-
 import { Bookings } from "./pages/Bookings";
+import { Donate } from "./pages/Donate";
 const App = () => (
 	<ThemeProvider
 		breakpoints={["xxxl", "xxl", "xl", "lg", "md", "sm", "xs", "xxs"]}
@@ -26,6 +26,7 @@ const App = () => (
 			<Route path="/program" element={<Program />} />
 			<Route path="/familydays" element={<FamilyDays />} />
 			<Route path="/admission" element={<AdmissionInfo />} />
+			<Route path="/donate" element={<Donate />} />
 		</Routes>
 	</ThemeProvider>
 );

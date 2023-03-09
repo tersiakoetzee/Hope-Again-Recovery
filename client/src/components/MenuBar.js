@@ -23,7 +23,7 @@ export const MenuBar = () => {
 							title="Program"
 							id="basic-nav-dropdown"
 						>
-							<NavDropdown.Item href="#action/3.1">
+							<NavDropdown.Item href="/program">
 								Program Outlay
 							</NavDropdown.Item>
 							<NavDropdown.Item href="/familydays">
@@ -36,7 +36,7 @@ export const MenuBar = () => {
 							title="Projects"
 							id="basic-nav-dropdown"
 						>
-							<NavDropdown.Item href="#action/3.1">Land</NavDropdown.Item>
+							<NavDropdown.Item href="/projects">Land</NavDropdown.Item>
 
 							<NavDropdown.Item href="#action/3.3">
 								Future Plans
@@ -75,7 +75,7 @@ export const MenuBar = () => {
 							</NavDropdown.Item>
 						</NavDropdown>
 
-						<Nav.Link className="b-left b-end px-4" href="#link">
+						<Nav.Link className="b-left b-end px-4" href="/donate">
 							Donate Now
 						</Nav.Link>
 					</Nav>
