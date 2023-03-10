@@ -8,6 +8,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import axios from "axios";
 import React, { useState } from "react";
 import { Template } from "../components/Template";
+import { BookingConfirmation } from "../components/BookingConfirmation";
 
 export const Bookings = () => {
 	const [name, setName] = useState("");
@@ -25,30 +26,45 @@ export const Bookings = () => {
 	const [whichOne, setWhichOne] = useState("");
 	const [dateTime, setDateTime] = useState(null);
 	const [validated, setValidated] = useState(false);
+	// Booking confirmation pop up variables
+	const [confirmation, setConfirmation] = useState(false);
+	const [openConfirmation, setOpenConfirmation] = useState(false);
 
 	const handleSubmit = (event) => {
+		event.preventDefault();
 		const form = event.currentTarget;
+
 		setValidated(true);
 		if (form.checkValidity() === false) {
-			event.preventDefault();
 			event.stopPropagation();
 		} else {
-			axios.post("/api/booking", {
-				name,
-				surname,
-				age,
-				phoneNumber,
-				addressLine1,
-				addressLine2,
-				city,
-				country,
-				dateTime,
-				answer1,
-				answer2,
-				email,
-				postCode,
-				whichOne,
-			});
+			axios
+				.post("/api/booking", {
+					name,
+					surname,
+					age,
+					phoneNumber,
+					addressLine1,
+					addressLine2,
+					city,
+					country,
+					dateTime,
+					answer1,
+					answer2,
+					email,
+					postCode,
+					whichOne,
+				})
+				.then(() => {
+					console.log("Booking Successful");
+					setConfirmation(true);
+					setOpenConfirmation(true);
+				})
+				.catch((err) => {
+					console.log(err);
+					setOpenConfirmation(true);
+					setConfirmation(false);
+				});
 		}
 	};
 
@@ -217,6 +233,15 @@ export const Bookings = () => {
 				>
 					Submit
 				</Button>
+
+				{openConfirmation && (
+					<BookingConfirmation
+						date={dateTime.toDateString()}
+						time={`${dateTime.toLocaleTimeString()}`}
+						confirmation={confirmation}
+						closeConfirmation={() => setOpenConfirmation(false)}
+					/>
+				)}
 			</Form>
 		</Template>
 	);
