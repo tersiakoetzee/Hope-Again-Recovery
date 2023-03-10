@@ -30,7 +30,7 @@ export const Bookings = () => {
 	const [confirmation, setConfirmation] = useState(false);
 	const [openConfirmation, setOpenConfirmation] = useState(false);
 
-	const handleSubmit = async (event) => {
+	const handleSubmit = (event) => {
 		event.preventDefault();
 		const form = event.currentTarget;
 
@@ -38,7 +38,7 @@ export const Bookings = () => {
 		if (form.checkValidity() === false) {
 			event.stopPropagation();
 		} else {
-			await axios
+			axios
 				.post("/api/booking", {
 					name,
 					surname,
