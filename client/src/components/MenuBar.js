@@ -24,7 +24,6 @@ export const MenuBar = () => {
 						<Nav.Link href="/">Home</Nav.Link>
 						<Nav.Link href="/about">About</Nav.Link>
 						{/* Program dropdown */}
-
 						<NavDropdown title="Program" id="basic-nav-dropdown">
 							<NavDropdown.Item href="/program">
 								Program Outlay
