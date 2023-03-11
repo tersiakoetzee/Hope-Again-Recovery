@@ -57,7 +57,7 @@ export const MenuBar = () => {
 							</NavDropdown.Item>
 						</NavDropdown>
 
-						<Nav.Link className="b-right b-left px-4" href="/about">
+						<Nav.Link className="b-right b-left px-4" href="/testimonials">
 							Testimonials
 						</Nav.Link>
 

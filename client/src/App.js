@@ -11,6 +11,7 @@ import ThemeProvider from "react-bootstrap/ThemeProvider";
 import { AdmissionInfo } from "./components/AdmissionInfo";
 
 import { Bookings } from "./pages/Bookings";
+import { Testimonials } from "./pages/Testimonials";
 const App = () => (
 	<ThemeProvider
 		breakpoints={["xxxl", "xxl", "xl", "lg", "md", "sm", "xs", "xxs"]}
@@ -23,6 +24,7 @@ const App = () => (
 			<Route path="/fundingpartners" element={<FundingPartners />} />
 			<Route path="/becomeafunder" element={<BecomeAFunder />} />
 			<Route path="/booking" element={<Bookings />} />
+			<Route path="/testimonials" element={<Testimonials />} />
 			<Route path="/program" element={<Program />} />
 			<Route path="/familydays" element={<FamilyDays />} />
 			<Route path="/admission" element={<AdmissionInfo />} />
