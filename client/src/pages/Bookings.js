@@ -8,6 +8,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import axios from "axios";
 import React, { useState } from "react";
 import { Template } from "../components/Template";
+import { BookingConfirmation } from "../components/BookingConfirmation";
 
 export const Bookings = () => {
 	const [name, setName] = useState("");
@@ -32,12 +33,16 @@ export const Bookings = () => {
 	const [careGiverCountry, setCareGiverCountry] = useState("");
 	const [careGiverPostCode, setCareGiverPostCode] = useState("");
 	const [validated, setValidated] = useState(false);
+	// Booking confirmation pop up variables
+	const [confirmation, setConfirmation] = useState(false);
+	const [openConfirmation, setOpenConfirmation] = useState(false);
 
 	const handleSubmit = (event) => {
+		event.preventDefault();
 		const form = event.currentTarget;
+
 		setValidated(true);
 		if (form.checkValidity() === false) {
-			event.preventDefault();
 			event.stopPropagation();
 		} else {
 			axios.post("/api/booking", {
@@ -63,6 +68,7 @@ export const Bookings = () => {
 				careGiverCountry,
 				careGiverPostCode,
 			});
+
 		}
 	};
 
@@ -368,6 +374,15 @@ export const Bookings = () => {
 				>
 					Submit
 				</Button>
+
+				{openConfirmation && (
+					<BookingConfirmation
+						date={dateTime.toDateString()}
+						time={`${dateTime.toLocaleTimeString()}`}
+						confirmation={confirmation}
+						closeConfirmation={() => setOpenConfirmation(false)}
+					/>
+				)}
 			</Form>
 		</Template>
 	);

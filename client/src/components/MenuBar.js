@@ -22,7 +22,7 @@ export const MenuBar = () => {
 							title="Program"
 							id="basic-nav-dropdown"
 						>
-							<NavDropdown.Item href="#action/3.1">
+							<NavDropdown.Item href="/program">
 								Program Outlay
 							</NavDropdown.Item>
 							<NavDropdown.Item href="/familydays">
