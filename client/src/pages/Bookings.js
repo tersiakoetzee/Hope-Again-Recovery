@@ -45,30 +45,40 @@ export const Bookings = () => {
 		if (form.checkValidity() === false) {
 			event.stopPropagation();
 		} else {
-			axios.post("/api/booking", {
-				name,
-				surname,
-				age,
-				phoneNumber,
-				addressLine1,
-				addressLine2,
-				city,
-				country,
-				dateTime,
-				answer1,
-				answer2,
-				careGiverName,
-				careGiverNumber,
-				email,
-				postCode,
-				whichOne,
-				careGiverAddress1,
-				careGiverAddress2,
-				careGiverCity,
-				careGiverCountry,
-				careGiverPostCode,
-			});
-
+			axios
+				.post("/api/booking", {
+					name,
+					surname,
+					age,
+					phoneNumber,
+					addressLine1,
+					addressLine2,
+					city,
+					country,
+					dateTime,
+					answer1,
+					answer2,
+					careGiverName,
+					careGiverNumber,
+					email,
+					postCode,
+					whichOne,
+					careGiverAddress1,
+					careGiverAddress2,
+					careGiverCity,
+					careGiverCountry,
+					careGiverPostCode,
+				})
+				.then(() => {
+					console.log("Booking Successful");
+					setConfirmation(true);
+					setOpenConfirmation(true);
+				})
+				.catch((err) => {
+					console.log(err);
+					setOpenConfirmation(true);
+					setConfirmation(false);
+				});
 		}
 	};
 
