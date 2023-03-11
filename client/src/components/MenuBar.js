@@ -48,13 +48,13 @@ export const MenuBar = () => {
 							title="Screening"
 							id="basic-nav-dropdown"
 						>
-							<NavDropdown.Item href="/booking">
+							<NavDropdown.Item href="/admission">
 								How Admission Works
 							</NavDropdown.Item>
 							<Nav.Link
 								className="b-right b-left px-4"
 								title="Screening"
-								href="#scrollspyHeading1"
+								href="/booking"
 								style={{ color: "black" }}
 							>
 								Book a Screening{" "}

@@ -13,7 +13,7 @@ export const AdmissionInfo = () => {
 				<ListGroup variant="flush">
 					<ListGroup.Item className="text-center">
 						Contact us to book your screening (See{" "}
-						<Card.Link class="link-dark" href="#scrollspyHeading1">
+						<Card.Link class="link-dark fw-bold" href="/booking">
 							Book a Screening
 						</Card.Link>
 						)

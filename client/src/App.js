@@ -9,6 +9,7 @@ import { BecomeAFunder } from "./pages/BecomeAFunder";
 import "bootstrap/dist/css/bootstrap.min.css";
 import ThemeProvider from "react-bootstrap/ThemeProvider";
 import { Bookings } from "./pages/Bookings";
+import { AdmissionInfo } from "./components/AdmissionInfo";
 
 const App = () => (
 	<ThemeProvider
@@ -24,6 +25,7 @@ const App = () => (
 			<Route path="/program" element={<Program />} />
 			<Route path="/familydays" element={<FamilyDays />} />
 			<Route path="/booking" element={<Bookings />} />
+			<Route path="admission" element={<AdmissionInfo />} />
 		</Routes>
 	</ThemeProvider>
 );

@@ -8,7 +8,6 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import axios from "axios";
 import React, { useState } from "react";
 import { Template } from "../components/Template";
-import { AdmissionInfo } from "../components/AdmissionInfo";
 
 export const Bookings = () => {
 	const [name, setName] = useState("");
@@ -74,10 +73,7 @@ export const Bookings = () => {
 
 	return (
 		<Template>
-			<AdmissionInfo />
-			<h1 id="scrollspyHeading1" className="text-center my-5 ">
-				Book a Screening
-			</h1>
+			<h1 className="text-center my-5 ">Book a Screening</h1>
 			<Form
 				className="row g-3 needs-validation col-md-8 offset-md-2 mb-5"
 				noValidate
