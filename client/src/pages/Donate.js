@@ -1,17 +1,19 @@
 import React from "react";
 import { useState } from "react";
+import axios from "axios";
 
 export const Donate = () => {
 	const yoco = new window.YocoSDK({
-		publicKey: "pk_test_a0b9ad7eJvg85gO5d1e4",
+		publicKey: "pk_test_8ba27c1fP4JWwbA33e54",
 	});
 	const [amount, setAmount] = useState("");
+	const currency = "ZAR";
 	const handleSubmit = (event) => {
 		event.preventDefault();
 		yoco.showPopup({
 			amountInCents: `${amount}`,
 			currency: "ZAR",
-			name: "Your Store or Product",
+			name: "Hope Again Recovery Home",
 			description: "Awesome description",
 			callback: function (result) {
 				// This function returns a token that your server can use to capture a payment
@@ -20,6 +22,11 @@ export const Donate = () => {
 					alert("error occurred: " + errorMessage);
 				} else {
 					alert("card successfully tokenized: " + result.id);
+					axios.post("/api/donate", {
+						token: result.id,
+						amountInCents: amount,
+						currency: currency,
+					});
 				}
 			},
 		});
