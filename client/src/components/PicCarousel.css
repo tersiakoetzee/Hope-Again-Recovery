@@ -4,7 +4,7 @@
 	color: #faea00;
 	text-align: center;
 	font-size: 48px;
-	text-shadow: -4px 2px 5px rgba(0, 0, 0, 0.62);
+	text-shadow: -4px 2px 5px rgba(0, 0, 0, 0.63);
 }
 
 .carousel-item::before {
