@@ -4,7 +4,6 @@ import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
 import logo from "../img/harh-logo.png";
 import "./MenuBar.css";
-
 export const MenuBar = () => {
 	return (
 		<Navbar bg="dark" variant="dark" expand="lg">
@@ -46,13 +45,16 @@ export const MenuBar = () => {
 							<NavDropdown.Item href="/admission">
 								How Admission Works
 							</NavDropdown.Item>
-							<NavDropdown.Item href="/booking">
-								Book a Screening
-							</NavDropdown.Item>
+							<Nav.Link
+								className="b-right b-left px-4"
+								title="Screening"
+								href="/booking"
+								style={{ color: "black" }}
+							>
+								Book a Screening{" "}
+							</Nav.Link>
 						</NavDropdown>
-
-						<Nav.Link href="#link">Testimonials</Nav.Link>
-
+						<Nav.Link href="/testimonials">Testimonials</Nav.Link>
 						{/* Fundings dropdown */}
 						<NavDropdown title="Funding" id="basic-nav-dropdown">
 							<NavDropdown.Item href="/fundingpartners">
