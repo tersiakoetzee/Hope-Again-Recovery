@@ -3,7 +3,6 @@ import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
 import "./MenuBar.css";
-
 export const MenuBar = () => {
 	return (
 		<Navbar bg="dark" variant="dark" expand="lg">
@@ -52,14 +51,17 @@ export const MenuBar = () => {
 							<NavDropdown.Item href="/admission">
 								How Admission Works
 							</NavDropdown.Item>
-							<NavDropdown.Item href="/booking">
-								Book a Screening
-							</NavDropdown.Item>
+							<Nav.Link
+								className="b-right b-left px-4"
+								title="Screening"
+								href="/booking"
+								style={{ color: "black" }}
+							>
+								Book a Screening{" "}
+							</Nav.Link>
 						</NavDropdown>
 
-						<Nav.Link className="b-right b-left px-4" href="#link">
-							Testimonials
-						</Nav.Link>
+						<Nav.Link className="b-right b-left px-4">Testimonials</Nav.Link>
 
 						{/* Fundings dropdown */}
 						<NavDropdown
