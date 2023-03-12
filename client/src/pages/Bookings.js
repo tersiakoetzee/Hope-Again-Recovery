@@ -92,9 +92,8 @@ export const Bookings = () => {
 		<Template>
 			<h1 className="text-center mt-4 ">Book a Screening</h1>
 			<h2 className="text-center my-4 ">
-				Take a look at How Admission{" "}
-				<Link class="link-dark fw-bold" to="/admission">
-					Works.
+				<Link class="link-primary fw-bold" to="/admission">
+					Take a look at How Admission Works.
 				</Link>
 			</h2>
 			<Form
