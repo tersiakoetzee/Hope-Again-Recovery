@@ -5,6 +5,7 @@ import Col from "react-bootstrap/Col";
 import Button from "react-bootstrap/Button";
 import axios from "axios";
 import { useState } from "react";
+import { FundingConfirmation } from "../components/FundingConfirmation";
 
 export const BecomeAFunder = () => {
 	const [name, setName] = useState("");
@@ -14,23 +15,46 @@ export const BecomeAFunder = () => {
 	const [email, setEmail] = useState("");
 	const [contribType, setContribType] = useState("");
 	const [other, setOther] = useState("");
+	const [validated, setValidated] = useState(false);
+	const [confirmation, setConfirmation] = useState(false);
+	const [openConfirmation, setOpenConfirmation] = useState(false);
+	const handleSubmit = (event) => {
+		event.preventDefault();
+		const form = event.currentTarget;
 
-	const handleSubmit = () => {
-		axios.post("/api/funding", {
-			name,
-			companyName,
-			country,
-			contactNumber,
-			email,
-			contribType,
-			other,
-		});
+		setValidated(true);
+		if (form.checkValidity() === false) {
+			event.stopPropagation();
+		} else {
+			axios
+				.post("/api/funding", {
+					name,
+					companyName,
+					country,
+					contactNumber,
+					email,
+					contribType,
+					other,
+				})
+				.then(() => {
+					console.log("Submission Successful!");
+					setConfirmation(true);
+					setOpenConfirmation(true);
+				})
+				.catch((err) => {
+					console.log(err);
+					setOpenConfirmation(true);
+					setConfirmation(false);
+				});
+		}
 	};
 	return (
 		<Template>
 			<Container className="formContainer">
 				<h2 style={{ textAlign: "center" }}>Become A Funder</h2>
 				<Form
+					noValidate
+					validated={validated}
 					onSubmit={handleSubmit}
 					style={{
 						margin: "100px",
@@ -41,12 +65,14 @@ export const BecomeAFunder = () => {
 				>
 					<Form.Group className="mb-3">
 						<Form.Label column sm="2">
-							Full Name
+							Full Name*
 						</Form.Label>
 						<Form.Control
-							type="name"
+							type="text"
+							pattern="^[a-zA-Z ]*$"
 							onChange={(e) => setName(e.target.value)}
 							placeholder="John Smith"
+							required
 						/>
 					</Form.Group>
 					<Form.Group as={Col} className="mb-3">
@@ -54,7 +80,8 @@ export const BecomeAFunder = () => {
 							Company Name
 						</Form.Label>
 						<Form.Control
-							type="name"
+							type="text"
+							pattern="^[a-zA-Z ]*$"
 							onChange={(e) => setCompanyName(e.target.value)}
 							placeholder="Fake Co .PTY"
 						/>
@@ -64,7 +91,8 @@ export const BecomeAFunder = () => {
 							Country
 						</Form.Label>
 						<Form.Control
-							type="name"
+							type="text"
+							pattern="^[a-zA-Z ]*$"
 							onChange={(e) => setCountry(e.target.value)}
 							placeholder="South Africa"
 						/>
@@ -74,9 +102,13 @@ export const BecomeAFunder = () => {
 							Contact Number
 						</Form.Label>
 						<Form.Control
-							type="number"
+							minLength="10"
+							maxLength="10 "
+							type="text"
+							pattern="0[0-9]{9}"
 							onChange={(e) => setContactNumber(e.target.value)}
 							placeholder="081 123 4567"
+							required
 						/>
 					</Form.Group>
 					<Form.Group className="mb-3">
@@ -96,6 +128,7 @@ export const BecomeAFunder = () => {
 						<Form.Select
 							aria-label="Default select example"
 							onChange={(e) => setContribType(e.target.value)}
+							required
 						>
 							<option selected disabled>
 								Please Select
@@ -123,6 +156,16 @@ export const BecomeAFunder = () => {
 					>
 						Submit
 					</Button>
+					{openConfirmation && (
+						<FundingConfirmation
+							companyName={companyName}
+							country={country}
+							contactNumber={contactNumber}
+							name={name}
+							confirmation={confirmation}
+							closeConfirmation={() => setOpenConfirmation(false)}
+						/>
+					)}
 				</Form>
 			</Container>
 		</Template>
