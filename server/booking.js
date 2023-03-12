@@ -48,6 +48,7 @@ router.post("/", async (req, res) => {
 		answer1,
 		answer2,
 	};
+
 	// Optional
 	const { email, postCode, whichOne } = req.body;
 
@@ -96,5 +97,46 @@ router.post("/", async (req, res) => {
 
 	res.status(200).json({ msg: "Booking successful" });
 });
+
+/*************************** start of get calendar events/dates */
+
+// Reading data / booked events lists from Google API
+router.get("/", async (req, res) => {
+	//testing api
+	res.send("You are listening on api bookings GET");
+	// eslint-disable-next-line no-console
+	console.log("Listening on api bookings get");
+
+	// Set credentials - if not needed uncomment
+	oauth2Client.setCredentials({ refresh_token: process.env.REFRESH_TOKEN });
+
+	const results = await calendar.events.list({
+		calendarId: "primary",
+		auth: oauth2Client,
+		timeMin: new Date().toISOString(),
+		maxResults: 10, //extract the next ten events
+		singleEvents: true,
+		orderBy: "startTime",
+	});
+
+	const events = results.data.items;
+	if (!events || events.length === 0) {
+		// eslint-disable-next-line no-console
+		console.log("No upcoming events found.");
+		return;
+	}
+	// eslint-disable-next-line no-console
+	console.log("Upcoming 10 events:");
+	events.map((event) => {
+		const start = event.start.dateTime || event.start.date;
+		// eslint-disable-next-line no-console
+		console.log(`${start} - ${event.summary}`);
+	});
+
+	//authorize().then(listEvents).catch(console.error);
+	//GET https://www.googleapis.com/calendar/v3/calendars/primary/events/eventId
+});
+
+//*************************** end of get calendar events/dates */
 
 export default router;
