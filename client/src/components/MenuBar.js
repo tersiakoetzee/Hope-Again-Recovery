@@ -61,7 +61,9 @@ export const MenuBar = () => {
 							</Nav.Link>
 						</NavDropdown>
 
-						<Nav.Link className="b-right b-left px-4">Testimonials</Nav.Link>
+						<Nav.Link className="b-right b-left px-4" href="/testimonials">
+							Testimonials
+						</Nav.Link>
 
 						{/* Fundings dropdown */}
 						<NavDropdown
