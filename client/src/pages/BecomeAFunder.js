@@ -37,12 +37,10 @@ export const BecomeAFunder = () => {
 					other,
 				})
 				.then(() => {
-					console.log("Submission Successful!");
 					setConfirmation(true);
 					setOpenConfirmation(true);
 				})
-				.catch((err) => {
-					console.log(err);
+				.catch(() => {
 					setOpenConfirmation(true);
 					setConfirmation(false);
 				});
@@ -51,15 +49,14 @@ export const BecomeAFunder = () => {
 	return (
 		<Template>
 			<Container className="formContainer">
-				<h2 style={{ textAlign: "center" }}>Become A Funder</h2>
+				<h2 className="text-center my-5">Become A Funder</h2>
 				<Form
+					className="row g-3 needs-validation col-md-8 offset-sm-2 mb-5 px-4 py-4"
 					noValidate
 					validated={validated}
 					onSubmit={handleSubmit}
 					style={{
-						margin: "100px",
 						border: " 1px solid",
-						padding: "20px",
 						borderRadius: "25px",
 					}}
 				>
@@ -76,9 +73,7 @@ export const BecomeAFunder = () => {
 						/>
 					</Form.Group>
 					<Form.Group as={Col} className="mb-3">
-						<Form.Label column sm="2">
-							Company Name*
-						</Form.Label>
+						<Form.Label>Company Name*</Form.Label>
 						<Form.Control
 							type="text"
 							pattern="^[a-zA-Z ]*$"
@@ -100,9 +95,7 @@ export const BecomeAFunder = () => {
 						/>
 					</Form.Group>
 					<Form.Group className="mb-3">
-						<Form.Label column sm="2">
-							Contact Number*
-						</Form.Label>
+						<Form.Label>Contact Number*</Form.Label>
 						<Form.Control
 							minLength="10"
 							maxLength="10 "
@@ -125,9 +118,7 @@ export const BecomeAFunder = () => {
 						/>
 					</Form.Group>
 					<Form.Group className="mb-3">
-						<Form.Label column sm="2">
-							Contribution Type:*
-						</Form.Label>
+						<Form.Label>Contribution Type:*</Form.Label>
 						<Form.Select
 							aria-label="Default select example"
 							onChange={(e) => setContribType(e.target.value)}
@@ -143,9 +134,7 @@ export const BecomeAFunder = () => {
 						</Form.Select>
 					</Form.Group>
 					<Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
-						<Form.Label column sm="2">
-							Please specify other
-						</Form.Label>
+						<Form.Label>Please specify other</Form.Label>
 						<Form.Control
 							as="textarea"
 							onChange={(e) => setOther(e.target.value)}

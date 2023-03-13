@@ -61,13 +61,12 @@ export const Bookings = () => {
 		<Template>
 			<h1 style={{ textAlign: "center" }}>Book a Screening</h1>
 			<Form
-				className="row g-3 needs-validation mx-5 my-5"
+				className="row g-3 needs-validation mx-5 my-5 px-4 py-4"
 				noValidate
 				validated={validated}
 				onSubmit={handleSubmit}
 				style={{
 					border: " 1px solid",
-					padding: "20px",
 					borderRadius: "25px",
 				}}
 			>

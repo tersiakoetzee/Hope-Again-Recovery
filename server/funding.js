@@ -29,12 +29,14 @@ router.post("/", (req, res) => {
 			contribType,
 			other,
 		])
-			.then(() => res.status(200).send("Funder added!"))
-			.catch((error) => {
-				res.status(400).send(error);
+			.then(() => res.status(200).json({ msg: "Funder added!" }))
+			.catch(() => {
+				res
+					.status(400)
+					.json({ msg: "Could submit entry, fill all required fields" });
 			});
 	} catch (error) {
-		res.status(500).send(error);
+		res.status(500).json({ msg: "Error occured. Please check your entries." });
 	}
 });
 export default router;
