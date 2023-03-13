@@ -3,6 +3,7 @@ import express from "express";
 
 import apiRouter from "./api";
 import bookingRouter from "./booking";
+import fundingRouter from "./funding";
 import config from "./utils/config";
 import {
 	clientRouter,
@@ -14,6 +15,7 @@ import {
 
 const apiRoot = "/api";
 const bookingRoot = "/api/booking";
+const fundingRoot = "/api/funding";
 
 dotenv.config();
 
@@ -30,10 +32,11 @@ if (config.production) {
 
 app.use(apiRoot, apiRouter);
 app.use(bookingRoot, bookingRouter);
+app.use(fundingRoot, fundingRouter);
 app.use("/health", (_, res) => res.sendStatus(200));
 app.use(clientRouter(apiRoot));
 app.use(clientRouter(bookingRoot));
-
+app.use(clientRouter(fundingRoot));
 app.use(logErrors());
 
 export default app;
