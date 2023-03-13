@@ -1,4 +1,7 @@
 import React from "react";
+import Form from "react-bootstrap/Form";
+import Button from "react-bootstrap/Button";
+import { Template } from "../components/Template";
 import { useState } from "react";
 import axios from "axios";
 
@@ -33,15 +36,32 @@ export const Donate = () => {
 	};
 
 	return (
-		<form onSubmit={handleSubmit}>
-			<input
-				type="text"
-				id="title"
-				value={amount}
-				className="input"
-				onChange={(e) => setAmount(e.target.value)}
-			></input>
-			<button type="submit">Pay</button>
-		</form>
+		<Template>
+		<div className="container">
+			<Form
+				className="text-center py-5"
+				onSubmit={handleSubmit}
+				style={{
+					margin: "100px",
+					border: " 2px solid",
+					padding: "20px",
+					borderRadius: "25px",
+				}}
+			>
+				<Form.Control
+					type="number"
+					pattern="[0-9]*"
+					placeholder="R"
+					id="title"
+					value={amount}
+					className="input"
+					onChange={(e) => setAmount(e.target.value)}
+				/>
+				<Button className="m-3" type="submit">
+					Submit
+				</Button>
+			</Form>
+		</div>
+		</Template>
 	);
 };
