@@ -60,6 +60,7 @@ export const BecomeAFunder = () => {
 						borderRadius: "25px",
 					}}
 				>
+					<p style={{ color: "grey" }}>*Required fields</p>
 					<Form.Group className="mb-3">
 						<Form.Label column sm="2">
 							Full Name*
