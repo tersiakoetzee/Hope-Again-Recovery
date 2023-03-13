@@ -217,7 +217,7 @@ export const Bookings = () => {
 						<Form.Control
 							onChange={(e) => setCountry(e.target.value)}
 							type="text"
-							pattern="[a-zA-Z]*"
+							pattern="^[a-zA-Z ]*$"
 							required
 						/>
 						<div className="invalid-feedback">
@@ -299,7 +299,7 @@ export const Bookings = () => {
 							placeholder="Enter Care-Giver full name"
 							onChange={(e) => setCareGiverName(e.target.value)}
 							type="text"
-							pattern="[a-zA-Z]*"
+							pattern="^[a-zA-Z ]*$"
 							required
 						/>
 						<div className="invalid-feedback">Please enter a valid name. </div>
