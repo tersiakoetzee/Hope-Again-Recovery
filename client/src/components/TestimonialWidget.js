@@ -14,7 +14,7 @@ export const TestimonialWidget = () => {
 					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
 					varius enim in eros elementum tristique. Duis cursus, mi quis viverra
 					ornare, eros dolor interdum nulla, ut. Read more{" "}
-					<a href="/about"> here.</a>
+					<a href="/testimonials"> here.</a>
 				</Card.Text>
 			</Card.ImgOverlay>
 		</Card>
