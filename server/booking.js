@@ -85,27 +85,31 @@ router.post("/", async (req, res) => {
 	// Set credentials
 	oauth2Client.setCredentials({ refresh_token: process.env.REFRESH_TOKEN });
 
-	// Make a booking
-	await calendar.events.insert({
-		calendarId: "primary",
-		auth: oauth2Client,
-		requestBody: {
-			summary: `${name} ${surname}\n${age}`,
-			description: `${phoneNumber}\n${email}\n${question1}\n${question2}\n Care-Giver Information:\n Care-Giver Name:${careGiverName}\n Care-Giver Number:${careGiverNumber}\n${careGiverLocation}`,
-			start: {
-				dateTime: new Date(dateTime),
-				timeZone: "Africa/Johannesburg",
+	try {
+		// Make a booking
+		await calendar.events.insert({
+			calendarId: "primary",
+			auth: oauth2Client,
+			requestBody: {
+				summary: `${name} ${surname}\n${age}`,
+				description: `${phoneNumber}\n${email}\n${question1}\n${question2}\n Care-Giver Information:\n Care-Giver Name:${careGiverName}\n Care-Giver Number:${careGiverNumber}\n${careGiverLocation}`,
+				start: {
+					dateTime: new Date(dateTime),
+					timeZone: "Africa/Johannesburg",
+				},
+				end: {
+					dateTime: dayjs(new Date(dateTime)).add(1, "hour").toISOString(),
+					timeZone: "Africa/Johannesburg",
+				},
+				location: `${addressLine1}\n${addressLine2}\n${city}\n${country}\n${postCode}\n`,
+				colorId: 7,
 			},
-			end: {
-				dateTime: dayjs(new Date(dateTime)).add(1, "hour").toISOString(),
-				timeZone: "Africa/Johannesburg",
-			},
-			location: `${addressLine1}\n${addressLine2}\n${city}\n${country}\n${postCode}\n`,
-			colorId: 7,
-		},
-	});
+		});
 
-	res.status(200).json({ msg: "Booking successful" });
+		res.status(200).json({ msg: "Booking successful" });
+	} catch (error) {
+		res.status(500).send(error);
+	}
 });
 
 export default router;
