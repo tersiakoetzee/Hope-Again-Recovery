@@ -64,8 +64,9 @@ export const MenuBar = () => {
 								Become a Funder
 							</NavDropdown.Item>
 						</NavDropdown>
-
-						<Nav.Link href="#link">Donate Now</Nav.Link>
+						<div className="donateColor ">
+							<Nav.Link href="#link">Donate Now</Nav.Link>
+						</div>
 					</Nav>
 				</Navbar.Collapse>
 			</Container>
