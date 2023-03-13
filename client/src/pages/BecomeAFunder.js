@@ -77,29 +77,31 @@ export const BecomeAFunder = () => {
 					</Form.Group>
 					<Form.Group as={Col} className="mb-3">
 						<Form.Label column sm="2">
-							Company Name
+							Company Name*
 						</Form.Label>
 						<Form.Control
 							type="text"
 							pattern="^[a-zA-Z ]*$"
 							onChange={(e) => setCompanyName(e.target.value)}
 							placeholder="Fake Co .PTY"
+							required
 						/>
 					</Form.Group>
 					<Form.Group className="mb-3">
 						<Form.Label column sm="2">
-							Country
+							Country*
 						</Form.Label>
 						<Form.Control
 							type="text"
 							pattern="^[a-zA-Z ]*$"
 							onChange={(e) => setCountry(e.target.value)}
 							placeholder="South Africa"
+							required
 						/>
 					</Form.Group>
 					<Form.Group className="mb-3">
 						<Form.Label column sm="2">
-							Contact Number
+							Contact Number*
 						</Form.Label>
 						<Form.Control
 							minLength="10"
@@ -113,17 +115,18 @@ export const BecomeAFunder = () => {
 					</Form.Group>
 					<Form.Group className="mb-3">
 						<Form.Label column sm="2">
-							Email address
+							Email address*
 						</Form.Label>
 						<Form.Control
 							type="email"
 							onChange={(e) => setEmail(e.target.value)}
 							placeholder="name@example.com"
+							required
 						/>
 					</Form.Group>
 					<Form.Group className="mb-3">
 						<Form.Label column sm="2">
-							Contribution Type:
+							Contribution Type:*
 						</Form.Label>
 						<Form.Select
 							aria-label="Default select example"
