@@ -9,6 +9,7 @@ import axios from "axios";
 import React, { useState } from "react";
 import { Template } from "../components/Template";
 import { BookingConfirmation } from "../components/BookingConfirmation";
+import { Link } from "react-router-dom";
 
 export const Bookings = () => {
 	const [name, setName] = useState("");
@@ -89,7 +90,12 @@ export const Bookings = () => {
 
 	return (
 		<Template>
-			<h1 className="text-center my-5 ">Book a Screening</h1>
+			<h1 className="text-center mt-4 ">Book a Screening</h1>
+			<h2 className="text-center my-4 ">
+				<Link class="link-primary fw-bold" to="/admission">
+					Take a look at How Admission Works.
+				</Link>
+			</h2>
 			<Form
 				className="row g-3 needs-validation col-md-8 offset-md-2 mb-5"
 				noValidate
@@ -211,7 +217,7 @@ export const Bookings = () => {
 						<Form.Control
 							onChange={(e) => setCountry(e.target.value)}
 							type="text"
-							pattern="[a-zA-Z]*"
+							pattern="^[a-zA-Z ]*$"
 							required
 						/>
 						<div className="invalid-feedback">
@@ -293,7 +299,7 @@ export const Bookings = () => {
 							placeholder="Enter Care-Giver full name"
 							onChange={(e) => setCareGiverName(e.target.value)}
 							type="text"
-							pattern="[a-zA-Z]*"
+							pattern="^[a-zA-Z ]*$"
 							required
 						/>
 						<div className="invalid-feedback">Please enter a valid name. </div>
