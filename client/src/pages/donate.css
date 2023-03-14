@@ -1,21 +1,67 @@
+.container {
+	position: relative;
+	overflow: hidden;
+}
+
 .popup {
 	position: absolute;
-	text-align: center;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: 9999;
 	background-color: white;
-	border: 1px solid black;
-	width: 100%;
-	height: 70%;
-	padding: 100px;
-	font-weight: bold;
+	border-radius: 10px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
-@media only screen and (max-width: 768px) {
-	/* adjust values as needed */
+
+@media (max-width: 768px) {
 	.popup {
-		width: 90%;
-		height: 50%;
-		top: 25%;
-		left: 5%;
-		padding: 30px;
-		/* adjust positioning as needed */
+		max-width: 90%;
+		max-height: 90%;
 	}
+}
+/* popup styling  */
+
+.modal-dialog {
+	max-width: 600px;
+	margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+	.modal-dialog {
+		max-width: 80%;
+	}
+}
+.modal-dialog {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%) !important;
+	background-color: white;
+
+	max-width: 90%;
+	max-height: 60%;
+	overflow: auto;
+}
+
+@media (min-width: 576px) {
+	.modal-dialog {
+		max-width: 50%;
+	}
+}
+
+@media (min-width: 992px) {
+	.modal-dialog {
+		max-width: 30%;
+	}
+}
+.form-with-border {
+	border: 2px solid black;
+	border-radius: 5px;
+	padding: 10px;
+	margin: 10px;
 }

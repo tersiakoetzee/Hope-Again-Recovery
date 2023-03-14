@@ -1,6 +1,7 @@
 import React from "react";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
+import Modal from "react-bootstrap/Modal";
 import { Template } from "../components/Template";
 import { useState } from "react";
 import axios from "axios";
@@ -41,21 +42,23 @@ export const Donate = () => {
 
 	return (
 		<Template>
-			{showPopup && (
-				<div className="popup text-center p-8">
-					<p>Thank you for your Donation!</p>
-				</div>
-			)}
 			<div className="container">
+				{showPopup && (
+					<div className="popup text-center p-8">
+						<Modal.Dialog>
+							<Modal.Header className="text-center">
+								<Modal.Title>Hope Again Recovery Center</Modal.Title>
+							</Modal.Header>
+
+							<Modal.Body>
+								<p>Thank you for your Donation!</p>
+							</Modal.Body>
+						</Modal.Dialog>
+					</div>
+				)}
 				<Form
-					className="text-center py-5"
+					className="text-center py-5 form-with-border"
 					onSubmit={handleSubmit}
-					style={{
-						margin: "100px",
-						border: " 2px solid",
-						padding: "20px",
-						borderRadius: "25px",
-					}}
 				>
 					<Form.Control
 						type="number"
