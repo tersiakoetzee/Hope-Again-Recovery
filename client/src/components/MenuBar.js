@@ -65,7 +65,9 @@ export const MenuBar = () => {
 							</NavDropdown.Item>
 						</NavDropdown>
 						<div className="donateColor ">
-							<Nav.Link href="#link">Donate Now</Nav.Link>
+							<Nav.Link className="donateColor text-dark " href="#link">
+								Donate Now
+							</Nav.Link>
 						</div>
 					</Nav>
 				</Navbar.Collapse>
