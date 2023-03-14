@@ -28,7 +28,6 @@ export const Donate = () => {
 					alert("error occurred: " + errorMessage);
 					setShowPopup(false);
 				} else {
-					// alert("card successfully tokenized: " + result.id);
 					setShowPopup(true);
 					axios.post("/api/donate", {
 						token: result.id,

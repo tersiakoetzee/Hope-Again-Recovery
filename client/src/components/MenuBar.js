@@ -69,11 +69,9 @@ export const MenuBar = () => {
 							</NavDropdown.Item>
 						</NavDropdown>
 
-
 						<Nav.Link className="b-left b-end px-4" href="/donate">
 							Donate Now
 						</Nav.Link>
-
 					</Nav>
 				</Navbar.Collapse>
 			</Container>
