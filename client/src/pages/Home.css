@@ -27,3 +27,18 @@
 .b-icon {
 	font-size: 80px;
 }
+
+/* Default font-size styling */
+h1,
+.h-1 {
+	font-size: 48px !important;
+}
+
+h2,
+.h-2 {
+	font-size: 28px !important;
+}
+card border-light mt-5 mx-5 px-5 py-5 p,
+.p-size {
+	font-size: 20px !important;
+}
