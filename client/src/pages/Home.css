@@ -15,12 +15,16 @@
 }
 
 .video-testimonial {
+	position: absolute;
 	height: 500px;
 	margin: 50px auto;
+	color:blue;
+	top: 40rem;
 }
 
 #video-widget-card {
 	height: 466.688px;
+	position: relative;
 }
 
 /* Booking confirmation icons */
@@ -42,3 +46,4 @@ card border-light mt-5 mx-5 px-5 py-5 p,
 .p-size {
 	font-size: 20px !important;
 }
+
