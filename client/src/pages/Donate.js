@@ -60,6 +60,7 @@ export const Donate = () => {
 					className="text-center py-5 form-with-border"
 					onSubmit={handleSubmit}
 				>
+					<Form.Label>Donate Now</Form.Label>
 					<Form.Control
 						type="number"
 						pattern="^[0-9]*[.,]?[0-9]*$"
