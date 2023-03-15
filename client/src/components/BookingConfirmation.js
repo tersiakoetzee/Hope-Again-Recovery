@@ -26,12 +26,19 @@ export const BookingConfirmation = ({
 									Location: 57 Artemis Road, Woodlands, Mitchell’s Plain
 								</p>
 							</Card>
-							<h5>Contact Details</h5>
+							<h5>Need to cancel your booking or contact HARH?</h5>
 							<Card className="mb-4 p-2">
 								<p className="mb-0">Tel: 021 371 7323</p>
 								<p className="mb-0">
 									Email:
 									<span className="text-primary"> harh@mounthope.co.za</span>
+								</p>
+								<p className="mb-0">
+									Alternate Email:
+									<span className="text-primary">
+										{" "}
+										secretary@mounthope.co.za
+									</span>
 								</p>
 							</Card>
 
