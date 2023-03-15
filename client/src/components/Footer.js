@@ -5,7 +5,7 @@ import "./Footer.css";
 
 export const Footer = () => {
 	return (
-		<div className="main-footer">
+		<div className="main-footer ">
 			<Container className="text-center py-1">
 				<Row>
 					<Col className="icon " sm={12} md={3}>
@@ -38,7 +38,7 @@ export const Footer = () => {
 					<Col sm={12} md={3}>
 						<h4>Contact Us</h4>
 						<p>
-							021 371 7323 57 Artemis Road, Woodlands, Mitchells Plain
+							021 371 7323 57<br></br> Artemis Road, Woodlands, Mitchells Plain
 							secretary@mounthope.co.za
 						</p>
 					</Col>
