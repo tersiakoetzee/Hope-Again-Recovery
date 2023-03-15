@@ -3,11 +3,18 @@ import { google } from "googleapis";
 import { JWT } from "google-auth-library";
 import logger from "./utils/logger";
 import dayjs from "dayjs";
+import { validationResult } from "express-validator";
+import { validation } from "./bookingValidate";
 
 const router = Router();
 
-router.post("/", async (req, res) => {
+router.post("/", validation, async (req, res) => {
 	logger.debug("Book a screening");
+
+	const errors = validationResult(req);
+	if (!errors.isEmpty()) {
+		return res.status(400).json({ errors: errors.array() });
+	}
 
 	// Required
 	const {
@@ -55,7 +62,7 @@ router.post("/", async (req, res) => {
 	// Screening questions
 	let question1 = `1. Have you previously been to a treatment centre? (${answer1})`;
 	const question2 = `2. Do you acknowledge that Hope Again Recovery Home requires that you have an assigned care-giver on your recovery journey? (${answer2})`;
-	let careGiverLocation = `Location: ${careGiverAddress1}, ${careGiverAddress2}, ${careGiverCity}, ${careGiverCountry}, ${careGiverPostCode}`;
+	let careGiverLocation = `Location: ${careGiverAddress1} ${careGiverAddress2} ${careGiverCity} ${careGiverCountry} ${careGiverPostCode}`;
 
 	if (whichOne && answer1.toLowerCase() == "yes") {
 		question1 += ` If so, which one? (${whichOne})`;
