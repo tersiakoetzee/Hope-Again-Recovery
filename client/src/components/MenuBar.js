@@ -32,11 +32,7 @@ export const MenuBar = () => {
 							</NavDropdown.Item>
 						</NavDropdown>
 						{/* Projects dropdown */}
-						<NavDropdown
-							className="b-right b-left px-4"
-							title="Projects"
-							id="basic-nav-dropdown"
-						>
+						<NavDropdown title="Projects" id="basic-nav-dropdown">
 							<NavDropdown.Item href="/projects">Land</NavDropdown.Item>
 
 							<NavDropdown.Item href="#action/3.3">
@@ -49,14 +45,9 @@ export const MenuBar = () => {
 							<NavDropdown.Item href="/admission">
 								How Admission Works
 							</NavDropdown.Item>
-							<Nav.Link
-								className="b-right b-left px-4"
-								title="Screening"
-								href="/booking"
-								style={{ color: "black" }}
-							>
-								Book a Screening{" "}
-							</Nav.Link>
+							<NavDropdown.Item href="/booking">
+								Book a Screening
+							</NavDropdown.Item>
 						</NavDropdown>
 						<Nav.Link href="/testimonials">Testimonials</Nav.Link>
 						{/* Fundings dropdown */}
