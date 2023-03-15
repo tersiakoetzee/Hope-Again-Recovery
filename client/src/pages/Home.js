@@ -20,10 +20,10 @@ export function Home() {
 					<section className="video-testimonial">
 						<Container>
 							<Row>
-								<Col className=".me-1">
+								<Col sm={12}>
 									<VideoWidget />
 								</Col>
-								<Col className=".ms-1">
+								<Col sm={12}>
 									<TestimonialWidget />
 								</Col>
 							</Row>
