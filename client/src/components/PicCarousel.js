@@ -12,7 +12,7 @@ export const PicCarousel = () => {
 					className="d-block w-100"
 					src={Image1}
 					alt="First slide"
-					height="550"
+					height="760"
 				/>{" "}
 				<Carousel.Caption>
 					<h3>Celebrate Sobriety</h3>
@@ -31,7 +31,7 @@ export const PicCarousel = () => {
 					className="d-block w-100"
 					src={Image2}
 					alt="Second slide"
-					height="550"
+					height="760"
 				/>
 
 				<Carousel.Caption>
@@ -49,7 +49,7 @@ export const PicCarousel = () => {
 					className="d-block w-100"
 					src={Image3}
 					alt="Third slide"
-					height="550"
+					height="760"
 				/>
 
 				<Carousel.Caption>
