@@ -10,6 +10,9 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import ThemeProvider from "react-bootstrap/ThemeProvider";
 import { AdmissionInfo } from "./components/AdmissionInfo";
 import { Bookings } from "./pages/Bookings";
+
+import { Donate } from "./pages/Donate";
+
 import { Testimonials } from "./pages/Testimonials";
 
 const App = () => (
@@ -28,6 +31,7 @@ const App = () => (
 			<Route path="/program" element={<Program />} />
 			<Route path="/familydays" element={<FamilyDays />} />
 			<Route path="/admission" element={<AdmissionInfo />} />
+			<Route path="/donate" element={<Donate />} />
 		</Routes>
 	</ThemeProvider>
 );
