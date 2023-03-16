@@ -97,13 +97,12 @@ export const Bookings = () => {
 				</Link>
 			</h2>
 			<Form
-				className="row g-3 needs-validation col-md-8 offset-md-2 mb-5"
+				className="row g-3 needs-validation col-md-8 offset-md-2 mb-5 px-4 py-4"
 				noValidate
 				validated={validated}
 				onSubmit={handleSubmit}
 				style={{
 					border: " 1px solid",
-					padding: "20px",
 					borderRadius: "25px",
 				}}
 			>
