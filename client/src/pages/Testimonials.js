@@ -1,9 +1,9 @@
 import Card from "react-bootstrap/Card";
 import CardGroup from "react-bootstrap/CardGroup";
 import { Template } from "../components/Template";
-import Test2 from "../assets/Test2.jpg";
-import Test3 from "../assets/Test3.jpg";
-import Test4 from "../assets/Test4.jpg";
+import Test2 from "../assets/test2.jpg";
+import Test3 from "../assets/test3.jpg";
+import Test4 from "../assets/test4.jpg";
 import "./Testimonials.css";
 
 export const Testimonials = () => {
