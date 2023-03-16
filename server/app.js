@@ -5,6 +5,7 @@ import apiRouter from "./api";
 import bookingRouter from "./booking";
 import fundingRouter from "./funding";
 import config from "./utils/config";
+import donateRouter from "./donate";
 import {
 	clientRouter,
 	configuredHelmet,
@@ -16,7 +17,7 @@ import {
 const apiRoot = "/api";
 const bookingRoot = "/api/booking";
 const fundingRoot = "/api/funding";
-
+const donateRoot = "/api/donate";
 dotenv.config();
 
 const app = express();
@@ -33,10 +34,13 @@ if (config.production) {
 app.use(apiRoot, apiRouter);
 app.use(bookingRoot, bookingRouter);
 app.use(fundingRoot, fundingRouter);
+app.use(donateRoot, donateRouter);
 app.use("/health", (_, res) => res.sendStatus(200));
 app.use(clientRouter(apiRoot));
 app.use(clientRouter(bookingRoot));
 app.use(clientRouter(fundingRoot));
+app.use(clientRouter(donateRoot));
+
 app.use(logErrors());
 
 export default app;
