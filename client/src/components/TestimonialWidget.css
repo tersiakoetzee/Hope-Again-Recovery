@@ -7,7 +7,7 @@
 #testimonial-title {
 	font-family: "Roboto", sans-serif;
 	font-size: 2rem;
-	font-weight: 700;	
+	font-weight: 700;
 }
 
 #testimonial-para {
@@ -19,28 +19,25 @@
 }
 
 a {
-	text-decoration: none;	
-	color:whitesmoke !important;
+	text-decoration: none;
+	color: whitesmoke !important;
 }
 
 a:hover {
-  color: #eed202 !important;
-}
-
-
-
-@media screen and (min-width: 576px) and (max-width: 1400px) {
-#testimonial-title {
-	font-family: "Roboto", sans-serif;
-	font-size: 3.5vw;
-	font-weight: 700;	
-}
-
-#testimonial-para {
-	font-family: "Plus Jakarta Sans", sans-serif;
-	text-align: center;
-	left: 20px;
 	color: #eed202 !important;
 }
 
+@media screen and (min-width: 576px) and (max-width: 1400px) {
+	#testimonial-title {
+		font-family: "Roboto", sans-serif;
+		font-size: 3.5vw;
+		font-weight: 700;
+	}
+
+	#testimonial-para {
+		font-family: "Plus Jakarta Sans", sans-serif;
+		text-align: center;
+		left: 20px;
+		color: #eed202 !important;
+	}
 }
