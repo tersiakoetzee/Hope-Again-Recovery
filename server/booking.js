@@ -115,7 +115,7 @@ router.post("/", validation, async (req, res) => {
 		// Request to Google Calendar API.
 		try {
 			await calendar.events.insert({
-				calendarId: "hopeagainrecovery3@gmail.com",
+				calendarId: process.env.CALENDAR_ID,
 				auth: client,
 				requestBody: booking,
 			});
@@ -123,118 +123,47 @@ router.post("/", validation, async (req, res) => {
 			res.status(200).json({ msg: "Booking successful" });
 		} catch (error) {
 			res.status(500).json({ msg: "Could not make a booking, try again" });
-			throw new Error(`Could not create event: ${error.message}`);
 		}
 	};
 
 	createBooking(bookingDetails);
 });
 
-/*************************** start of get calendar events/dates */
+/* start of get calendar events/dates */
 
 // Reading data / booked events lists from Google API
 router.get("/", async (req, res) => {
-	//testing api
-	res.send("You are listening on api bookings GET");
-	// eslint-disable-next-line no-console
-	console.log("Listening on api bookings get");
-
-	// Set credentials - if not needed uncomment
-	oauth2Client.setCredentials({ refresh_token: process.env.REFRESH_TOKEN });
-
-	// If modifying these scopes, delete token.json.
-	const SCOPES = ["https://www.googleapis.com/auth/calendar.readonly"];
-	// The file token.json stores the user's access and refresh tokens, and is
-	// created automatically when the authorization flow completes for the first
-	// time.
-	const TOKEN_PATH = path.join(process.cwd(), "token.json");
-	const CREDENTIALS_PATH = path.join(process.cwd(), "credentials.json");
-
-	/**
-	 * Reads previously authorized credentials from the save file.
-	 *
-	 * @return {Promise<OAuth2Client|null>}
-	 */
-	async function loadSavedCredentialsIfExist() {
+	async function listEvents() {
+		const client = new JWT({
+			email: process.env.CLIENT_EMAIL,
+			key: process.env.PRIVATE_KEY,
+			scopes: [
+				// set the right scope
+				"https://www.googleapis.com/auth/calendar",
+				"https://www.googleapis.com/auth/calendar.events",
+			],
+		});
+		const calendar = google.calendar({ version: "v3" });
 		try {
-			const content = await fs.readFile(TOKEN_PATH);
-			const credentials = JSON.parse(content);
-			return google.auth.fromJSON(credentials);
-		} catch (err) {
-			return null;
+			const results = await calendar.events.list({
+				calendarId: process.env.CALENDAR_ID,
+				auth: client,
+				singleEvents: true,
+				orderBy: "startTime",
+			});
+			// Returning bookings list
+			const events = results.data.items.map((event) => event.start.dateTime);
+			res.status(200).json(events);
+		} catch (error) {
+			res
+				.status(500)
+				.json({ msg: "Could not return bookings list, try again" });
 		}
 	}
 
-	/**
-	 * Serializes credentials to a file compatible with GoogleAUth.fromJSON.
-	 *
-	 * @param {OAuth2Client} client
-	 * @return {Promise<void>}
-	 */
-	async function saveCredentials(client) {
-		const content = await fs.readFile(CREDENTIALS_PATH);
-		const keys = JSON.parse(content);
-		const key = keys.installed || keys.web;
-		const payload = JSON.stringify({
-			type: "authorized_user",
-			client_id: key.client_id,
-			client_secret: key.client_secret,
-			refresh_token: client.credentials.refresh_token,
-		});
-		await fs.writeFile(TOKEN_PATH, payload);
-	}
-
-	/**
-	 * Load or request or authorization to call APIs.
-	 *
-	 */
-	async function authorize() {
-		let client = await loadSavedCredentialsIfExist();
-		if (client) {
-			return client;
-		}
-		client = await authenticate({
-			scopes: SCOPES,
-			keyfilePath: CREDENTIALS_PATH,
-		});
-		if (client.credentials) {
-			await saveCredentials(client);
-		}
-		return client;
-	}
-
-	/**
-	 * Lists the next 10 events on the user's primary calendar.
-	 * @param {google.auth.OAuth2} auth An authorized OAuth2 client.
-	 */
-	async function listEvents(auth) {
-		const calendar = google.calendar({ version: "v3", auth });
-		const results = await calendar.events.list({
-			calendarId: "primary",
-			timeMin: new Date().toISOString(),
-			maxResults: 10,
-			singleEvents: true,
-			orderBy: "startTime",
-		});
-		const events = results.data.items;
-		if (!events || events.length === 0) {
-			// eslint-disable-next-line no-console
-			console.log("No upcoming events found.");
-			return;
-		}
-		// eslint-disable-next-line no-console
-		console.log("Upcoming 10 events:");
-		events.map((event) => {
-			const start = event.start.dateTime || event.start.date;
-			// eslint-disable-next-line no-console
-			console.log(`${start} - ${event.summary}`);
-		});
-	}
-	// eslint-disable-next-line no-console
-	authorize().then(listEvents).catch(console.error);
-	//GET https://www.googleapis.com/calendar/v3/calendars/primary/events/eventId
+	listEvents();
 });
 
-//*************************** end of get calendar events/dates */
+//*end of get calendar events/dates */
 
 export default router;
