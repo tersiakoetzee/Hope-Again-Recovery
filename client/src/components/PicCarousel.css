@@ -1,0 +1,48 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,700&display=swap");
+
+.carousel-caption h3 {
+	color: #eed202;
+	text-align: center;
+	font-size: 48px;
+	text-shadow: -4px 2px 5px rgba(0, 0, 0, 0.63);
+}
+
+.carousel-item::before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	background-color: rgba(0, 0, 0, 0.45);
+}
+
+.carousel-caption {
+	font-family: "Roboto Flex";
+	bottom: 150px;
+	padding-left: 100px;
+	padding-right: 100px;
+}
+
+.carousel-caption p {
+	font-size: 28px;
+	text-shadow: -5px 3px 6px rgba(0, 0, 0, 0.62);
+}
+
+.carousel-caption a {
+	background-color: #eed202;
+	color: black;
+	border-radius: 0;
+	padding: 10px 30px 10px 30px;
+	box-shadow: -2px 2px 4px rgba(0, 0, 0, 0.42);
+	border: 0;
+}
+
+span.carousel-control-next-icon {
+	background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='%23eed202' width='8' height='8' viewBox='0 0 8 8'%3e%3cpath d='M2.75 0l-1.5 1.5L3.75 4l-2.5 2.5L2.75 8l4-4-4-4z'/%3e%3c/svg%3e");
+}
+
+span.carousel-control-prev-icon {
+	background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='%23eed202' width='8' height='8' viewBox='0 0 8 8'%3e%3cpath d='M5.25 0l-4 4 4 4 1.5-1.5L4.25 4l2.5-2.5L5.25 0z'/%3e%3c/svg%3e");
+}

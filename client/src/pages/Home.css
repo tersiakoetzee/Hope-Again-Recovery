@@ -1,3 +1,9 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap");
+
+* {
+	font-family: "Roboto", sans-serif !important;
+}
+
 .logo {
 	width: 100px;
 }
@@ -6,4 +12,33 @@
 }
 .message:hover {
 	background-color: yellow;
+}
+
+.video-testimonial {
+	height: 500px;
+	margin: 50px auto;
+}
+
+#video-widget-card {
+	height: 466.688px;
+}
+
+/* Booking confirmation icons */
+.b-icon {
+	font-size: 80px;
+}
+
+/* Default font-size styling */
+h1,
+.h-1 {
+	font-size: 48px !important;
+}
+
+h2,
+.h-2 {
+	font-size: 28px !important;
+}
+card border-light mt-5 mx-5 px-5 py-5 p,
+.p-size {
+	font-size: 20px !important;
 }
