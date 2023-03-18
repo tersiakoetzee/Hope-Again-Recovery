@@ -102,6 +102,7 @@
 		"react-icons": "^4.7.1",
 		"react-script-hook": "^1.7.2",
 		"react-text-mask": "^5.5.0",
+		"styled-components": "^5.3.9",
 		"winston": "^3.8.2"
 	},
 	"engines": {
