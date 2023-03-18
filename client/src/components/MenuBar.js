@@ -4,6 +4,7 @@ import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
 import logo from "../img/harh-logo.png";
 import "./MenuBar.css";
+
 export const MenuBar = () => {
 	return (
 		<Navbar bg="dark" variant="dark" expand="lg">
@@ -32,14 +33,10 @@ export const MenuBar = () => {
 							</NavDropdown.Item>
 						</NavDropdown>
 						{/* Projects dropdown */}
-						<NavDropdown
-							className="b-right b-left px-4"
-							title="Projects"
-							id="basic-nav-dropdown"
-						>
+						<NavDropdown title="Projects" id="basic-nav-dropdown">
 							<NavDropdown.Item href="/projects">Land</NavDropdown.Item>
 
-							<NavDropdown.Item href="#action/3.3">
+							<NavDropdown.Item href="#futureplans">
 								Future Plans
 							</NavDropdown.Item>
 						</NavDropdown>
@@ -49,14 +46,9 @@ export const MenuBar = () => {
 							<NavDropdown.Item href="/admission">
 								How Admission Works
 							</NavDropdown.Item>
-							<Nav.Link
-								className="b-right b-left px-4"
-								title="Screening"
-								href="/booking"
-								style={{ color: "black" }}
-							>
-								Book a Screening{" "}
-							</Nav.Link>
+							<NavDropdown.Item href="/booking">
+								Book a Screening
+							</NavDropdown.Item>
 						</NavDropdown>
 						<Nav.Link href="/testimonials">Testimonials</Nav.Link>
 						{/* Fundings dropdown */}
@@ -68,11 +60,10 @@ export const MenuBar = () => {
 								Become a Funder
 							</NavDropdown.Item>
 						</NavDropdown>
-						<div className="donateColor ">
-							<Nav.Link className="donateColor text-dark " href="#link">
-								Donate Now
-							</Nav.Link>
-						</div>
+
+						<Nav.Link className="btn text-dark donateColor" href="/donate">
+							Donate Now
+						</Nav.Link>
 					</Nav>
 				</Navbar.Collapse>
 			</Container>

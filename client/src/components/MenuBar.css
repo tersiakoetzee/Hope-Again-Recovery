@@ -27,7 +27,13 @@
 		letter-spacing: 0.6px;
 	}
 }
+
 .donateColor {
-	background-color: #14d547;
+	background-color: #14d547 !important;
 	border-radius: 5px;
+}
+
+.donateColor:hover {
+	background-color: #15c343 !important;
+	color: #fff !important;
 }

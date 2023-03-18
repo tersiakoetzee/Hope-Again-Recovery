@@ -2,6 +2,7 @@ import { Template } from "../components/Template";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
+import Image6 from "../assets/img6.jpg";
 
 export const Projects = () => {
 	return (
@@ -24,7 +25,7 @@ export const Projects = () => {
 					<Col className=" text-center py-4">
 						<img
 							className="img-fluid shadow-2-strong"
-							src="https://scontent-cpt1-1.xx.fbcdn.net/v/t39.30808-6/315212994_660147695543635_6295274609281976028_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=OtTcppY6k9YAX_gflli&_nc_ht=scontent-cpt1-1.xx&oh=00_AfASYhQmqj_jQtd0V6khjIFkD4BYenM-ToQ3h0BTvHjwyA&oe=640220B3"
+							src={Image6}
 							width="100%"
 							height="auto"
 							alt="Land Project"
