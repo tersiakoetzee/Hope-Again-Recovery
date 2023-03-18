@@ -6,21 +6,34 @@
 	text-align: center !important;
 }
 
+.dropdown-item:hover {
+	background: #eed202 !important;
+}
+
+.nav-link:hover {
+	color: #eed202 !important;
+}
+
 /* On larger screen */
 @media screen and (min-width: 992px) {
-	.b-start {
-		border-left: 3px solid #564e4e;
+	.menu-bar {
+		color: red !important;
 	}
 
-	.b-left {
-		border-left: 1px solid #564e4e;
+	.nav-link {
+		color: #fff !important;
+		font-size: 16px !important;
+		font-weight: 500 !important;
+		letter-spacing: 0.6px;
 	}
+}
 
-	.b-right {
-		border-right: 1px solid #564e4e;
-	}
+.donateColor {
+	background-color: #14d547 !important;
+	border-radius: 5px;
+}
 
-	.b-end {
-		border-right: 3px solid #564e4e;
-	}
+.donateColor:hover {
+	background-color: #15c343 !important;
+	color: #fff !important;
 }

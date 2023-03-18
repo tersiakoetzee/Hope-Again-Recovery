@@ -1,8 +1,9 @@
 .main-footer {
-	background-color: #1d2130;
+	background-color: rgb(52, 58, 64);
 	color: aliceblue;
 	padding: 20px;
 }
+
 .footer-bottom {
 	border-top: 1px solid aliceblue;
 	padding: 4px;
