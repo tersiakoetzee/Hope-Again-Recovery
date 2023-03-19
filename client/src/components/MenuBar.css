@@ -4,10 +4,12 @@
 
 .dropdown-item {
 	text-align: center !important;
+	color: #000 !important;
 }
 
 .dropdown-item:hover {
 	background: #eed202 !important;
+	color: #000 !important;
 }
 
 .nav-link:hover {
