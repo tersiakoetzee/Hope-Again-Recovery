@@ -1,13 +1,13 @@
-.main-footer {
-	background-color: rgb(52, 58, 64);
-	color: aliceblue;
-	padding: 20px;
+a {
+	text-decoration: none !important;
+	color: #fff !important;
 }
 
-.footer-bottom {
-	border-top: 1px solid aliceblue;
-	padding: 4px;
+a:hover {
+	text-decoration: none !important;
+	color: #eed202 !important;
 }
-a:href {
-	color: aliceblue;
+
+.icon {
+	font-size: 38px;
 }
