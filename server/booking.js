@@ -47,6 +47,7 @@ router.post("/", validation, async (req, res) => {
 		careGiverName,
 		careGiverNumber,
 	};
+
 	// Optional
 	const {
 		email,
@@ -114,7 +115,7 @@ router.post("/", validation, async (req, res) => {
 		// Request to Google Calendar API.
 		try {
 			await calendar.events.insert({
-				calendarId: "hopeagainrecovery3@gmail.com",
+				calendarId: process.env.CALENDAR_ID,
 				auth: client,
 				requestBody: booking,
 			});
@@ -122,11 +123,47 @@ router.post("/", validation, async (req, res) => {
 			res.status(200).json({ msg: "Booking successful" });
 		} catch (error) {
 			res.status(500).json({ msg: "Could not make a booking, try again" });
-			throw new Error(`Could not create event: ${error.message}`);
 		}
 	};
 
 	createBooking(bookingDetails);
 });
+
+/* start of get calendar events/dates */
+
+// Reading data / booked events lists from Google API
+router.get("/", async (req, res) => {
+	async function listEvents() {
+		const client = new JWT({
+			email: process.env.CLIENT_EMAIL,
+			key: process.env.PRIVATE_KEY,
+			scopes: [
+				// set the right scope
+				"https://www.googleapis.com/auth/calendar",
+				"https://www.googleapis.com/auth/calendar.events",
+			],
+		});
+		const calendar = google.calendar({ version: "v3" });
+		try {
+			const results = await calendar.events.list({
+				calendarId: process.env.CALENDAR_ID,
+				auth: client,
+				singleEvents: true,
+				orderBy: "startTime",
+			});
+			// Returning bookings list
+			const events = results.data.items.map((event) => event.start.dateTime);
+			res.status(200).json(events);
+		} catch (error) {
+			res
+				.status(500)
+				.json({ msg: "Could not return bookings list, try again" });
+		}
+	}
+
+	listEvents();
+});
+
+//*end of get calendar events/dates */
 
 export default router;
