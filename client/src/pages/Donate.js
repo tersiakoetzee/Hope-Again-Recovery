@@ -1,6 +1,8 @@
 import React from "react";
 import Form from "react-bootstrap/Form";
 import Container from "react-bootstrap/Container";
+import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
 import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
 import InputGroup from "react-bootstrap/InputGroup";
@@ -44,6 +46,17 @@ export const Donate = () => {
 	return (
 		<Template>
 			<Container>
+				<Row>
+					<Col>
+						<h2>Make A Donation</h2>
+						<p>
+							Your donation will go towards ensuring that we can continue our
+							work of substance abuse prevention and provide a safe space
+							<br></br> for people to find freedom and become constructive
+							citizens of society. Would you consider giving now.
+						</p>
+					</Col>
+				</Row>
 				<h2 className="text-center my-5">Donate Now</h2>
 				{showPopup && (
 					<div className="popup text-center p-8">
