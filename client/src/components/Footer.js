@@ -17,9 +17,8 @@ export const Footer = () => {
 							width="160"
 							height="100"
 						/>
-						<p>
-							est. 2007
-						</p>
+						{/* footer logo */}
+						<p>est. 2007</p>
 					</Col>
 					<Col sm={12} md={3}>
 						<h4>More Projects</h4>
