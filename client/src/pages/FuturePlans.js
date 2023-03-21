@@ -9,7 +9,7 @@ export const FuturePlans = () => {
 		<Template>
 			<Container>
 				<Row className="square rounded border border-3 ">
-					<Col className="text-center py-4">
+					<Col sm={12} md={6} className="text-center py-4">
 						<h1>Future Plans</h1>
 						<p>
 							Mount Hope Projects continues to dream for flourishing
@@ -23,7 +23,7 @@ export const FuturePlans = () => {
 							resources.
 						</p>
 					</Col>
-					<Col className=" text-center py-4">
+					<Col sm={12} md={6} className=" text-center py-4">
 						<img
 							className="img-fluid shadow-2-strong"
 							src={Future}
