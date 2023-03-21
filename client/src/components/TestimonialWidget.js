@@ -31,7 +31,6 @@ export const TestimonialWidget = () => {
 					</a>
 				</div>
 			</Card.Body>
-
 		</Card>
 	);
 };
