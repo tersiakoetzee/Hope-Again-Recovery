@@ -2,6 +2,7 @@ import { Template } from "../components/Template";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
+import HopeChurch from "../assets/church-logo.png";
 
 export const FundingPartners = () => {
 	return (
@@ -21,6 +22,12 @@ export const FundingPartners = () => {
 					</Col>
 					<Col>
 						<h5>Mount Hope Church</h5>
+						<img
+							className=" icon rounded text-center py-2"
+							src={HopeChurch}
+							alt="First slide"
+							height="180"
+						/>
 					</Col>
 					<br></br>
 					<Col>
