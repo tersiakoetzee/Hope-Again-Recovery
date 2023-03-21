@@ -1,27 +1,26 @@
 .fd-white-block {
-    height: 50vh;
+	height: 50vh;
 }
 
 .fd-text-col {
-    position: relative;
+	position: relative;
 }
 
 .fd-yellow-block {
-    position: absolute;
-    bottom: -100px;
-    width: 75%;
-    height: 100px;
-    background-color: #eed202;
+	position: absolute;
+	bottom: -100px;
+	width: 75%;
+	height: 100px;
+	background-color: #eed202;
 }
 
 /* On larger screen */
 @media screen and (min-width: 992px) {
-    .fd-row {
-        height: 75vh !important;
-    }
-    
-    .fd-content-container {
-        width: 75% !important;
-    }
+	.fd-row {
+		height: 75vh !important;
+	}
 
+	.fd-content-container {
+		width: 75% !important;
+	}
 }

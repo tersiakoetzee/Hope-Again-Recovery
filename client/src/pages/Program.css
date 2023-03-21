@@ -1,26 +1,26 @@
 .quote-container {
-    height: 50vh;
+	height: 50vh;
 }
 
 /* On larger screen */
 @media screen and (min-width: 992px) {
-    .care-row {
-        height: 75vh !important;
-    }
-    
-    .po-content-container {
-        width: 75% !important;
-    }
+	.care-row {
+		height: 75vh !important;
+	}
 
-    .po-col {
-        position: relative;
-    }
-    
-    .po-red-block {
-        position: absolute;
-        top: 0;
-        right: 0;
-        width: 25%;
-        height: 100%;
-    }
+	.po-content-container {
+		width: 75% !important;
+	}
+
+	.po-col {
+		position: relative;
+	}
+
+	.po-red-block {
+		position: absolute;
+		top: 0;
+		right: 0;
+		width: 25%;
+		height: 100%;
+	}
 }

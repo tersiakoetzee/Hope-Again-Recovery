@@ -25,19 +25,13 @@ export const Footer = () => {
 						<h4 className="mt-4 mt-md-0">Useful Links</h4>
 						<hr className="text-yellow" />
 						<p>
-							<a href="/projects">
-								New Building
-							</a>
+							<a href="/projects">New Building</a>
 						</p>
 						<p>
-							<a href="/booking">
-								Book Screening
-							</a>
+							<a href="/booking">Book Screening</a>
 						</p>
 						<p>
-							<a href="/">
-								Donation
-							</a>
+							<a href="/">Donation</a>
 						</p>
 					</Col>
 					<Col sm={12} md={3}>
@@ -79,12 +73,13 @@ export const Footer = () => {
 							<i className="bi bi-facebook icon"></i>
 						</a>
 						<p className="my-2">
-							<a href="/#">Copyright &copy; {new Date().getFullYear()} H-A-R-H</a>
+							<a href="/#">
+								Copyright &copy; {new Date().getFullYear()} H-A-R-H
+							</a>
 							<span className="text-warning"> | </span>
 							<a href="#/">Privacy Policy</a>
 							<span className="text-warning"> | </span>
 							<a href="/#">Terms & Conditions</a>
-
 						</p>
 					</Col>
 				</Row>

@@ -5,18 +5,18 @@
 }
 
 p,
-p>a {
+p > a {
 	font-size: 20px !important;
 }
 
-p>a,
+p > a,
 .icon {
 	text-decoration: none !important;
 	color: #fff !important;
 	font-weight: 400 !important;
 }
 
-p>a:hover,
+p > a:hover,
 .icon:hover {
 	text-decoration: none !important;
 	color: #eed202 !important;
