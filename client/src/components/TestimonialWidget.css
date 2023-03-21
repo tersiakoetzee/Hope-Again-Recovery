@@ -5,13 +5,20 @@
 	background: #000;
 }
 
-.card-img {
+.card-img,
+.card-img-overlay {
 	border: none !important;
 	border-radius: 0 !important;
 	height: 100%;
-
 }
 
+.quote-icon {
+	font-size: 48px;
+}
 
-
-
+.testimoni {
+	background-color: rgba(0, 0, 0, 0.5);
+	padding: 1rem;
+	padding-top: 1.8rem;
+	border-radius: 0.25rem;
+}
