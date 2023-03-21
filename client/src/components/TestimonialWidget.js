@@ -8,7 +8,7 @@ export const TestimonialWidget = () => {
 	return (
 		<Card className="text-white testimonial-container" id="testimonial-widget">
 			<Card.Img src={Image1} alt="Card image" />
-			<Card.ImgOverlay className="d-flex flex-column align-items-center justify-content-end p-5">
+			<Card.Body className="d-flex flex-column align-items-center justify-content-end p-5">
 				<i className="bi bi-quote text-yellow align-self-start quote-icon"></i>
 				<div className="w-100 px-lg-5 testimoni">
 					<Paragraph>
@@ -30,7 +30,8 @@ export const TestimonialWidget = () => {
 						READ MORE
 					</a>
 				</div>
-			</Card.ImgOverlay>
+			</Card.Body>
+
 		</Card>
 	);
 };

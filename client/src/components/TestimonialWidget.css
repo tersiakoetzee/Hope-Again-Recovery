@@ -1,8 +1,18 @@
 #testimonial-widget {
+	position: relative;
 	border-radius: 0 !important;
 	border: none !important;
 	height: 100% !important;
-	background: #000;
+}
+
+#testimonial-widget > img {
+	position: absolute;
+	height: 100% !important;
+	object-fit: cover;
+}
+
+#testimonial-widget > .card-body {
+	z-index: 1;
 }
 
 .card-img,
