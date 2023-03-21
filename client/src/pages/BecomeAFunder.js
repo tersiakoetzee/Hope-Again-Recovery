@@ -52,7 +52,7 @@ export const BecomeAFunder = () => {
 			<Container className="formContainer">
 				<h2 className="text-center mb-3">Become A Funder</h2>
 				<div className="row justify-content-center mb-5">
-					<Card style={{ width: "50rem" }}>
+					<Card className="col-md-8">
 						<Card.Body className="text-center">
 							<Card.Text>
 								Partner with us in the work of substance abuse prevention. Your
