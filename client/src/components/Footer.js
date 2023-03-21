@@ -5,12 +5,12 @@ import "./Footer.css";
 
 export const Footer = () => {
 	return (
-		<div className="bg-dark">
+		<div className="bg-dark footer">
 			<Container className="text-center text-white py-4">
 				<Row>
-					<Col className="" sm={12} md={3}>
+					<Col sm={12} md={3}>
 						<img
-							className=" icon rounded-circle text-center py-2"
+							className="rounded-circle text-center py-2"
 							src="https://scontent-cpt1-1.xx.fbcdn.net/v/t39.30808-6/328616358_556590029746692_1897079217511533681_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=174925&_nc_ohc=W5TFkG91gMMAX-YUo9v&_nc_ht=scontent-cpt1-1.xx&oh=00_AfCk3QeJAeZ9IU3FnOXnJ8MehG4Aj10GL6qtJrATFF6ptQ&oe=640714B3"
 							alt="First slide"
 							height="100"
@@ -22,8 +22,8 @@ export const Footer = () => {
 						</p>
 					</Col>
 					<Col sm={12} md={3}>
-						<h4>Useful Links</h4>
-						<hr />
+						<h4 className="mt-4 mt-md-0">Useful Links</h4>
+						<hr className="text-yellow" />
 						<p>
 							<a href="/projects">
 								New Building
@@ -41,8 +41,8 @@ export const Footer = () => {
 						</p>
 					</Col>
 					<Col sm={12} md={3}>
-						<h4>Socials</h4>
-						<hr />
+						<h4 className="mt-4 mt-md-0">Socials</h4>
+						<hr className="text-yellow" />
 						<p>
 							<a
 								href="https://www.facebook.com/HOPEAGAINRECOVERYHOME/"
@@ -54,8 +54,8 @@ export const Footer = () => {
 						</p>
 					</Col>
 					<Col sm={12} md={3}>
-						<h4>Contact Info</h4>
-						<hr />
+						<h4 className="mt-4 mt-md-0">Contact Info</h4>
+						<hr className="text-yellow" />
 						<p>
 							<i className="bi bi-telephone-fill"></i> 021 371 7323
 						</p>
@@ -70,16 +70,15 @@ export const Footer = () => {
 				</Row>
 				<Row>
 					<Col>
-						<hr />
+						<hr className="text-yellow mt-4 mt-md-0" />
 						<a
-							className=""
 							href="https://www.facebook.com/HOPEAGAINRECOVERYHOME/"
 							target="_blank"
 							rel="noreferrer"
 						>
 							<i className="bi bi-facebook icon"></i>
 						</a>
-						<p>
+						<p className="my-2">
 							<a href="/#">Copyright &copy; {new Date().getFullYear()} H-A-R-H</a>
 							<span className="text-warning"> | </span>
 							<a href="#/">Privacy Policy</a>

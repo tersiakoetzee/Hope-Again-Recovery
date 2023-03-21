@@ -1,39 +1,27 @@
-import { MenuBar } from "../components/MenuBar";
 import "./Home.css";
 import { PicCarousel } from "../components/PicCarousel";
 import { TestimonialWidget } from "../components/TestimonialWidget";
 import { VideoWidget } from "../components/VideoWidget";
-import { Footer } from "../components/Footer";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
+import { Template } from "../components/Template";
 
 export function Home() {
 	return (
-		<div>
-			<header>
-				<MenuBar />
-			</header>
-			<main role="main">
-				<div>
-					<PicCarousel />
-					<section className="video-testimonial">
-						<Container>
-							<Row>
-								<Col sm={12} md={6}>
-									<VideoWidget />
-								</Col>
-								<Col sm={12} md={6}>
-									<TestimonialWidget />
-								</Col>
-							</Row>
-						</Container>
-					</section>
-
-					<Footer />
-				</div>
-			</main>
-		</div>
+		<Template>
+			<PicCarousel />
+			<Container fluid>
+				<Row>
+					<Col className="p-0" sm={12} md={6} lg={6}>
+						<VideoWidget />
+					</Col>
+					<Col className="p-0" sm={12} md={6} lg={6}>
+						<TestimonialWidget />
+					</Col>
+				</Row>
+			</Container>
+		</Template>
 	);
 }
 
