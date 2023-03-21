@@ -21,3 +21,12 @@
 .bg-blue {
 	background: #0945a0 !important;
 }
+
+/* ****************Media Query Below - Additional ***************************/
+
+@media only screen and (min-width: 576px) and (max-width: 1400px) {
+	.video-testimonial {
+		height: 900px;
+		margin: 50px auto;
+	}
+}
