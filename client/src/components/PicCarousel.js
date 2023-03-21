@@ -56,8 +56,8 @@ export const PicCarousel = () => {
 					<h3>Land Project</h3>
 
 					<p>
-						Mount Hope plans to erect a Leadership Centre for Skills Development
-						and Recovery for Men and Women.
+						Mount Hope plans to erect a Leadership Centre for skills development
+						and recovery for men and women.
 					</p>
 					<a href="/" className="btn btn-lg btn-dark">
 						View more here
