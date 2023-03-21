@@ -1,6 +1,7 @@
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
+import logo from "../img/harh-logo.png";
 import "./Footer.css";
 
 export const Footer = () => {
@@ -10,15 +11,14 @@ export const Footer = () => {
 				<Row>
 					<Col className="icon " sm={12} md={3}>
 						<img
-							className=" icon rounded-circle text-center py-2"
-							src="https://scontent-cpt1-1.xx.fbcdn.net/v/t39.30808-6/328616358_556590029746692_1897079217511533681_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=174925&_nc_ohc=W5TFkG91gMMAX-YUo9v&_nc_ht=scontent-cpt1-1.xx&oh=00_AfCk3QeJAeZ9IU3FnOXnJ8MehG4Aj10GL6qtJrATFF6ptQ&oe=640714B3"
+							className=" icon text-center py-2"
+							src={logo}
 							alt="First slide"
+							width="160"
 							height="100"
 						/>
-						<p>
-							Hope Again <br></br>Recovery Home<br></br>
-							est. 2007
-						</p>
+						{/* footer logo */}
+						<p>est. 2007</p>
 					</Col>
 					<Col sm={12} md={3}>
 						<h4>More Projects</h4>
