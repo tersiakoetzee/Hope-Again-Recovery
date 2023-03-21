@@ -29,7 +29,7 @@ export const FuturePlans = () => {
 							src={Future}
 							width="100%"
 							height="auto"
-							alt="Land Project"
+							alt="Futur Plans"
 						/>
 					</Col>
 				</Row>
