@@ -15,12 +15,14 @@
 }
 
 .video-testimonial {
-	height: 500px;
+	height: 750px;
 	margin: 50px auto;
+	top: 40rem;
 }
 
 #video-widget-card {
 	height: 466.688px;
+	position: relative;
 }
 
 /* Booking confirmation icons */
@@ -41,4 +43,13 @@ h2,
 card border-light mt-5 mx-5 px-5 py-5 p,
 .p-size {
 	font-size: 20px !important;
+}
+
+/* ****************Media Query Below - Additional ***************************/
+
+@media only screen and (min-width: 576px) and (max-width: 1400px) {
+	.video-testimonial {
+		height: 900px;
+		margin: 50px auto;
+	}
 }
