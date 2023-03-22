@@ -1,8 +1,8 @@
 import Card from "react-bootstrap/Card";
 import CardGroup from "react-bootstrap/CardGroup";
 import { Template } from "../components/Template";
-import Test2 from "../assets/test2.jpg";
-import Test3 from "../assets/test3.jpg";
+import Test2 from "../assets/test2.png";
+import Test3 from "../assets/test3.png";
 import Test4 from "../assets/test4.jpg";
 import "./Testimonials.css";
 
@@ -19,7 +19,12 @@ export const Testimonials = () => {
 				</Card>
 				<CardGroup>
 					<Card>
-						<Card.Img variant="top" src={Test2} />
+						<Card.Img
+							variant="top"
+							src={Test2}
+							className= "img-fluid"
+								alt="person"
+								/>
 						<Card.Body>
 							<Card.Title>Samantha, 26yrs</Card.Title>
 							<Card.Text>
