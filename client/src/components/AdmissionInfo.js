@@ -21,12 +21,7 @@ export const AdmissionInfo = () => {
 								<ListGroup variant="flush">
 									<ListGroup.Item className="border-0 d-flex align-items-center">
 										<i className="bi bi-circle-fill mx-1 text-warning"></i>
-										<p className="mb-0">
-											Contact us to book your screening or{" "}
-										</p>
-										<Card.Link className="btn btn-success ms-1" href="/booking">
-											Book a Screening
-										</Card.Link>
+										<p className="mb-0">Contact us to book your screening </p>
 									</ListGroup.Item>
 									<AdmissionItem
 										color="text-success"
@@ -56,6 +51,9 @@ export const AdmissionInfo = () => {
 									<div className="border p-2 px-lg-5">
 										<p className="lead">Admission Fee: R1950</p>
 										<p className="lead">Monthly Fee: R1900</p>
+										<Card.Link className="btn btn-success ms-1" href="/booking">
+											Book a Screening
+										</Card.Link>
 									</div>
 								</Card.Text>
 							</Card.Body>
