@@ -1,6 +1,6 @@
 import Card from "react-bootstrap/Card";
 import "./TestimonialWidget.css";
-import Image1 from "../assets/testimonial8.jpg";
+import Image1 from "../assets/matthew-img.jpg";
 import { Heading1 } from "./Heading1";
 import { Paragraph } from "./Paragraph";
 

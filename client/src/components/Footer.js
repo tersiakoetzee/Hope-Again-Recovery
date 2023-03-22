@@ -7,21 +7,17 @@ import "./Footer.css";
 export const Footer = () => {
 	return (
 		<div className="bg-dark footer">
-			<Container className="text-center text-white py-4">
+			<Container className="text-center text-white py-5">
 				<Row>
 					<Col sm={12} md={3}>
 						<img
-							className="rounded-circle text-center py-2"
+							className="text-center"
 							src={logo}
 							alt="First slide"
-							width="160"
-							height="100"
+							width="170"
+							height="47"
 						/>
-						<p>
-							Hope Again <br />
-							Recovery Home <br />
-							est. 2007
-						</p>
+						<p>est. 2007</p>
 					</Col>
 					<Col sm={12} md={3}>
 						<h4 className="mt-4 mt-md-0">Useful Links</h4>
@@ -45,7 +41,7 @@ export const Footer = () => {
 								target="_blank"
 								rel="noreferrer"
 							>
-								Facebook
+								<i className="bi bi-facebook"></i> Facebook
 							</a>
 						</p>
 					</Col>
@@ -67,13 +63,6 @@ export const Footer = () => {
 				<Row>
 					<Col>
 						<hr className="text-yellow mt-4 mt-md-0" />
-						<a
-							href="https://www.facebook.com/HOPEAGAINRECOVERYHOME/"
-							target="_blank"
-							rel="noreferrer"
-						>
-							<i className="bi bi-facebook icon"></i>
-						</a>
 						<p className="my-2">
 							<a href="/#">
 								Copyright &copy; {new Date().getFullYear()} H-A-R-H

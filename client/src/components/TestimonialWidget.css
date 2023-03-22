@@ -9,6 +9,7 @@
 	position: absolute;
 	height: 100% !important;
 	object-fit: cover;
+	object-position: 50% 15%;
 }
 
 #testimonial-widget > .card-body {
