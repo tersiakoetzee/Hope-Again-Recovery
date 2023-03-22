@@ -6,6 +6,7 @@ import { FamilyDays } from "./pages/FamilyDays";
 import { Projects } from "./pages/Projects";
 import { FundingPartners } from "./pages/FundingPartners";
 import { BecomeAFunder } from "./pages/BecomeAFunder";
+import { FuturePlans } from "./pages/FuturePlans";
 import "bootstrap/dist/css/bootstrap.min.css";
 import ThemeProvider from "react-bootstrap/ThemeProvider";
 import { AdmissionInfo } from "./components/AdmissionInfo";
@@ -24,6 +25,7 @@ const App = () => (
 			<Route path="/" element={<Home />} />
 			<Route path="/about" element={<About />} />
 			<Route path="/projects" element={<Projects />} />
+			<Route path="/futureplans" element={<FuturePlans />} />
 			<Route path="/fundingpartners" element={<FundingPartners />} />
 			<Route path="/becomeafunder" element={<BecomeAFunder />} />
 			<Route path="/booking" element={<Bookings />} />
