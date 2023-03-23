@@ -1,13 +1,27 @@
-.main-footer {
-	background-color: rgb(52, 58, 64);
-	color: aliceblue;
-	padding: 20px;
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap");
+
+.footer {
+	font-family: "Roboto", sans-serif !important;
 }
 
-.footer-bottom {
-	border-top: 1px solid aliceblue;
-	padding: 4px;
+p,
+p > a {
+	font-size: 20px !important;
 }
-a:href {
-	color: aliceblue;
+
+p > a,
+.icon {
+	text-decoration: none !important;
+	color: #fff !important;
+	font-weight: 400 !important;
+}
+
+p > a:hover,
+.icon:hover {
+	text-decoration: none !important;
+	color: #eed202 !important;
+}
+
+a .icon {
+	font-size: 38px !important;
 }
