@@ -34,9 +34,13 @@
 	border-radius: 0.25rem;
 }
 
-.article-text>h2 {
+.article-text > h2 {
 	font-size: 28px;
-	font-family: 'Roboto', sans-serif;
+	font-family: "Roboto", sans-serif;
+}
+.article-text > p {
+	font-size: 20px;
+	font-family: "Inter", sans-serif;
 }
 .article-text>p {
 	font-size: 20px;

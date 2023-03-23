@@ -21,14 +21,14 @@ export const AboutContent = () => {
 				<Container>
 					<Row className="justify-content-center">
 						<Col className="text-center custom-container" lg={8}>
-							<Heading2  className="text-yellow mt-5 mb-2">Our Story</Heading2>
+							<Heading2 className="text-yellow mt-5 mb-2">Our Story</Heading2>
 							<Paragraph className="text-white">
 								For many years, Mount Hope Church hosted Recovery Circles and
-								support groups for men as a response to the ongoing drug misuse and
-								abuse plaguing Mitchell’s Plain and its surrounding communities.
-								They quickly realised that something more needed to be done, and
-								through a series of miraculous events Hope Again recovery Home was
-								established.
+								support groups for men as a response to the ongoing drug misuse
+								and abuse plaguing Mitchell’s Plain and its surrounding
+								communities. They quickly realised that something more needed to
+								be done, and through a series of miraculous events Hope Again
+								recovery Home was established.
 							</Paragraph>
 						</Col>
 					</Row>
@@ -63,7 +63,6 @@ export const AboutContent = () => {
 							/>
 						</Col>
 					</Row>
-
 				</Container>
 			</div>
 
@@ -72,15 +71,24 @@ export const AboutContent = () => {
 					<Col lg={6}>
 						<Row className="justify-content-center bg-warning h-100">
 							<Col className="text-center mt-5" sm={10} lg={10}>
-								<Heading2 >Our Values</Heading2>
+								<Heading2>Our Values</Heading2>
 								<Paragraph>
 									The programme’s ultimate goal is healing of the body, soul and
-									spirit of the individual, as this is a prerequisite for a full,
-									constructive life with the right tools to make healthy life choices.
+									spirit of the individual, as this is a prerequisite for a
+									full, constructive life with the right tools to make healthy
+									life choices.
 								</Paragraph>
 							</Col>
-							<Col className="mb-5 d-flex justify-content-center" sm={10} lg={10}>
-								<Card.Img className="values-img" src={hopeAgainImg} responsive />
+							<Col
+								className="mb-5 d-flex justify-content-center"
+								sm={10}
+								lg={10}
+							>
+								<Card.Img
+									className="values-img"
+									src={hopeAgainImg}
+									responsive
+								/>
 							</Col>
 						</Row>
 					</Col>

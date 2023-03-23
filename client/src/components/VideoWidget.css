@@ -2,10 +2,16 @@
 	height: 100% !important;
 	border: none !important;
 	border-radius: 0 !important;
-  }
+}
 
 iframe {
 	height: 230px;
+}
+
+@media screen and (min-width: 768px) {
+	iframe {
+		height: 100%;
+	}
 }
 
 @media screen and (min-width: 768px) {

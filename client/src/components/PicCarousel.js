@@ -9,9 +9,20 @@ import { Paragraph } from "./Paragraph";
 
 export const PicCarousel = () => {
 	return (
-		<Carousel className="carousel-container"
-			nextIcon={<span aria-hidden="true" className="carousel-control-next-icon bi bi-caret-right-fill" />}
-			prevIcon={<span aria-hidden="true" className="carousel-control-next-icon bi bi-caret-left-fill" />}
+		<Carousel
+			className="carousel-container"
+			nextIcon={
+				<span
+					aria-hidden="true"
+					className="carousel-control-next-icon bi bi-caret-right-fill"
+				/>
+			}
+			prevIcon={
+				<span
+					aria-hidden="true"
+					className="carousel-control-next-icon bi bi-caret-left-fill"
+				/>
+			}
 		>
 			<Carousel.Item>
 				<img
@@ -41,7 +52,9 @@ export const PicCarousel = () => {
 
 				<Carousel.Caption>
 					<Heading1 className="text-yellow">Book A Screening</Heading1>
-					<Paragraph>Find out how admission works and book a screening.</Paragraph>
+					<Paragraph>
+						Find out how admission works and book a screening.
+					</Paragraph>
 					<a href="/Admission" className="btn btn-lg btn-dark">
 						{" "}
 						READ MORE
@@ -58,8 +71,10 @@ export const PicCarousel = () => {
 
 				<Carousel.Caption>
 					<Heading1 className="text-yellow">Land Project</Heading1>
-					<Paragraph>Mount Hope plans to erect a Leadership Centre for Skills Development
-						and Recovery for Men and Women.</Paragraph>
+					<Paragraph>
+						Mount Hope plans to erect a Leadership Centre for Skills Development
+						and Recovery for Men and Women.
+					</Paragraph>
 					<a href="/" className="btn btn-lg btn-dark">
 						READ MORE
 					</a>
