@@ -36,7 +36,7 @@ export const MenuBar = () => {
 						<NavDropdown title="Projects" id="basic-nav-dropdown">
 							<NavDropdown.Item href="/projects">Land</NavDropdown.Item>
 
-							<NavDropdown.Item href="#futureplans">
+							<NavDropdown.Item href="/futureplans">
 								Future Plans
 							</NavDropdown.Item>
 						</NavDropdown>
