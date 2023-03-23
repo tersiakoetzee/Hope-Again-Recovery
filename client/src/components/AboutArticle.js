@@ -6,7 +6,7 @@ export const AboutArticle = ({ photo, title, text }) => {
 			<div className="image">
 				<Image src={photo} className="img-fluid" />
 			</div>
-			<div>
+			<div className="article-text">
 				<h2>{title}</h2>
 				<p>{text}</p>
 			</div>
