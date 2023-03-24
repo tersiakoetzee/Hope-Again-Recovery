@@ -21,7 +21,7 @@ export const AboutContent = () => {
 				<Container>
 					<Row className="justify-content-center">
 						<Col className="text-center custom-container" lg={8}>
-							<Heading2 className="text-yellow mt-5 mb-2">Our Story</Heading2>
+							<Heading2 className="text-yellow mb-2">Our Story</Heading2>
 							<Paragraph className="text-white">
 								For many years, Mount Hope Church hosted Recovery Circles and
 								support groups for men as a response to the ongoing drug misuse

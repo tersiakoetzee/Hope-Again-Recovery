@@ -1,5 +1,5 @@
 .carousel-container {
-	max-height: 600px;
+	max-height: 88vh;
 }
 
 .carousel-item::before {
@@ -14,7 +14,7 @@
 }
 
 .carousel-caption {
-	bottom: 170px;
+	bottom: 150px;
 }
 
 .carousel-caption a {
@@ -49,4 +49,11 @@ a {
 	font-weight: 500 !important;
 	font-size: 16px !important;
 	padding: 11px 18px 8px 18px !important;
+}
+
+/* On larger screen */
+@media screen and (min-width: 992px) {
+	.carousel-caption {
+		bottom: 200px;
+	}
 }
