@@ -51,13 +51,17 @@ export const AdmissionInfo = () => {
 									<div className="border p-2 px-lg-5">
 										<p className="lead">Admission Fee: R1950</p>
 										<p className="lead">Monthly Fee: R1900</p>
-										<Card.Link className="btn btn-success ms-1" href="/booking">
-											Book a Screening
-										</Card.Link>
 									</div>
 								</Card.Text>
 							</Card.Body>
 						</Card>
+					</Col>
+				</Row>
+				<Row className="justify-content-center text-center">
+					<Col lg={8}>
+						<Card.Link className="btn btn-success ms-1" href="/booking">
+							Book a Screening
+						</Card.Link>
 					</Col>
 				</Row>
 			</Container>
