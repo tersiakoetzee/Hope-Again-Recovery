@@ -29,18 +29,18 @@ export const Testimonials = () => {
 					</Col>
 					<Col className="content1">
 						<div id="content-block1">
-							<p className="quotes-size">&apos;&ldquo;</p>
+							<p className="quotes-size">&ldquo;</p>
 							{/* <i className="bi bi-quote"></i> */}
 							<h2>Life Changing</h2>
 							<p className="testimonial-copy">
 								Was at HARH in 2012 for 9 months and the experience was life
 								changing where I met Jesus and got saved. The program was
-								disciplined and it has prepared us for some of life&apos;’s
-								challenges we might face. I&apos;’m currently working as a field
+								disciplined and it has prepared us for some of life’s
+								challenges we might face. I’m currently working as a field
 								agent for an asset management company and have been married for
 								4 years.
 							</p>
-							<p className="quotes-size">&apos;&rdquo;</p>
+							<p className="quotes-size">&rdquo;</p>
 							{/* <i className="bi bi-quote"></i> */}
 						</div>
 					</Col>
@@ -48,7 +48,7 @@ export const Testimonials = () => {
 				<Row>
 					<Col className="content2">
 						<div id="content-block1">
-							<p className="quotes-size">&apos;&ldquo;</p>
+							<p className="quotes-size">&ldquo;</p>
 							<h2>Living Life to the Fullest</h2>
 							<p className="testimonial-copy">
 								I was on drugs for 6 years, addicted to crystal meth and
@@ -66,7 +66,7 @@ export const Testimonials = () => {
 								are living life to the fullest and thank God every day for
 								carrying us through!{" "}
 							</p>
-							<p className="quotes-size">&apos;&rdquo;</p>
+							<p className="quotes-size">&rdquo;</p>
 							{/* <i className="bi bi-quote"></i> */}
 						</div>
 					</Col>
