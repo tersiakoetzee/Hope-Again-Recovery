@@ -14,13 +14,17 @@ export const AdmissionInfo = () => {
 			<PageHeaderTemplate title="How Admission Works" image={test} />
 			<Container fluid>
 				<Row className="justify-content-center">
-					<Col className="py-5 d-flex justify-content-center align-items-center ai-col-height" lg={8}>
+					<Col
+						className="py-5 d-flex justify-content-center align-items-center ai-col-height"
+						lg={8}
+					>
 						<div className="ai-content px-3">
 							<Card className="border-0 m-0 p-0">
-								<Heading2 className="text-yellow">Steps to how admission works at Hope Again Recovery Home</Heading2>
+								<Heading2 className="text-yellow">
+									Steps to how admission works at Hope Again Recovery Home
+								</Heading2>
 								<Card.Body className="m-0 p-0">
 									<ListGroup variant="flush">
-
 										<AdmissionItem
 											color="text-dark"
 											text="Contact us to book your screening"
@@ -55,9 +59,12 @@ export const AdmissionInfo = () => {
 											<p className="lead">Monthly Fee: R1900</p>
 										</div>
 									</Card.Text>
-											<Card.Link className="btn btn-success ms-1 mt-2" href="/booking">
-												Book a Screening
-											</Card.Link>
+									<Card.Link
+										className="btn btn-success ms-1 mt-2"
+										href="/booking"
+									>
+										Book a Screening
+									</Card.Link>
 								</Card.Body>
 							</Card>
 						</div>
@@ -66,9 +73,7 @@ export const AdmissionInfo = () => {
 						<div className="bg-blue ai-block"></div>
 					</Col>
 				</Row>
-				<Row>
-
-				</Row>
+				<Row></Row>
 			</Container>
 		</Template>
 	);

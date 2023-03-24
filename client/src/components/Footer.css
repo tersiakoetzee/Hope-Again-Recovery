@@ -26,7 +26,7 @@ a .icon {
 	font-size: 38px !important;
 }
 
-p>a:hover,
+p > a:hover,
 .icon:hover {
 	text-decoration: none !important;
 	color: #eed202 !important;
