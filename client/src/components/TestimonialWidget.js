@@ -1,7 +1,7 @@
 import Card from "react-bootstrap/Card";
 import "./TestimonialWidget.css";
 import Image1 from "../assets/matthew-img.jpg";
-import { Heading1 } from "./Heading1";
+import { Heading2 } from "./Heading2";
 import { Paragraph } from "./Paragraph";
 
 export const TestimonialWidget = () => {
@@ -21,7 +21,7 @@ export const TestimonialWidget = () => {
 					</Paragraph>
 				</div>
 				<div className="w-100 px-lg-5 text-center">
-					<Heading1 className="text-yellow">Life Changing Stories</Heading1>
+					<Heading2 className="text-yellow">Life Changing Stories</Heading2>
 					<Paragraph>
 						Shared in Hope Again&apos;s life changing testimonials.
 					</Paragraph>

@@ -5,11 +5,14 @@ import Row from "react-bootstrap/Row";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import "bootstrap/dist/css/bootstrap.min.css";
+import bookImg from "../assets/img1.jpeg";
 import axios from "axios";
 import React, { useState } from "react";
 import { Template } from "../components/Template";
 import { BookingConfirmation } from "../components/BookingConfirmation";
 import { Link } from "react-router-dom";
+import { PageHeaderTemplate } from "../components/PageHeaderTemplate";
+import { Paragraph } from "../components/Paragraph";
 
 export const Bookings = () => {
 	const [name, setName] = useState("");
@@ -90,12 +93,14 @@ export const Bookings = () => {
 
 	return (
 		<Template>
-			<h1 className="text-center mt-4 ">Book a Screening</h1>
-			<h2 className="text-center my-4 ">
-				<Link class="link-primary fw-bold" to="/admission">
-					Take a look at How Admission Works.
-				</Link>
-			</h2>
+			<PageHeaderTemplate title="Book a Screening" image={bookImg} />
+			<Paragraph className="text-center my-5">
+				<em>
+					<Link class="link-primary" to="/admission">
+						Take a look at How Admission Works.
+					</Link>
+				</em>
+			</Paragraph>
 			<Form
 				className="row g-3 needs-validation col-md-8 offset-md-2 mb-5 px-4 py-4"
 				noValidate

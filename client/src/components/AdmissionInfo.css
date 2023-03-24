@@ -1,15 +1,19 @@
-.fd-content {
+.ai-icon {
+	font-size: 10px;
+}
+
+.ai-content {
 	max-width: 530px;
 	width: 100%;
 }
 
-.fd-col-height {
+.ai-col-height {
 	min-height: 80vh;
 }
 
 /* On larger screen */
 @media screen and (min-width: 992px) {
-	.fd-stats {
-		height: 30vh;
+	.ai-block {
+		min-height: 100%;
 	}
 }

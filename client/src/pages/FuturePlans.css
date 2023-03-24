@@ -1,15 +1,15 @@
-.fd-content {
+.fp-content {
 	max-width: 530px;
 	width: 100%;
 }
 
-.fd-col-height {
-	min-height: 80vh;
+.fp-col-height {
+	height: 80vh;
 }
 
 /* On larger screen */
 @media screen and (min-width: 992px) {
-	.fd-stats {
+	.fp-stats {
 		height: 30vh;
 	}
 }

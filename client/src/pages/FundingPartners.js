@@ -3,14 +3,19 @@ import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import HopeChurch from "../assets/church-logo.png";
+import funderImg from "../assets/img1.jpeg";
+import { PageHeaderTemplate } from "../components/PageHeaderTemplate";
+import { Heading2 } from "../components/Heading2";
 
 export const FundingPartners = () => {
 	return (
 		<Template>
+			<PageHeaderTemplate title="Funding Partners" image={funderImg} />
 			<Container className="partners text-center px-5 pt-5 mb-5">
 				<Row>
-					<h2>Funding Partners :</h2>
-					<p>Thank you to our current funding and resource partners:</p>
+					<Heading2 className="mb-5 text-blue">
+						Thank you to our current funding and resource partners:
+					</Heading2>
 					<Col>
 						<h5>Department of Social Development</h5>
 						<img

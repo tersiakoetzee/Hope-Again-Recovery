@@ -10,6 +10,10 @@ import { Template } from "../components/Template";
 import { useState } from "react";
 import axios from "axios";
 import "./donate.css";
+import donateImg from "../assets/img1.jpeg";
+import { PageHeaderTemplate } from "../components/PageHeaderTemplate";
+import { Paragraph } from "../components/Paragraph";
+import { Heading2 } from "../components/Heading2";
 
 export const Donate = () => {
 	const yoco = new window.YocoSDK({
@@ -45,19 +49,19 @@ export const Donate = () => {
 
 	return (
 		<Template>
-			<Container>
-				<Row>
-					<Col>
-						<h2>Make A Donation</h2>
-						<p>
+			<PageHeaderTemplate title="Make A Donation" image={donateImg} />
+			<Container className="pt-0">
+				<Row className="justify-content-center pt-5">
+					<Col md={8}>
+						<Paragraph>
 							Your donation will go towards ensuring that we can continue our
-							work of substance abuse prevention and provide a safe space
-							<br></br> for people to find freedom and become constructive
-							citizens of society. Would you consider giving now.
-						</p>
+							work of substance abuse prevention and provide a safe space for
+							people to find freedom and become constructive citizens of
+							society. Would you consider giving now.
+						</Paragraph>
 					</Col>
 				</Row>
-				<h2 className="text-center my-5">Donate Now</h2>
+				<Heading2 className="text-center my-5">Donate Now</Heading2>
 				{showPopup && (
 					<div className="popup text-center p-8">
 						<Modal.Dialog>
