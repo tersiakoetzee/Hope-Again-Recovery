@@ -4,25 +4,41 @@ import "./PicCarousel.css";
 import Image1 from "../assets/img1.jpeg";
 import Image2 from "../assets/img2.jpeg";
 import Image3 from "../assets/img3.jpeg";
+import { Heading1 } from "./Heading1";
+import { Paragraph } from "./Paragraph";
+
 export const PicCarousel = () => {
 	return (
-		<Carousel>
+		<Carousel
+			className="carousel-container"
+			nextIcon={
+				<span
+					aria-hidden="true"
+					className="carousel-control-next-icon bi bi-caret-right-fill"
+				/>
+			}
+			prevIcon={
+				<span
+					aria-hidden="true"
+					className="carousel-control-next-icon bi bi-caret-left-fill"
+				/>
+			}
+		>
 			<Carousel.Item>
 				<img
 					className="d-block w-100"
 					src={Image1}
 					alt="First slide"
-					height="760"
+					height="600"
 				/>{" "}
 				<Carousel.Caption>
-					<h3>Celebrate Sobriety</h3>
-
-					<p>
+					<Heading1 className="text-yellow">Celebrate Sobriety</Heading1>
+					<Paragraph>
 						Our last fundraiser to raise awareness on substance use, and
 						fundraiser for land.
-					</p>
-					<a href="/projects" className="btn btn-lg btn-dark">
-						View more here
+					</Paragraph>
+					<a href="/projects" className="btn btn-lg btn-dark rounded">
+						READ MORE
 					</a>
 				</Carousel.Caption>
 			</Carousel.Item>
@@ -31,16 +47,17 @@ export const PicCarousel = () => {
 					className="d-block w-100"
 					src={Image2}
 					alt="Second slide"
-					height="760"
+					height="600"
 				/>
 
 				<Carousel.Caption>
-					<h3>Book A Screening</h3>
-
-					<p>Find out how admission works and book a screening.</p>
-					<a href="/booking" className="btn btn-lg btn-dark">
+					<Heading1 className="text-yellow">Book A Screening</Heading1>
+					<Paragraph>
+						Find out how admission works and book a screening.
+					</Paragraph>
+					<a href="/Admission" className="btn btn-lg btn-dark">
 						{" "}
-						View more here
+						READ MORE
 					</a>
 				</Carousel.Caption>
 			</Carousel.Item>
@@ -49,18 +66,17 @@ export const PicCarousel = () => {
 					className="d-block w-100"
 					src={Image3}
 					alt="Third slide"
-					height="760"
+					height="600"
 				/>
 
 				<Carousel.Caption>
-					<h3>Land Project</h3>
-
-					<p>
-						Mount Hope plans to erect a Leadership Centre for skills development
-						and recovery for men and women.
-					</p>
+					<Heading1 className="text-yellow">Land Project</Heading1>
+					<Paragraph>
+						Mount Hope plans to erect a Leadership Centre for Skills Development
+						and Recovery for Men and Women.
+					</Paragraph>
 					<a href="/" className="btn btn-lg btn-dark">
-						View more here
+						READ MORE
 					</a>
 				</Carousel.Caption>
 			</Carousel.Item>

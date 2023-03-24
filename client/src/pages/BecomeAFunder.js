@@ -6,6 +6,10 @@ import Button from "react-bootstrap/Button";
 import axios from "axios";
 import { useState } from "react";
 import { FundingConfirmation } from "../components/FundingConfirmation";
+import Card from "react-bootstrap/Card";
+import funderImg from "../assets/img1.jpeg";
+import { PageHeaderTemplate } from "../components/PageHeaderTemplate";
+import { Paragraph } from "../components/Paragraph";
 
 export const BecomeAFunder = () => {
 	const [name, setName] = useState("");
@@ -48,8 +52,24 @@ export const BecomeAFunder = () => {
 	};
 	return (
 		<Template>
+			<PageHeaderTemplate title="Become A Funder" image={funderImg} />
 			<Container className="formContainer">
-				<h2 className="text-center my-5">Become A Funder</h2>
+				<div className="row justify-content-center mb-5">
+					<Card className="col-md-8 border-0">
+						<Card.Body>
+							<Paragraph>
+								Partner with us in the work of substance abuse prevention. Your
+								partnership will ensure that we can grow the reach of our
+								services and ensure more people can find freedom from substance
+								abuse and become constructive citizens of society.
+							</Paragraph>
+							<Paragraph>
+								For more information please email harh@mounthope.co.za or call
+								us on 0213717323
+							</Paragraph>
+						</Card.Body>
+					</Card>
+				</div>
 				<Form
 					className="row g-3 needs-validation col-md-8 offset-sm-2 mb-5 px-4 py-4"
 					noValidate
@@ -108,9 +128,7 @@ export const BecomeAFunder = () => {
 						/>
 					</Form.Group>
 					<Form.Group className="mb-3">
-						<Form.Label column sm="2">
-							Email address*
-						</Form.Label>
+						<Form.Label>Email address*</Form.Label>
 						<Form.Control
 							type="email"
 							onChange={(e) => setEmail(e.target.value)}

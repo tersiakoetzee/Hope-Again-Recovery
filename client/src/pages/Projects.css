@@ -1,0 +1,15 @@
+.lp-content {
+	max-width: 530px;
+	width: 100%;
+}
+
+.lp-col-height {
+	min-height: 80vh;
+}
+
+/* On larger screen */
+@media screen and (min-width: 992px) {
+	.lp-stats {
+		height: 30vh;
+	}
+}

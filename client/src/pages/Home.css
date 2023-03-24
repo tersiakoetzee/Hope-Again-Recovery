@@ -1,28 +1,5 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap");
-
-* {
-	font-family: "Roboto", sans-serif !important;
-}
-
 .logo {
 	width: 100px;
-}
-.message {
-	color: blue;
-}
-.message:hover {
-	background-color: yellow;
-}
-
-.video-testimonial {
-	height: 750px;
-	margin: 50px auto;
-	top: 40rem;
-}
-
-#video-widget-card {
-	height: 466.688px;
-	position: relative;
 }
 
 /* Booking confirmation icons */
@@ -30,19 +7,19 @@
 	font-size: 80px;
 }
 
-/* Default font-size styling */
-h1,
-.h-1 {
-	font-size: 48px !important;
+/* custom colors */
+.text-yellow {
+	color: #eed202 !important;
+}
+.bg-yellow {
+	color: #eed202 !important;
 }
 
-h2,
-.h-2 {
-	font-size: 28px !important;
+.text-blue {
+	color: #0945a0 !important;
 }
-card border-light mt-5 mx-5 px-5 py-5 p,
-.p-size {
-	font-size: 20px !important;
+.bg-blue {
+	background: #0945a0 !important;
 }
 
 /* ****************Media Query Below - Additional ***************************/
@@ -52,4 +29,7 @@ card border-light mt-5 mx-5 px-5 py-5 p,
 		height: 900px;
 		margin: 50px auto;
 	}
+}
+.bg-blue {
+	background: #0945a0 !important;
 }
