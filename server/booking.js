@@ -122,7 +122,7 @@ router.post("/", validation, async (req, res) => {
 
 			res.status(200).json({ msg: "Booking successful" });
 		} catch (error) {
-			res.status(500).json({ msg: "Could not make a booking, try again" });
+			res.status(500).json({ msg:  error });
 		}
 	};
 
