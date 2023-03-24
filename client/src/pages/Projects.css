@@ -1,15 +1,15 @@
-.fd-content {
+.lp-content {
 	max-width: 530px;
 	width: 100%;
 }
 
-.fd-col-height {
+.lp-col-height {
 	min-height: 80vh;
 }
 
 /* On larger screen */
 @media screen and (min-width: 992px) {
-	.fd-stats {
+	.lp-stats {
 		height: 30vh;
 	}
 }

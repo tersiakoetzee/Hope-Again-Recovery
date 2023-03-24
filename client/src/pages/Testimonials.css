@@ -1,8 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap");
 
-#testimonial-cards {
-	height: 1500px;
-	margin: 0 0 50px 0;
+.main-container {
+	height: 100rem;
 }
 
 #testimonial-cards-header {
@@ -15,9 +14,57 @@
 	font-family: "Roboto", sans-serif;
 }
 
-@media screen and (min-width: 576px) {
-	#testimonial-cards {
-		height: 750px;
-		margin: 0 0 50px 0;
-	}
+.ImageOverlay {
+	display: flex;
+	position: relative;
+	text-align: center;
+	color: #eed202;
+	margin: 0 !important;
 }
+
+.card-image1 {
+	position: absolute;
+	object-fit: cover;
+	height: 100%;
+	width: auto;
+	top: 0px;
+	left: 0px;
+}
+
+.title {
+	z-index: 1;
+}
+
+.title-para {
+	z-index: 1;
+}
+
+#content-block1 {
+	padding: 5rem;
+}
+
+.content1 {
+	height: 30rem;
+	padding: 0 !important;
+}
+
+.content2 {
+	height: 30rem;
+	padding: 0 !important;
+}
+
+.testimonial-copy {
+	font-size: 16px !important;
+}
+
+.quotes-size {
+	font-size: 4rem !important;
+	padding-bottom: 0px;
+}
+/* .age-span {
+	color: whitesmoke;
+} */
+
+/* @media screen and (min-width: 576px) {
+	
+} */

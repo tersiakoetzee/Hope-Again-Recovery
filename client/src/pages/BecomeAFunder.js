@@ -7,6 +7,9 @@ import axios from "axios";
 import { useState } from "react";
 import { FundingConfirmation } from "../components/FundingConfirmation";
 import Card from "react-bootstrap/Card";
+import funderImg from "../assets/img1.jpeg";
+import { PageHeaderTemplate } from "../components/PageHeaderTemplate";
+import { Paragraph } from "../components/Paragraph";
 
 export const BecomeAFunder = () => {
 	const [name, setName] = useState("");
@@ -49,21 +52,21 @@ export const BecomeAFunder = () => {
 	};
 	return (
 		<Template>
+			<PageHeaderTemplate title="Become A Funder" image={funderImg} />
 			<Container className="formContainer">
-				<h2 className="text-center mb-3">Become A Funder</h2>
 				<div className="row justify-content-center mb-5">
-					<Card className="col-md-8">
-						<Card.Body className="text-center">
-							<Card.Text>
+					<Card className="col-md-8 border-0">
+						<Card.Body>
+							<Paragraph>
 								Partner with us in the work of substance abuse prevention. Your
 								partnership will ensure that we can grow the reach of our
 								services and ensure more people can find freedom from substance
 								abuse and become constructive citizens of society.
-							</Card.Text>
-							<Card.Text>
+							</Paragraph>
+							<Paragraph>
 								For more information please email harh@mounthope.co.za or call
 								us on 0213717323
-							</Card.Text>
+							</Paragraph>
 						</Card.Body>
 					</Card>
 				</div>
