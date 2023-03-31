@@ -10,13 +10,13 @@ To run this application, you need to have Node.js and npm installed on your comp
 
 To install the dependencies, run the following command:
 
-`npm install` 
+`npm install`
 
 ## Usage
 
 To start the application, run the following command:
 
-`npm start` 
+`npm start`
 
 Then, open [http://localhost:3000](http://localhost:3000/) in your browser.
 
@@ -24,10 +24,10 @@ Then, open [http://localhost:3000](http://localhost:3000/) in your browser.
 
 This application uses the following dependencies:
 
--   React: a JavaScript library for building user interfaces.
--   react-bootstrap: a UI library for Bootstrap.
--   axios: a Promise-based HTTP client for the browser and Node.js.
--   YocoSDK: a payment gateway SDK for South Africa.
+- React: a JavaScript library for building user interfaces.
+- react-bootstrap: a UI library for Bootstrap.
+- axios: a Promise-based HTTP client for the browser and Node.js.
+- YocoSDK: a payment gateway SDK for South Africa.
 
 ## How it works
 
