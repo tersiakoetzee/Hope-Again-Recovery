@@ -33,10 +33,6 @@ This application uses the following dependencies:
 
 The application uses the YocoSDK to handle the payment process. When the user submits the donation form, the SDK shows a popup where the user can enter their payment details. If the payment is successful, the application sends a POST request to a server endpoint (/api/donate) with the payment details.
 
-## License
-
-This project is licensed under the MIT License. See the [LICENSE](https://chat.openai.com/LICENSE) file for details.
-
 ## Author
 
 This project was created by Tersia Koetzee.
