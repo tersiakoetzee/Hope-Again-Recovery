@@ -1,6 +1,6 @@
 # YOCO
 
-This project is called "Donation Form", and it's a React application that allows users to make a donation to the Hope Again Recovery Home.
+This is a react form that allows users to make a donation to the Hope Again Recovery Home.
 
 ## Prerequisites
 
