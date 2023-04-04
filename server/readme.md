@@ -16,9 +16,24 @@ To use this code, you will need the following:
 
 1.  Clone the repository
 2.  Install dependencies using `npm install`
-3.  Create a `.env` file in the root directory with the following information:
 
-`SECRET_KEY=<your_secret_key>`
+### Yoco Keys
+
+To use the Yoco API, you will need to have your Yoco Secret Key. You can find your Yoco Secret Key by logging into your Yoco dashboard.
+
+In order to keep your Yoco Secret Key secure, it is recommended to store it as an environment variable. This code reads the Yoco Secret Key from an environment variable named `SECRET_KEY` in the `.env` file located in the root directory.
+
+### Environment Variables
+
+The `.env` file mentioned in the installation section should have the following format:
+
+    SECRET_KEY=<your_secret_key>
+
+Replace `<your_secret_key>` with your actual Yoco Secret Key.
+
+Make sure to add the `.env` file to your `.gitignore` file so that it is not uploaded to version control and stays secure.
+
+When the code is executed, it will read the `SECRET_KEY` environment variable and use it to authenticate with the Yoco API.
 
 ### Usage
 
@@ -32,42 +47,7 @@ To use this code, make a POST request to the endpoint `/` with the required para
 
 ### Example
 
-javascriptCopy code
-
-    `const axios = require("axios");
-    import { Router } from "express";
-
-    const router = Router();
-
-    router.post("/", (req, res) => {
-      const { token, amountInCents, currency } = req.body;
-      try {
-        axios
-          .post(
-            "https://online.yoco.com/v1/charges/",
-            {
-              token: token,
-              amountInCents: Number(amountInCents),
-              currency: currency,
-            },
-            {
-              headers: {
-                "X-Auth-Secret-Key": process.env.SECRET_KEY,
-              },
-            }
-          )
-          .then(() => {
-            res.status(200).send("Thank You!");
-          })
-          .catch((error) => {
-            res.status(400).send(error);
-          });
-      } catch (error) {
-        res.status(500).send(error);
-      }
-    });
-
-    export default router;`
+[Go to the offical Yoco site for the exam](https://www.yoco.com/za/yoco-gateway/#:~:text=How%20do%20I%20link%20Yoco,to%20link%20with%20your%20website.)
 
 ### Error Handling
 
