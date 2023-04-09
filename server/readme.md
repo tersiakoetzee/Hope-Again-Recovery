@@ -147,8 +147,6 @@ The following should be added to the `.env` file:
 
     DB_USER or DB_USERNAME  = <your_username>
 
-
-
 Make sure to add the `.env` file to your `.gitignore` file so that it is not uploaded to version control and stays secure.
 
 When the code is executed, it will read the environment variables and use it to authenticate with your postgres database.
