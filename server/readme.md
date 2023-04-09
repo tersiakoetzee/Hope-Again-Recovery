@@ -101,3 +101,83 @@ PRIVATE_KEY=<private_key_found_in_credentials_json_file>
 ### Reference
 
 - [Create Google Calender Events using the Google API and Service Accounts in Node.JS](https://dev.to/pedrohase/create-google-calender-events-using-the-google-api-and-service-accounts-in-nodejs-22m8)
+
+<br />
+
+# Database for the Funding Form
+
+This form is built with Node.js and Express.js and connects to a Postgres database to store and retrieve data.
+
+## Getting Started
+
+### Prerequisites
+
+To use this code, you will need the following:
+
+- Node.js and npm installed
+
+- Postgres
+
+### Installation
+
+Using the command `npm install` will install the necessary dependencies.
+
+### Setup
+
+1.  Download and install a PostgreSQL server.
+2.  Open the psql command-line tool.
+3.  Run a CREATE DATABASE command to create a new database. Your table should include the same column names as the parameters under the usage section.
+
+How to do this can be found in the postgres documentation:
+
+[PostgreSQL: The world's most advanced open source database](https://www.postgresql.org/)
+
+4.  Connect to the new database using environmental variables.
+
+### Environment Variables
+
+The following should be added to the `.env` file:
+
+    DB_HOST = <your_host_name>
+
+    DB_NAME = <your_database_name>
+
+    DB_PASS or DB_PASSWORD = <your_password>
+    DB_PORT =<your_database_port>
+
+    DB_USER or DB_USERNAME  = <your_username>
+
+
+
+Make sure to add the `.env` file to your `.gitignore` file so that it is not uploaded to version control and stays secure.
+
+When the code is executed, it will read the environment variables and use it to authenticate with your postgres database.
+
+### Usage
+
+This code exposes a single endpoint `/` that accepts a POST request. It expects the following parameters in the request body:
+
+- `name`: The name of the user
+
+- `companyName`: The name of the Company of the user
+
+- `country`: The country the user resides in
+
+- `contactNumber`: The users contact number
+
+- `email`: The user's email
+
+- `contribType`: The type of contribution the user wishes to make
+
+- `other`: Refers to an option that is not on the list of given options as a type of contribution
+
+To use this code, make a POST request to the endpoint `/api/booking` with the required parameters in the request body.
+
+### How it works
+
+When the user submits the Funding form, a popup is shown with the details you've submitted. If the payment is successful, the application sends the data you've added to the database.
+
+### Acknowledgements
+
+- [Express.js Documentation](https://expressjs.com/)
+- [PostgreSQL: The world's most advanced open source database](https://www.postgresql.org/)
