@@ -57,3 +57,47 @@ If there is an error with the request, the code will respond with an HTTP error 
 
 - [Yoco API Documentation](https://developers.yoco.com/)
 - [Express.js Documentation](https://expressjs.com/)
+
+<br />
+
+# Google Calendar API Integration for bookings
+
+## Getting Started
+
+### Prerequisites
+
+- Node.js and npm installed
+- A Google account
+
+### Installation
+
+`npm install` will install all the packages needed including googleapis and google-auth-library, if not found they can be installed:
+
+```
+npm i googleapis
+npm i google-auth-library
+```
+
+### Setup
+
+- Go to the Google Cloud Console and create a new project.
+- Enable the [Calendar API](https://console.cloud.google.com/marketplace/product/google/calendar-json.googleapis.com?pli=1)
+- [Create a service account](https://developers.google.com/workspace/guides/create-credentials#create_a_service_account)
+- In your calendar where you want to create events, go to the settings and share the calendar with [the e-mail of your service account](https://console.cloud.google.com/iam-admin/serviceaccounts) (Make sure to set the permissions to "Make changes to events")
+- [Create and save the credentials JSON for your created account](https://developers.google.com/workspace/guides/create-credentials#create_credentials_for_a_service_account) into your Node.JS project (Never user the credentials from the json file, use them as environment variables.)
+
+### Environment Variables
+
+Note: CLIENT_EMAIL and PRIVATE_KEY is found in the above created and saved credentials JSON file
+
+Add the following variables in `.env` file.
+
+```
+CALENDA_ID=<your_email_address>
+CLIENT_EMAIL=<email_found_in_credential_json_file>
+PRIVATE_KEY=<private_key_found_in_credentials_json_file>
+```
+
+### Reference
+
+- [Create Google Calender Events using the Google API and Service Accounts in Node.JS](https://dev.to/pedrohase/create-google-calender-events-using-the-google-api-and-service-accounts-in-nodejs-22m8)
