@@ -1,0 +1,48 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap");
+
+.vm-row {
+	position: relative;
+}
+
+.vm-col {
+	margin-bottom: 132px;
+}
+
+.about-red-block {
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	height: 100px;
+	background: red;
+}
+
+/* About article styling */
+.item .image {
+	min-width: 80px;
+	max-width: 80px;
+	height: 80px;
+}
+
+.item {
+	padding: 20px;
+	margin-right: 8px;
+}
+
+.values-img {
+	width: 50% !important;
+	border-radius: 0.25rem;
+}
+
+.article-text > h2 {
+	font-size: 28px;
+	font-family: "Roboto", sans-serif;
+}
+.article-text > p {
+	font-size: 20px;
+	font-family: "Inter", sans-serif;
+}
+.article-text > p {
+	font-size: 20px;
+	font-family: "Inter", sans-serif;
+}

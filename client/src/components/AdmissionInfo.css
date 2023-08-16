@@ -1,0 +1,19 @@
+.ai-icon {
+	font-size: 10px;
+}
+
+.ai-content {
+	max-width: 530px;
+	width: 100%;
+}
+
+.ai-col-height {
+	min-height: 80vh;
+}
+
+/* On larger screen */
+@media screen and (min-width: 992px) {
+	.ai-block {
+		min-height: 100%;
+	}
+}

@@ -1,43 +1,76 @@
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
+import logo from "../img/harh-logo.png";
 import "./Footer.css";
 
 export const Footer = () => {
 	return (
-		<div className="main-footer">
-			<Container ClassName="text-center py-1">
+		<div className="bg-dark footer">
+			<Container className="text-center text-white py-5">
 				<Row>
-					<Col className="icon ">
+					<Col sm={12} md={3}>
 						<img
-							className="text-center py-3"
-							src="https://scontent-cpt1-1.xx.fbcdn.net/v/t39.30808-6/328578860_1623777118136682_3792465063130725698_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=ro__ikRWxD0AX-5VndF&_nc_ht=scontent-cpt1-1.xx&oh=00_AfBcPuLjgtSb8d782M4zN3x_M-ksTlfZf0ZiCe_aW1JTHg&oe=63F858B2"
+							className="text-center"
+							src={logo}
 							alt="First slide"
-							height="150"
+							width="170"
+							height="47"
 						/>
+						<p>est. 2007</p>
 					</Col>
-					<Col className="col-md-3 col-sm-4">
-						<h4>More Projects</h4>
-						<a href="/building ">New Building</a>
-					</Col>
-					<Col className="col-md-3 col-sm-6">
-						<h4>Socials</h4>
-						<a href="https://www.facebook.com/HOPEAGAINRECOVERYHOME/">
-							Visit FaceBook
-						</a>
-					</Col>
-					<Col className="col-md-3 col-sm-6">
-						<h4>Contact Us</h4>
+					<Col sm={12} md={3}>
+						<h4 className="mt-4 mt-md-0">Useful Links</h4>
+						<hr className="text-yellow" />
 						<p>
-							021 371 7323 57 Artemis Road, Woodlands, Mitchells Plain
-							secretary@mounthope.co.za
+							<a href="/projects">New Building</a>
+						</p>
+						<p>
+							<a href="/booking">Book Screening</a>
+						</p>
+						<p>
+							<a href="/">Donation</a>
+						</p>
+					</Col>
+					<Col sm={12} md={3}>
+						<h4 className="mt-4 mt-md-0">Socials</h4>
+						<hr className="text-yellow" />
+						<p>
+							<a
+								href="https://www.facebook.com/HOPEAGAINRECOVERYHOME/"
+								target="_blank"
+								rel="noreferrer"
+							>
+								<i className="bi bi-facebook"></i> Facebook
+							</a>
+						</p>
+					</Col>
+					<Col sm={12} md={3}>
+						<h4 className="mt-4 mt-md-0">Contact Info</h4>
+						<hr className="text-yellow" />
+						<p>
+							<i className="bi bi-telephone-fill"></i> 021 371 7323
+						</p>
+						<p>
+							<i className="bi bi-envelope-fill"></i> secretary@mounthope.co.za
+						</p>
+						<p>
+							<i className="bi bi-geo-alt-fill"></i> 57 Artemis Road Woodlands
+							Mitchells Plain
 						</p>
 					</Col>
 				</Row>
 				<Row>
-					<Col className="footer-bottom">
-						<p className="text-center">
-							Copyright &copy;{new Date().getFullYear()} H-A-R-H
+					<Col>
+						<hr className="text-yellow mt-4 mt-md-0" />
+						<p className="my-2">
+							<a href="/#">
+								Copyright &copy; {new Date().getFullYear()} H-A-R-H
+							</a>
+							<span className="text-warning"> | </span>
+							<a href="#/">Privacy Policy</a>
+							<span className="text-warning"> | </span>
+							<a href="/#">Terms & Conditions</a>
 						</p>
 					</Col>
 				</Row>

@@ -1,9 +1,35 @@
 .logo {
 	width: 100px;
 }
-.message {
-	color: blue;
+
+/* Booking confirmation icons */
+.b-icon {
+	font-size: 80px;
 }
-.message:hover {
-	background-color: yellow;
+
+/* custom colors */
+.text-yellow {
+	color: #eed202 !important;
+}
+.bg-yellow {
+	color: #eed202 !important;
+}
+
+.text-blue {
+	color: #0945a0 !important;
+}
+.bg-blue {
+	background: #0945a0 !important;
+}
+
+/* ****************Media Query Below - Additional ***************************/
+
+@media only screen and (min-width: 576px) and (max-width: 1400px) {
+	.video-testimonial {
+		height: 900px;
+		margin: 50px auto;
+	}
+}
+.bg-blue {
+	background: #0945a0 !important;
 }

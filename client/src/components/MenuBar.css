@@ -1,0 +1,51 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap");
+
+.menu-bar {
+	font-family: "Roboto", sans-serif !important;
+}
+
+.dropdown-menu {
+	border-radius: 0 !important;
+}
+
+.dropdown-item {
+	color: #000 !important;
+	font-weight: 400 !important;
+}
+
+.dropdown-item:hover {
+	background: #eed202 !important;
+	color: #000 !important;
+}
+
+.nav-link {
+	padding: 8px 8px !important;
+}
+
+.nav-link:hover {
+	color: #eed202 !important;
+}
+
+/* On larger screen */
+@media screen and (min-width: 992px) {
+	.menu-bar {
+		color: red !important;
+	}
+
+	.nav-link {
+		color: #fff !important;
+		font-size: 16px !important;
+		font-weight: 500 !important;
+		letter-spacing: 0.6px;
+	}
+}
+
+.donateColor {
+	background-color: #14d547 !important;
+	border-radius: 5px;
+}
+
+.donateColor:hover {
+	background-color: #15c343 !important;
+	color: #fff !important;
+}

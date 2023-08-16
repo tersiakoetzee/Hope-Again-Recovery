@@ -1,18 +1,21 @@
-import Card from "react-bootstrap/Card";
 import "./VideoWidget.css";
+import { Heading2 } from "./Heading2";
+import { Paragraph } from "./Paragraph";
+import { Card } from "react-bootstrap";
 
 export const VideoWidget = () => {
 	return (
-		<Card className="col-md-6 col-sm-6  border border-3">
+		<Card className="video-container">
 			<iframe
-				style={{ height: 250, width: "100%" }}
+				style={{ width: "100%" }}
 				src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2FHOPEAGAINRECOVERYHOME%2Fvideos%2F388933556082025%2F&show_text=false&width=560&t=0"
 				title="FaceBook video"
-				allowfullscreen
 			></iframe>
 			<Card.Body>
-				<Card.Title>H-A-R-H</Card.Title>
-				<Card.Text>Fun daily workout at HARH.</Card.Text>
+				<Heading2>Fun Daily</Heading2>
+				<Heading2>Workout At</Heading2>
+				<Heading2>H.A.R.H</Heading2>
+				<Paragraph className="mb-2">Come and join the fun</Paragraph>
 			</Card.Body>
 		</Card>
 	);

@@ -1,0 +1,73 @@
+.container {
+	position: relative;
+	overflow: hidden;
+	padding: 70px;
+}
+
+.popup {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: 9999;
+	background-color: white;
+	border-radius: 10px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+@media (max-width: 768px) {
+	.popup {
+		max-width: 90%;
+		max-height: 90%;
+	}
+}
+
+/* popup styling  */
+.modal-dialog {
+	max-width: 600px;
+	margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+	.modal-dialog {
+		max-width: 80%;
+	}
+}
+.modal-dialog {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%) !important;
+	background-color: white;
+
+	max-width: 90%;
+	max-height: 60%;
+	overflow: auto;
+}
+
+@media (min-width: 576px) {
+	.modal-dialog {
+		max-width: 50%;
+	}
+}
+
+@media (min-width: 992px) {
+	.modal-dialog {
+		max-width: 30%;
+	}
+}
+.form-with-border {
+	border: 2px solid black;
+	border-radius: 5px;
+	padding: 10px;
+	margin: 10px;
+}
+
+.input-group-text {
+	background-color: #fff;
+	text-align: left;
+}
