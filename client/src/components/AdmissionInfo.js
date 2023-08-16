@@ -45,35 +45,31 @@ export const AdmissionInfo = () => {
 											text="During a screening, the program will be explained and an
 										acceptance agreement is shared both verbally and on paper."
 										/>
-
 										<AdmissionItem
 											color="text-dark"
 											text="Once there is a mutual acceptance of the T’s & C’s of the
-									program, the candidate has been accepted into the 6-9 month
-									aftercare program"
+											program, the candidate has been accepted into the 6-9 month
+											aftercare program"
 										/>
 									</ListGroup>
-									<Card.Text className="d-flex my-3">
+									<Card.Text className="text-center d-flex justify-content-center">
 										<div className="border p-2 px-lg-5">
 											<p className="lead">Admission Fee: R1950</p>
 											<p className="lead">Monthly Fee: R1900</p>
 										</div>
 									</Card.Text>
-									<Card.Link
-										className="btn btn-success ms-1 mt-2"
-										href="/booking"
-									>
-										Book a Screening
-									</Card.Link>
 								</Card.Body>
 							</Card>
 						</div>
 					</Col>
-					<Col className="p-0" lg={4}>
-						<div className="bg-blue ai-block"></div>
+				</Row>
+				<Row className="justify-content-center text-center">
+					<Col lg={8}>
+						<Card.Link className="btn btn-success ms-1" href="/booking">
+							Book a Screening
+						</Card.Link>
 					</Col>
 				</Row>
-				<Row></Row>
 			</Container>
 		</Template>
 	);
